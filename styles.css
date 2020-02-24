@@ -37,7 +37,7 @@
 }
 
 .header-parking {
-  background: url(./img/header/header_cars.png) no-repeat;
+  background: url(./img/header/header_cars.png) no-repeat top center/cover;
   height: 490px;
 }
 
@@ -140,8 +140,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   width: 1080px;
   height: 351px;
   display: flex;
-  -webkit-box-shadow: 6px 3px 10px -6px #5f6286;
-  -moz-box-shadow: 6px 3px 10px -6px #5f6286;
   box-shadow: 6px 3px 10px -6px #5f6286;
 }
 
@@ -377,9 +375,92 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin: 0 50px 0 25px;
 }
 
+.review {
+  background-color: #F4F4F4;
+  padding: 70px 0 50px;
+}
+
+.review-title {
+  font-size: 50px;
+  margin-right: 690px;
+}
+
+.comments {
+  width: 1075px;
+  height: 270px;
+  margin-left: auto;
+  background-color: #fff;
+  padding: 23px 50px;
+  box-shadow: 6px 3px 10px -6px #5f6286;
+}
+.comments__header {
+  display: flex;
+  border-bottom: 1px solid #707070;
+  align-items: center;
+  justify-content: space-between;
+}
+.comments__user-info {
+  display: flex;
+  flex-direction: column;
+}
+.comments__username {
+  font-size: 26px;
+}
+.comments__text {
+  margin-top: 15px;
+}
+.comments__data {
+  display: block;
+  text-align: right;
+}
+
+.review-control {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.arrow {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.slider-arrow {
+  margin-right: 45px;
+}
+
+.arrow-size {
+  font-size: 25px;
+}
+
+.arrow:active {
+  color: #ff8949;
+}
+
+.point {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #B4B4B4;
+  border-radius: 50px;
+  background-color: transparent;
+}
+
+.slider-point {
+  display: flex;
+  justify-content: space-between;
+  width: 82px;
+  margin-left: 780px;
+  margin-top: 25px;
+}
+
+.active-point {
+  background-color: #ff8949;
+}
+
 body {
   font-family: "Ubuntu";
-  color: #000;
+  color: #3e4042;
   padding: 0;
   margin: 0;
   font-size: 16px;
@@ -400,7 +481,7 @@ a {
   text-decoration: none;
 }
 
-h2 {
+h3 {
   font-weight: bold;
   font-size: 26px;
   margin: 0;

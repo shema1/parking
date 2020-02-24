@@ -8,6 +8,8 @@
       href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap"
       rel="stylesheet"
     />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -149,7 +151,7 @@
             </div>
             <div class="parking-info">
               <div class="parking-info__title">
-                <h2 class="parking-name">Parking Samolot</h2>
+                <h3 class="parking-name">Parking Samolot</h3>
                 <span class="parking-recommended">Polecany</span>
               </div>
               <div class="parking-info__services">
@@ -231,9 +233,9 @@
                 </div>
               </div>
               <div class="parking-price">
-                <h2 class="parking-price__days">
+                <h3 class="parking-price__days">
                   Сeny za dni:
-                </h2>
+                </h3>
                 <ul class="price-list">
                   <li class="price-list__item">
                     <span class="price-list__line line">-</span>1 dzień
@@ -278,10 +280,9 @@
                 </ul>
               </div>
             </div>
-
             <div class="parking-info">
               <div class="parking-info__title">
-                <h2 class="parking-name">Parking Samolot</h2>
+                <h3 class="parking-name">Parking Samolot</h3>
                 <span class="parking-recommended">Polecany</span>
               </div>
               <form class="parking-data">
@@ -367,6 +368,59 @@
           </div>
         </li>
       </ul>
+    </section>
+    <section class="review">
+      <div class="container">
+        <div class="review-control">
+          <h2 class="review-title bold">Recenzje</h2>
+          <div class="slider-arrow">
+            <button class="left-arrow arrow">
+              <i class="material-icons arrow-size">
+                keyboard_arrow_left
+              </i>
+            </button>
+            <button class="right-arrow arrow">
+              <i class="material-icons arrow-size">
+                keyboard_arrow_right
+              </i>
+            </button>
+          </div>
+        </div>
+        <div class="comments">
+          <div class="comments__header">
+            <div class="comments__user-info">
+              <span class="comments__parking-name"
+                >Parking Okęcie (parkKING)</span
+              >
+              <span class="comments__username bold">Aleksandra Krasowska</span>
+            </div>
+            <div class="comments__rating">
+              <img src="./img/review/stars.png" alt="img" />
+            </div>
+          </div>
+          <div class="comments__body">
+            <p class="comments__text">
+              Idealna opcja - szybki kontakt, błyskawiczny transfer na i z
+              lotniska, łatwy dojazd. Gdybym miał się czegoś czepiać, to na
+              parkingu dość tłoczno, miejsca nie są wyznaczone, z początku można
+              czuć się przytłoczonym.
+            </p>
+            <p class="comments__text">
+              Nie było to jednak problemem, spokojnie stanąłem, wszystko grało.
+              W drodze powrotnej kierowca dojechał tak szybko, że nie zdążyłem
+              dojść do wyjścia, czekał na mnie.
+            </p>
+            <span class="comments__data">29.01.2020 12:14</span>
+          </div>
+        </div>
+        <div class="slider-point">
+            <span class="point"></span>
+            <span class="point"></span>
+            <span class="point active-point"></span>
+            <span class="point"></span>
+            <span class="point"></span>
+        </div>
+      </div>
     </section>
   </body>
 </html>

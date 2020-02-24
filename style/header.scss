@@ -1,3 +1,6 @@
+.header{
+   
+}
 .header-menu {
   display: flex;
   padding: 26px 0;
@@ -42,7 +45,7 @@
 }
 
 .header-parking {
-  background: url(./img/header/header_cars.png) no-repeat;
+  background: url(./img/header/header_cars.png)no-repeat top center/cover ;
   height: 490px;
 
 }
