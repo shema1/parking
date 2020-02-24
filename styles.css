@@ -130,9 +130,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .parking-logo {
   display: flex;
   flex-direction: column;
+  height: 1000px;
 }
 .parking-logo__text {
-  color: #000;
+  color: #808080;
+  transform: rotate(-90deg);
+  font-size: 50px;
 }
 
 .parking-card {
@@ -311,6 +314,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
+  height: 10000px;
 }
 
 div, p, form, input, a, span, button {
