@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parking</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-menu container">
+        <div class="header-menu__logo">
+          <a class="header-menu__logo-link" href="#">
+            <span class="header-menu__link header-menu__link_color">
+              parking</span
+            >
+            lotnisko warzsawa</a
+          >
+        </div>
+        <nav class="header-nav">
+          <ul class="header-nav__list">
+            <li class="header-nav__item">
+              <a href="#" class="header-nav__link"> Zarezerwuj przez telefon</a>
+            </li>
+            <li class="header-nav__item">
+              <a
+                href="tel:+48579996550"
+                class="header-nav__link header-nav__link_phone"
+              >
+                <img
+                  src="./img/header/header_phone.png"
+                  alt="phone"
+                  class="header-nav__phone-img"
+                />
+                + 48 579-996-550
+              </a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#" class="header-nav__link"
+                >Dokonaj rezerwacje telefonicznie</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-parking">
+        <nav class="header-info">
+          <ul class="header-info__menu container">
+            <li class="header-info__item">
+              <a href="#" class="header-info__link">
+                <span class="header-info__line">-</span> Natychmiastowe
+                potwierdzenie</a
+              >
+            </li>
+            <li class="header-info__item">
+              <a href="#" class="header-info__link">
+                <span class="header-info__line">-</span> Darmowy transfer</a
+              >
+            </li>
+            <li class="header-info__item">
+              <a href="#" class="header-info__link">
+                <span class="header-info__line">-</span> Zapłać gotówką na
+                parkingu
+              </a>
+            </li>
+            <li class="header-info__item">
+              <a href="#" class="header-info__link">
+                <span class="header-info__line">-</span> Bilet parkingowy w
+                SMS</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header-intro container">
+          <h1 class="header-intro__title">
+            <span class="header-intro__title-color"> parking</span> lotnisko
+            Warzsawa
+          </h1>
+          <form class="header-search">
+            <div class="date-block">
+              <label for="date-block__arrival-date" class="date-block__label"
+                >Date of Arrival</label
+              >
+              <div class="date-block__inputs">
+                <input type="date" name="arrival-date" class="date-picker" />
+                <select name="start-time" class="time-picker">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+              </div>
+            </div>
+            <div class="date-block">
+              <label for="date-block__departure-date" class="date-block__label"
+                >Departure Date</label
+              >
+              <div class="date-block__inputs">
+                <input type="date" name="departure-date" class="date-picker" />
+                <select name="end-time" class="time-picker">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="date-block__btn btn">
+              Szukaj
+            </button>
+          </form>
+        </div>
+        <div class="header-info">
+          <div class="header-info__wraper container">
+            <span class="header-info__bold">Darmowy transfer</span>
+            <span>Dojazd na lotnisko oraz powrotny gratis</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="parking container">
+      <div class="parking-logo">
+          <img  class="parking-logo__img" src="./img/parking/airport.png" alt="img">
+          <div class="parking-logo__text"> POLSKI PARKING PRZY LOTNISKU</div>
+      </div>
+      <ul class="parking-list">
+        <li class="parking-list__item">
+          <div class="parking-card">
+            <div class="parking-img">
+              <div class="parking-img__header">
+                Zniżka - <span class="add-orange"> 50%</span>
+              </div>
+              <div class="parking-img__footer">
+                <div class="parking-stars">
+                  <img src="./img/parking/stars.png" alt="star" />
+                </div>
+                <div class="parking-comments">
+                  4.7 (1986 opinii)
+                </div>
+              </div>
+            </div>
+            <div class="parking-info">
+              <div class="parking-info__title">
+                <h2 class="parking-name">Parking Samolot</h2>
+                <span class="parking-recommended">Polecany</span>
+              </div>
+              <div class="parking-info__services">
+                <div class="parking-info__services-wraper">
+                  <ul class="services-list">
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Ogrodzony
+                    </li>
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Faktura VAT
+                    </li>
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Monitoring
+                      24/7
+                    </li>
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Darmowe
+                      Wi-Fi
+                    </li>
+                  </ul>
+                  <div class="transfer-block">
+                    <div class="transfer-info">
+                      <img
+                        class="transfer-info__img"
+                        src="./img/parking/path.png"
+                        alt="img"
+                      />
+                      <div class="transfer-info__wraper">
+                        <span class="info-title">6 km</span>
+                        <span class="info-text">Оdległość do lotniska</span>
+                      </div>
+                    </div>
+                    <div class="transfer-info">
+                      <img
+                        class="transfer-info__img"
+                        src="./img/parking/bus.png"
+                        alt="img"
+                      />
+                      <div class="transfer-info__wraper">
+                        <span class="info-title">9 min</span>
+                        <span class="info-text">Transfer na lotnisko</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="parking-info__reservation">
+                  <div class="price-info">
+                    <span class="price-info__old">210zł</span>
+                    <span class="price-info__new">109zł</span>
+                    <span class="price-info__days">Za 7 dni</span>
+                    <a href="#" class="price-info__more">zobacz ceny za dni </a>
+                  </div>
+                  <button class="btn">
+                    Zarezerwować
+                  </button>
+                  <div class="add-info">
+                    <span class="line">-</span> Darmowa anulacja
+                    <span class="add-info__circle">i</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="parking-list__item">
+          <div class="parking-card">
+            <div class="parking-img">
+              <div class="parking-img__header">
+                Zniżka - <span class="add-orange"> 50%</span>
+              </div>
+              <div class="parking-img__footer">
+                <div class="parking-stars">
+                  <img src="./img/parking/stars.png" alt="star" />
+                </div>
+                <div class="parking-comments">
+                  4.7 (1986 opinii)
+                </div>
+              </div>
+            </div>
+            <div class="parking-info">
+              <div class="parking-info__title">
+                <h2 class="parking-name">Parking Samolot</h2>
+                <span class="parking-recommended">Polecany</span>
+              </div>
+              <div class="parking-info__services">
+                <div class="parking-info__services-wraper">
+                  <ul class="services-list">
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Ogrodzony
+                    </li>
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Faktura VAT
+                    </li>
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Monitoring
+                      24/7
+                    </li>
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Darmowe
+                      Wi-Fi
+                    </li>
+                  </ul>
+                  <div class="transfer-block">
+                    <div class="transfer-info">
+                      <img
+                        class="transfer-info__img"
+                        src="./img/parking/path.png"
+                        alt="img"
+                      />
+                      <div class="transfer-info__wraper">
+                        <span class="info-title">6 km</span>
+                        <span class="info-text">Оdległość do lotniska</span>
+                      </div>
+                    </div>
+                    <div class="transfer-info">
+                      <img
+                        class="transfer-info__img"
+                        src="./img/parking/bus.png"
+                        alt="img"
+                      />
+                      <div class="transfer-info__wraper">
+                        <span class="info-title">9 min</span>
+                        <span class="info-text">Transfer na lotnisko</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="parking-info__reservation">
+                  <div class="price-info">
+                    <span class="price-info__old">210zł</span>
+                    <span class="price-info__new">109zł</span>
+                    <span class="price-info__days">Za 7 dni</span>
+                    <a href="#" class="price-info__more">zobacz ceny za dni </a>
+                  </div>
+                  <button class="btn">
+                    Zarezerwować
+                  </button>
+                  <div class="add-info">
+                    <span class="line">-</span> Darmowa anulacja
+                    <span class="add-info__circle">i</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

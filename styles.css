@@ -1,0 +1,374 @@
+.header-menu {
+  display: flex;
+  padding: 26px 0;
+}
+.header-menu__logo-link {
+  font-size: 22px;
+  color: #3e4042;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.header-menu__link_color {
+  color: #ff8949;
+}
+
+.header-nav {
+  margin-left: auto;
+}
+.header-nav__list {
+  display: flex;
+  align-items: center;
+}
+.header-nav__item {
+  margin-left: 30px;
+}
+.header-nav__link {
+  color: #3e4042;
+  font-size: 16px;
+  font-weight: 500;
+}
+.header-nav__link_phone {
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+}
+.header-nav__phone-img {
+  margin-right: 15px;
+}
+
+.header-parking {
+  background: url(./img/header/header_cars.png) no-repeat;
+  height: 490px;
+}
+
+.header-info {
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #fff;
+}
+.header-info__menu {
+  display: flex;
+  justify-content: space-between;
+}
+.header-info__link {
+  color: #fff;
+}
+.header-info__line {
+  color: #ff8949;
+}
+.header-info__wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-info__bold {
+  font-weight: bold;
+}
+
+.header-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-intro__title {
+  color: #fff;
+  font-size: 76px;
+  text-transform: uppercase;
+}
+.header-intro__title-color {
+  color: #ff8949;
+}
+
+.header-search {
+  width: 100%;
+  background-color: #fff;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  margin-bottom: 41px;
+}
+
+.date-block input select {
+  border: 1px solid #dbdbdb;
+}
+
+.date-block {
+  color: #3e4042;
+  font-size: 16px;
+  margin-right: 30px;
+}
+.date-block__inputs {
+  margin-top: 10px;
+}
+.date-block__btn {
+  margin-top: 25px;
+}
+
+.date-picker {
+  width: 385px;
+  height: 39px;
+  margin-right: 15px;
+}
+
+.time-picker {
+  width: 114px;
+  height: 39px;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  background-image: url(./img/header/calendar.png);
+}
+
+.parking {
+  display: flex;
+}
+
+.parking-logo {
+  display: flex;
+  flex-direction: column;
+}
+.parking-logo__text {
+  color: #000;
+}
+
+.parking-card {
+  width: 1080px;
+  height: 351px;
+  display: flex;
+  -webkit-box-shadow: 6px 3px 10px -6px #5f6286;
+  -moz-box-shadow: 6px 3px 10px -6px #5f6286;
+  box-shadow: 6px 3px 10px -6px #5f6286;
+}
+
+.parking-list__item {
+  margin-bottom: 20px;
+}
+
+.parking-img {
+  width: 395px;
+  height: 351px;
+  background-image: url(./img/parking/parking_card_1.png);
+  display: flex;
+  flex-direction: column;
+}
+.parking-img__header {
+  font-size: 20px;
+  color: #fff;
+  height: 56px;
+  background-color: rgba(34, 23, 17, 0.59);
+  text-align: center;
+  padding-top: 15px;
+}
+.parking-img__footer {
+  height: 96px;
+  display: flex;
+  margin-top: auto;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  background: rgba(255, 255, 255, 0);
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.41) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 0.41)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.41) 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.41) 100%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.41) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.41) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#000000", GradientType=0 );
+}
+
+.parking-comments {
+  font-weight: 500;
+  color: #fff;
+}
+
+.parking-info {
+  width: 685px;
+  height: 351px;
+  padding: 19px 28px 0;
+}
+
+.parking-info__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+  width: 586px;
+  position: relative;
+  padding-left: 13px;
+}
+
+.parking-name {
+  margin: 13px 0;
+}
+
+.parking-recommended {
+  position: absolute;
+  color: #ff8949;
+  background-color: #3e4042;
+  width: 112px;
+  text-align: center;
+  font-weight: bold;
+  clip-path: polygon(100% -600%, 0 100%, 100% 100%);
+  padding: 5px 0;
+  right: -72px;
+}
+
+.services-list {
+  margin-bottom: 70px;
+}
+.services-list__item {
+  margin-bottom: 12px;
+}
+.services-list__line {
+  margin-right: 24px;
+}
+
+.parking-info__services {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 0 0 13px;
+}
+
+.price-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.price-info__old {
+  font-size: 18px;
+  text-decoration: line-through;
+}
+.price-info__new {
+  color: #ff8949;
+  font-size: 26px;
+  font-weight: bold;
+}
+.price-info__days {
+  color: #9b9b9b;
+}
+.price-info__more {
+  color: #ff8949;
+  text-decoration: underline;
+  margin: 33px 0 18px;
+}
+
+.parking-info__reservation {
+  margin-top: 30px;
+}
+
+.transfer-block {
+  display: flex;
+}
+
+.transfer-info {
+  display: flex;
+  margin-right: 36px;
+}
+
+.transfer-info__wraper {
+  display: flex;
+  flex-direction: column;
+}
+
+.transfer-info__img {
+  align-self: center;
+  margin-right: 12px;
+}
+
+.info-title {
+  font-weight: bold;
+}
+
+.info-text {
+  font-size: 14px;
+  color: #9b9b9b;
+  font-weight: 300;
+}
+
+.add-info {
+  color: #9B9B9B;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.add-info__circle {
+  color: #fff;
+  background-color: #ff8949;
+  height: 18px;
+  width: 18px;
+  border-radius: 50px;
+  display: block;
+  text-align: center;
+}
+
+body {
+  font-family: "Ubuntu";
+  color: #000;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+div, p, form, input, a, span, button {
+  box-sizing: border-box;
+}
+
+ul, li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 26px;
+  margin: 0;
+}
+
+.container {
+  width: 1350px;
+  margin: 0 auto;
+}
+
+.line {
+  color: #ff8949;
+  font-weight: bold;
+}
+
+.btn {
+  background-color: #ff8949;
+  height: 39px;
+  width: 172px;
+  border: none;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+}
+
+.add-info {
+  color: #9B9B9B;
+  display: flex;
+}
+.add-info__circle {
+  color: #fff;
+  background-color: #ff8949;
+  height: 18px;
+  width: 18px;
+  border-radius: 50px;
+  display: block;
+  text-align: center;
+}
+
+.add-orange {
+  color: #ff8949;
+}
+
+/*# sourceMappingURL=styles.css.map */
