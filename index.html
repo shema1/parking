@@ -82,24 +82,35 @@
           </h1>
           <form class="header-search">
             <div class="date-block">
-              <label for="date-block__arrival-date" class="date-block__label"
+              <label for="arrival-date" class="date-label"
                 >Date of Arrival</label
               >
               <div class="date-block__inputs">
-                <input type="date" name="arrival-date" class="date-picker" />
-                <select name="start-time" class="time-picker">
+                <input
+                  type="date"
+                  name="arrival-date"
+                  class="date-picker date-picker__header"
+                />
+                <select
+                  name="start-time"
+                  class=" time-picker time-picker__header"
+                >
                   <option value="1">1</option>
                   <option value="2">2</option>
                 </select>
               </div>
             </div>
             <div class="date-block">
-              <label for="date-block__departure-date" class="date-block__label"
+              <label for="date-block__departure-date" class="date-label"
                 >Departure Date</label
               >
               <div class="date-block__inputs">
-                <input type="date" name="departure-date" class="date-picker" />
-                <select name="end-time" class="time-picker">
+                <input
+                  type="date"
+                  name="departure-date"
+                  class="date-picker date-picker__header"
+                />
+                <select name="end-time" class="time-picker time-picker__header">
                   <option value="1">1</option>
                   <option value="2">2</option>
                 </select>
@@ -226,65 +237,96 @@
                 <h2 class="parking-name">Parking Samolot</h2>
                 <span class="parking-recommended">Polecany</span>
               </div>
-              <div class="parking-info__services">
-                <div class="parking-info__services-wraper">
-                  <ul class="services-list">
-                    <li class="services-list__item">
-                      <span class="services-list__line line">-</span>Ogrodzony
-                    </li>
-                    <li class="services-list__item">
-                      <span class="services-list__line line">-</span>Faktura VAT
-                    </li>
-                    <li class="services-list__item">
-                      <span class="services-list__line line">-</span>Monitoring
-                      24/7
-                    </li>
-                    <li class="services-list__item">
-                      <span class="services-list__line line">-</span>Darmowe
-                      Wi-Fi
-                    </li>
-                  </ul>
-                  <div class="transfer-block">
-                    <div class="transfer-info">
-                      <img
-                        class="transfer-info__img"
-                        src="./img/parking/path.png"
-                        alt="img"
-                      />
-                      <div class="transfer-info__wraper">
-                        <span class="info-title">6 km</span>
-                        <span class="info-text">Оdległość do lotniska</span>
-                      </div>
-                    </div>
-                    <div class="transfer-info">
-                      <img
-                        class="transfer-info__img"
-                        src="./img/parking/bus.png"
-                        alt="img"
-                      />
-                      <div class="transfer-info__wraper">
-                        <span class="info-title">9 min</span>
-                        <span class="info-text">Transfer na lotnisko</span>
-                      </div>
-                    </div>
+              <form class="parking-data">
+                <div class="date-wrapper">
+                  <div class="date-input">
+                    <label for="arrival-date" class="l">Data przyjazdu:</label>
+                    <input
+                      type="date"
+                      name="arrival-date"
+                      class="date-picker date-picker__parking"
+                    />
+                  </div>
+                  <div class="date-input">
+                    <label for="arrival-date" class="">Data wyjazdu:</label>
+                    <input
+                      type="date"
+                      name="arrival-date"
+                      class="date-picker date-picker__parking"
+                    />
                   </div>
                 </div>
-                <div class="parking-info__reservation">
-                  <div class="price-info">
-                    <span class="price-info__old">210zł</span>
-                    <span class="price-info__new">109zł</span>
-                    <span class="price-info__days">Za 7 dni</span>
-                    <a href="#" class="price-info__more">zobacz ceny za dni </a>
-                  </div>
-                  <button class="btn">
-                    Zarezerwować
-                  </button>
-                  <div class="add-info">
-                    <span class="line">-</span> Darmowa anulacja
-                    <span class="add-info__circle">i</span>
+                <div class="time-wrapper">
+                  <span class="duration">Godziny od i do:</span>
+                  <div class="time-input">
+                    <select
+                      name="start-time"
+                      class=" time-picker time-picker__parking"
+                    >
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                    </select>
+                    <select
+                      name="start-time"
+                      class=" time-picker time-picker__parking"
+                    >
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                    </select>
                   </div>
                 </div>
-              </div>
+                <div class="userData-wraper">
+                  <div class="user-data user-data__name">
+                    <label for="name" class="">Imię i nazwisko:</label>
+                    <input
+                      type="text"
+                      name="name"
+                      class="text-input"
+                    />
+                  </div>
+                  <div class="user-data ">
+                    <label for="name" class="">Numer rejestracyjny:</label>
+                    <input
+                      type="text"
+                      name="name"
+                      class="text-input"
+                    />
+                  </div>
+                  <div class="user-data ">
+                    <label for="name" class="">Liczba osób:</label>
+                    <input
+                      type="number"
+                      name="name"
+                      class="num-input"
+                    />
+                  </div>
+                  <div class="user-data ">
+                    <label for="child" class="">Liczba dzieci:</label>
+                    <input
+                      type="number"
+                      name="name"
+                      class="num-input"
+                    />
+                  </div>
+                  <div class="user-data ">
+                    <label for="tel" class="">Numer telefonu:</label>
+                    <input
+                      type="tel"
+                      name="tel"
+                      class="tel-input"
+                    />
+                  </div>
+                  <div class="user-data ">
+                    <label for="email" class="">E-mail:</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="email-input"
+                    />
+                  </div>
+                </div>
+
+              </form>
             </div>
           </div>
         </li>

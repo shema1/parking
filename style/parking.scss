@@ -188,3 +188,32 @@
       text-align:center;
     }
 }
+
+
+.parking-data{
+    display: flex;
+    flex-direction: column;
+}
+
+.date-wrapper,.time-input{
+  display: flex;
+}
+
+.time-wrapper,.user-data{
+    display: flex;
+    flex-direction: column;
+}
+
+.date-picker__parking,.time-picker__parking{
+    width: 300px;
+}
+
+.userData-wraper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.user-data__name{
+    width: 100%;
+}
+

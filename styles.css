@@ -108,15 +108,13 @@
   margin-top: 25px;
 }
 
-.date-picker {
+.date-picker__header {
   width: 385px;
-  height: 39px;
   margin-right: 15px;
 }
 
-.time-picker {
+.time-picker__header {
   width: 114px;
-  height: 39px;
 }
 
 input[type=date]::-webkit-calendar-picker-indicator {
@@ -308,6 +306,34 @@ input[type=date]::-webkit-calendar-picker-indicator {
   text-align: center;
 }
 
+.parking-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-wrapper, .time-input {
+  display: flex;
+}
+
+.time-wrapper, .user-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-picker__parking, .time-picker__parking {
+  width: 300px;
+}
+
+.userData-wraper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.user-data__name {
+  width: 100%;
+}
+
 body {
   font-family: "Ubuntu";
   color: #000;
@@ -373,6 +399,10 @@ h2 {
 
 .add-orange {
   color: #ff8949;
+}
+
+.date-picker, .time-picker, .text-input {
+  height: 40px;
 }
 
 /*# sourceMappingURL=styles.css.map */
