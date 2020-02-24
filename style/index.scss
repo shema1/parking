@@ -2,6 +2,7 @@
 @import './header.scss';
 @import'./parking.scss';
 @import './review.scss';
+@import './footer.scss';
 
 
 body {
@@ -10,20 +11,11 @@ body {
 	padding: 0;
 	margin: 0;
     font-size: 16px;
-    height: 10000px;
 }
 
 div, p, form, input, a, span, button {
 	box-sizing: border-box;
 }
-
-// p {
-// 	margin: 0;
-//     font-size: 14px;
-//     line-height: 1.25em;
-//     letter-spacing: 0.02em;
-//     font-weight: 300;
-// }
 
 ul, li {
 	display: block;
@@ -35,8 +27,14 @@ a{
 }
 
 h3{
-    font-weight: bold;
+    font-weight: 700;
     font-size: 26px;
+    margin: 0;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: 700;
     margin: 0;
 }
 
@@ -95,6 +93,10 @@ h3{
   .input:focus{
       border-color: $second-text-color;
       outline: none;
+  }
+
+  .d-flex{
+      display: flex;
   }
 
   
