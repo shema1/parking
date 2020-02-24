@@ -1,18 +1,16 @@
-.parking{
-    display: flex;
+.parking {
+  display: flex;
 }
-.parking-logo{
+.parking-logo {
+  display: flex;
+  flex-direction: column;
+  height: 1000px;
 
-    display: flex;
-    flex-direction: column;
-    height: 1000px;
-
-    &__text{
-        color: #808080;
-        transform: rotate(-90deg);
-        font-size: 50px;
-  
-    }
+  &__text {
+    color: #808080;
+    transform: rotate(-90deg);
+    font-size: 50px;
+  }
 }
 
 .parking-card {
@@ -35,39 +33,63 @@
   background-image: url(./img/parking/parking_card_1.png);
   display: flex;
   flex-direction: column;
-  &__header{
-      font-size: 20px;
-      color: #fff;
-      height: 56px;
+  &__header {
+    font-size: 20px;
+    color: #fff;
+    height: 56px;
     background-color: rgba($color: #221711, $alpha: 0.59);
     text-align: center;
     padding-top: 15px;
   }
-  &__footer{
-      height: 96px;
-      display: flex;
+  &__footer {
+    height: 96px;
+    display: flex;
     margin-top: auto;
     justify-content: space-around;
     align-items: flex-end;
     padding-bottom: 20px;
-    background: rgba(255,255,255,0);
-    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.41) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, rgba(0,0,0,0.41)));
-    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.41) 100%);
-    background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.41) 100%);
-    background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.41) 100%);
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.41) 100%);
+    background: rgba(255, 255, 255, 0);
+    background: -moz-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.41) 100%
+    );
+    background: -webkit-gradient(
+      left top,
+      left bottom,
+      color-stop(0%, rgba(255, 255, 255, 0)),
+      color-stop(100%, rgba(0, 0, 0, 0.41))
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.41) 100%
+    );
+    background: -o-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.41) 100%
+    );
+    background: -ms-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.41) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.41) 100%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0 );
   }
 }
 
-.parking-comments{
-    font-weight: 500;
-    color: #fff;
+.parking-comments {
+  font-weight: 500;
+  color: #fff;
 }
 .parking-info {
   width: 685px;
-  height: 351px;
   padding: 19px 28px 0;
 }
 
@@ -81,8 +103,8 @@
   padding-left: 13px;
 }
 
-.parking-name{
-    margin: 13px 0;
+.parking-name {
+  margin: 13px 0;
 }
 
 .parking-recommended {
@@ -136,7 +158,6 @@
     color: $second-text-color;
     text-decoration: underline;
     margin: 33px 0 18px;
-
   }
 }
 
@@ -149,9 +170,9 @@
 }
 
 .transfer-info {
-    display: flex;
-    margin-right: 36px;
-  }
+  display: flex;
+  margin-right: 36px;
+}
 .transfer-info__wraper {
   display: flex;
   flex-direction: column;
@@ -172,48 +193,91 @@
   font-weight: 300;
 }
 
+.add-info {
+  color: #9b9b9b;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  &__circle {
+    color: #fff;
+    background-color: $second-text-color;
+    height: 18px;
+    width: 18px;
+    border-radius: 50px;
+    display: block;
+    text-align: center;
+  }
+}
 
-.add-info{
-    color:#9B9B9B;
+.parking-card__form {
+  height: 581px;
+}
+
+.parking-data label {
+  color: #777777;
+  margin-bottom: 8px;
+  margin-left: 13px;
+}
+
+.userData {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 17px;
+}
+
+.end-time-input,
+.start-time-input,
+.end-date-input,
+.start-date-input,
+.tel-input,
+.user-data__email {
+  width: 300px;
+}
+.reg-num-input,
+.person-num-input,
+.child-num-input {
+  width: 190px;
+}
+
+.name-input {
+  width: 628px;
+}
+
+.parking-price__days {
+  margin: 15px;
+}
+
+.price-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 150px;
+  align-items: center;
+  &__item {
+    margin-bottom: 12px;
+  }
+  &__line {
+    margin-left: 10px;
+  }
+}
+
+
+.total{
+    margin-left: auto;
     display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-    &__circle{
-        color: #fff;
-      background-color: $second-text-color;
-      height: 18px;
-      width: 18px;
-      border-radius: 50px;
-      display: block;
-      text-align:center;
+    align-items: center;
+    &__price  {
+        font-size: 26px;
+    }
+
+    &__days{
+        color: #9B9B9B;
+        margin: 0 50px 0 25px;
     }
 }
-
-
-.parking-data{
-    display: flex;
-    flex-direction: column;
-}
-
-.date-wrapper,.time-input{
-  display: flex;
-}
-
-.time-wrapper,.user-data{
-    display: flex;
-    flex-direction: column;
-}
-
-.date-picker__parking,.time-picker__parking{
-    width: 300px;
-}
-
-.userData-wraper{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.user-data__name{
-    width: 100%;
-}
-

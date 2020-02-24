@@ -51,6 +51,14 @@ h2{
     font-weight: bold;
 }
 
+.orange{
+    color: $second-text-color;
+}
+
+.bold{
+    font-weight: 700;
+}
+
 .btn {
     background-color: $second-text-color;
     height: 39px;
@@ -79,7 +87,12 @@ h2{
     color: $second-text-color;
   }
 
-  .date-picker,.time-picker,.text-input{
+ .input{
     height: 40px;
-  
   }
+
+  .input:focus{
+      border-color: $second-text-color;
+      outline: none;
+  }
+

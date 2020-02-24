@@ -188,7 +188,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .parking-info {
   width: 685px;
-  height: 351px;
   padding: 19px 28px 0;
 }
 
@@ -291,7 +290,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .add-info {
-  color: #9B9B9B;
+  color: #9b9b9b;
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
@@ -306,32 +305,76 @@ input[type=date]::-webkit-calendar-picker-indicator {
   text-align: center;
 }
 
-.parking-data {
-  display: flex;
-  flex-direction: column;
+.parking-card__form {
+  height: 581px;
 }
 
-.date-wrapper, .time-input {
-  display: flex;
+.parking-data label {
+  color: #777777;
+  margin-bottom: 8px;
+  margin-left: 13px;
 }
 
-.time-wrapper, .user-data {
-  display: flex;
-  flex-direction: column;
-}
-
-.date-picker__parking, .time-picker__parking {
-  width: 300px;
-}
-
-.userData-wraper {
+.userData {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.user-data__name {
-  width: 100%;
+.user-data {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 17px;
+}
+
+.end-time-input,
+.start-time-input,
+.end-date-input,
+.start-date-input,
+.tel-input,
+.user-data__email {
+  width: 300px;
+}
+
+.reg-num-input,
+.person-num-input,
+.child-num-input {
+  width: 190px;
+}
+
+.name-input {
+  width: 628px;
+}
+
+.parking-price__days {
+  margin: 15px;
+}
+
+.price-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 150px;
+  align-items: center;
+}
+.price-list__item {
+  margin-bottom: 12px;
+}
+.price-list__line {
+  margin-left: 10px;
+}
+
+.total {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.total__price {
+  font-size: 26px;
+}
+.total__days {
+  color: #9B9B9B;
+  margin: 0 50px 0 25px;
 }
 
 body {
@@ -373,6 +416,14 @@ h2 {
   font-weight: bold;
 }
 
+.orange {
+  color: #ff8949;
+}
+
+.bold {
+  font-weight: 700;
+}
+
 .btn {
   background-color: #ff8949;
   height: 39px;
@@ -401,8 +452,13 @@ h2 {
   color: #ff8949;
 }
 
-.date-picker, .time-picker, .text-input {
+.input {
   height: 40px;
+}
+
+.input:focus {
+  border-color: #ff8949;
+  outline: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -89,12 +89,9 @@
                 <input
                   type="date"
                   name="arrival-date"
-                  class="date-picker date-picker__header"
+                  class="input date-picker__header"
                 />
-                <select
-                  name="start-time"
-                  class=" time-picker time-picker__header"
-                >
+                <select name="start-time" class="input time-picker__header">
                   <option value="1">1</option>
                   <option value="2">2</option>
                 </select>
@@ -108,9 +105,9 @@
                 <input
                   type="date"
                   name="departure-date"
-                  class="date-picker date-picker__header"
+                  class="input date-picker__header"
                 />
-                <select name="end-time" class="time-picker time-picker__header">
+                <select name="end-time" class="input time-picker__header">
                   <option value="1">1</option>
                   <option value="2">2</option>
                 </select>
@@ -218,114 +215,153 @@
           </div>
         </li>
         <li class="parking-list__item">
-          <div class="parking-card">
-            <div class="parking-img">
-              <div class="parking-img__header">
-                Zniżka - <span class="add-orange"> 50%</span>
+          <div class="parking-card parking-card__form">
+            <div class="parking-rating">
+              <div class="parking-img">
+                <div class="parking-img__header">
+                  Zniżka - <span class="add-orange"> 50%</span>
+                </div>
+                <div class="parking-img__footer">
+                  <div class="parking-stars">
+                    <img src="./img/parking/stars.png" alt="star" />
+                  </div>
+                  <div class="parking-comments">
+                    4.7 (1986 opinii)
+                  </div>
+                </div>
               </div>
-              <div class="parking-img__footer">
-                <div class="parking-stars">
-                  <img src="./img/parking/stars.png" alt="star" />
-                </div>
-                <div class="parking-comments">
-                  4.7 (1986 opinii)
-                </div>
+              <div class="parking-price">
+                <h2 class="parking-price__days">
+                  Сeny za dni:
+                </h2>
+                <ul class="price-list">
+                  <li class="price-list__item">
+                    <span class="price-list__line line">-</span>1 dzień
+                    <span class="orange bold">50zł</span>
+                  </li>
+                  <li class="price-list__item">
+                    <span class="price-list__line line">-</span>1 dzień
+                    <span class="orange bold">50zł</span>
+                  </li>
+                  <li class="price-list__item">
+                    <span class="price-list__line line">-</span>1 dzień
+                    <span class="orange bold">50zł</span>
+                  </li>
+                  <li class="price-list__item">
+                    <span class="price-list__line line">-</span>1 dzień
+                    <span class="orange bold">50zł</span>
+                  </li>
+                  <li class="price-list__item">
+                    <span class="price-list__line line">-</span>1 dzień
+                    <span class="orange bold">50zł</span>
+                  </li>
+                  <li class="price-list__item">
+                    <span class="price-list__line line">-</span>1 dzień
+                    <span class="orange bold">50zł</span>
+                  </li>
+                  <li class="price-list__item">
+                    <span class="price-list__line line">-</span>1 dzień
+                    <span class="orange bold">50zł</span>
+                  </li>
+                  <li class="price-list__item">
+                    <span class="price-list__line line">-</span>1 dzień
+                    <span class="orange bold">50zł</span>
+                  </li>
+                  <li class="price-list__item">
+                    <span class="price-list__line line">-</span>1 dzień
+                    <span class="orange bold">50zł</span>
+                  </li>
+                  <li class="price-list__item">
+                    <span class="price-list__line line">-</span>1 dzień
+                    <span class="orange bold">50zł</span>
+                  </li>
+                </ul>
               </div>
             </div>
+
             <div class="parking-info">
               <div class="parking-info__title">
                 <h2 class="parking-name">Parking Samolot</h2>
                 <span class="parking-recommended">Polecany</span>
               </div>
               <form class="parking-data">
-                <div class="date-wrapper">
-                  <div class="date-input">
-                    <label for="arrival-date" class="l">Data przyjazdu:</label>
+                <div class="userData">
+                  <div class="user-data user-data__start-date">
+                    <label for="start-date" class="l">Data przyjazdu:</label>
                     <input
                       type="date"
-                      name="arrival-date"
-                      class="date-picker date-picker__parking"
+                      name="start-date"
+                      class="start-date-input input"
                     />
                   </div>
-                  <div class="date-input">
-                    <label for="arrival-date" class="">Data wyjazdu:</label>
+                  <div class="user-data user-data__end-date">
+                    <label for="end-date" class="l">Data przyjazdu:</label>
                     <input
                       type="date"
-                      name="arrival-date"
-                      class="date-picker date-picker__parking"
+                      name="end-date"
+                      class="end-date-input input"
                     />
                   </div>
-                </div>
-                <div class="time-wrapper">
-                  <span class="duration">Godziny od i do:</span>
-                  <div class="time-input">
-                    <select
-                      name="start-time"
-                      class=" time-picker time-picker__parking"
-                    >
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                    </select>
-                    <select
-                      name="start-time"
-                      class=" time-picker time-picker__parking"
-                    >
+                  <div class="user-data user-data__start-time">
+                    <label for="start-time" class="">Godziny od :</label>
+                    <select name="start-time" class=" start-time-input input">
                       <option value="1">1</option>
                       <option value="2">2</option>
                     </select>
                   </div>
-                </div>
-                <div class="userData-wraper">
+                  <div class="user-data user-data__3nd-time">
+                    <label for="start-time" class="">do:</label>
+                    <select name="start-time" class=" end-time-input input">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                    </select>
+                  </div>
                   <div class="user-data user-data__name">
                     <label for="name" class="">Imię i nazwisko:</label>
+                    <input type="text" name="name" class="name-input input" />
+                  </div>
+                  <div class="user-data user-data__reg-num">
+                    <label for="reg-num" class="">Numer rejestracyjny:</label>
                     <input
                       type="text"
-                      name="name"
-                      class="text-input"
+                      name="reg-num"
+                      class="reg-num-input input"
                     />
                   </div>
-                  <div class="user-data ">
-                    <label for="name" class="">Numer rejestracyjny:</label>
-                    <input
-                      type="text"
-                      name="name"
-                      class="text-input"
-                    />
-                  </div>
-                  <div class="user-data ">
-                    <label for="name" class="">Liczba osób:</label>
+                  <div class="user-data user-data__person-num">
+                    <label for="person-num" class="">Liczba osób:</label>
                     <input
                       type="number"
-                      name="name"
-                      class="num-input"
+                      name="person-num"
+                      class="person-num-input input"
                     />
                   </div>
-                  <div class="user-data ">
-                    <label for="child" class="">Liczba dzieci:</label>
+                  <div class="user-data user-data__child-num ">
+                    <label for="child-num" class="">Liczba dzieci:</label>
                     <input
                       type="number"
-                      name="name"
-                      class="num-input"
+                      name="child-num"
+                      class="child-num-input input"
                     />
                   </div>
-                  <div class="user-data ">
+                  <div class="user-data user-data__tel ">
                     <label for="tel" class="">Numer telefonu:</label>
-                    <input
-                      type="tel"
-                      name="tel"
-                      class="tel-input"
-                    />
+                    <input type="tel" name="tel" class="tel-input input" />
                   </div>
-                  <div class="user-data ">
+                  <div class="user-data user-data__email">
                     <label for="email" class="">E-mail:</label>
                     <input
                       type="email"
                       name="email"
-                      class="email-input"
+                      class="email-input input"
                     />
                   </div>
+                  <div class="total">
+                    <span class="total__price orange bold">60zł</span>
+                    <span class="total__days">Za 3 dni</span>
+                  </div>
+                  <button class="btn" type="submit">Zarezerwować</button>
                 </div>
-
               </form>
             </div>
           </div>
