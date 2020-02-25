@@ -1,12 +1,13 @@
 $lg:1400px;
+$tb:800px;
 @mixin for-mobile {
-    @media screen and (max-width: $lg) {
+    @media screen and (max-width: $tb) {
         @content
     }
 }
 
 @mixin for-tablet {
-    @media screen and (max-width: $lg -1) {
+    @media screen and (max-width: $lg) {
         @content
     }
 }
