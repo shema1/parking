@@ -126,6 +126,11 @@
     display: block;
     margin-left: 10px;
   }
+  &__mobile{
+    @include for-mobile {
+      margin-bottom: 25px;
+    }
+  }
 }
 
 .header-intro {
@@ -165,6 +170,7 @@
     height: 187px;
     padding: 20px 40px;
     width: 100%;
+    margin: 15px 0 0;
   }
 }
 
@@ -211,4 +217,5 @@
   background: #fff
     url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
     97% 50% no-repeat;
+    border: none;
 }

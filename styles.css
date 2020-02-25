@@ -131,6 +131,11 @@
   display: block;
   margin-left: 10px;
 }
+@media screen and (max-width: 1400px) {
+  .header-info__mobile {
+    margin-bottom: 25px;
+  }
+}
 
 .header-intro {
   display: flex;
@@ -174,6 +179,7 @@
     height: 187px;
     padding: 20px 40px;
     width: 100%;
+    margin: 15px 0 0;
   }
 }
 
@@ -226,6 +232,7 @@
 
 [type=date] {
   background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+  border: none;
 }
 
 .parking {
@@ -1084,6 +1091,7 @@ h4 {
 
 .input {
   height: 40px;
+  border: 1px solid #DBDBDB;
 }
 
 .input:focus {
