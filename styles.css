@@ -123,17 +123,29 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .parking {
   display: flex;
+  padding: 40px 0;
 }
 
 .parking-logo {
   display: flex;
+  margin-right: 15px;
   flex-direction: column;
-  height: 1000px;
+  position: relative;
+}
+.parking-logo__img {
+  align-self: start;
 }
 .parking-logo__text {
+  position: absolute;
+  display: block;
   color: #808080;
   transform: rotate(-90deg);
-  font-size: 50px;
+  width: 1820px;
+  font-size: 119px;
+  margin: 0;
+  left: -800px;
+  top: 1250px;
+  opacity: 0.5;
 }
 
 .parking-card {
@@ -150,11 +162,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .parking-img {
   width: 395px;
   height: 351px;
-  background-image: url(./img/parking/parking_card_1.png);
   display: flex;
   flex-direction: column;
+  position: relative;
 }
-.parking-img__header {
+
+.overlay-img {
+  position: absolute;
+  height: 351px;
+  width: 395px;
+}
+.overlay-img__header {
   font-size: 20px;
   color: #fff;
   height: 56px;
@@ -162,24 +180,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
   text-align: center;
   padding-top: 15px;
 }
-.parking-img__footer {
-  height: 96px;
+.overlay-img__footer {
+  height: 100px;
   display: flex;
-  margin-top: auto;
+  margin-top: 195px;
   justify-content: space-around;
   align-items: flex-end;
   padding-bottom: 20px;
-  background: rgba(255, 255, 255, 0);
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.41) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 0.41)));
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.41) 100%);
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.41) 100%);
-  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.41) 100%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.41) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#000000", GradientType=0 );
+  background: linear-gradient(0deg, #0000007a, #524f4f00);
 }
 
-.parking-comments {
+.comment-text {
   font-weight: 500;
   color: #fff;
 }
@@ -633,22 +644,8 @@ h4 {
   font-size: 16px;
 }
 
-.add-info {
-  color: #9B9B9B;
-  display: flex;
-}
-.add-info__circle {
-  color: #fff;
-  background-color: #ff8949;
-  height: 18px;
-  width: 18px;
-  border-radius: 50px;
-  display: block;
-  text-align: center;
-}
-
-.add-orange {
-  color: #ff8949;
+.non-active {
+  opacity: 30%;
 }
 
 .input {
