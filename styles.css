@@ -1,12 +1,20 @@
 .header-menu {
-  display: flex;
   padding: 26px 0;
+  display: flex;
+  flex-direction: row;
 }
 .header-menu__logo-link {
   font-size: 22px;
   color: #3e4042;
   text-transform: uppercase;
   font-weight: bold;
+}
+@media screen and (max-width: 1000px) {
+  .header-menu__logo-link {
+    font-size: 19px;
+    width: 111px;
+    display: block;
+  }
 }
 .header-menu__link_color {
   color: #ff8949;
@@ -19,18 +27,40 @@
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 1000px) {
+  .header-nav__list {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
 .header-nav__item {
   margin-left: 30px;
+}
+@media screen and (max-width: 1000px) {
+  .header-nav__item:first-child {
+    display: none;
+  }
 }
 .header-nav__link {
   color: #3e4042;
   font-size: 16px;
   font-weight: 500;
 }
+@media screen and (max-width: 1000px) {
+  .header-nav__link {
+    font-size: 12px;
+  }
+}
 .header-nav__link_phone {
   display: flex;
   font-size: 20px;
   font-weight: bold;
+}
+@media screen and (max-width: 1000px) {
+  .header-nav__link_phone {
+    font-size: 14px;
+    margin-top: 10px;
+  }
 }
 .header-nav__phone-img {
   margin-right: 15px;
@@ -38,7 +68,17 @@
 
 .header-parking {
   background: url(./img/header/header_cars.png) no-repeat top center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
   height: 490px;
+}
+@media screen and (max-width: 1000px) {
+  .header-parking {
+    flex-direction: column-reverse;
+    height: 460px;
+  }
 }
 
 .header-info {
@@ -49,12 +89,32 @@
   font-size: 20px;
   color: #fff;
 }
+@media screen and (max-width: 1000px) {
+  .header-info {
+    font-size: 12px;
+  }
+}
 .header-info__menu {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 1000px) {
+  .header-info__menu {
+    height: 80px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: end;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header-info__item {
+    width: 110px;
+  }
+}
 .header-info__link {
   color: #fff;
+  display: flex;
+  margin-top: 9px;
 }
 .header-info__line {
   color: #ff8949;
@@ -67,16 +127,32 @@
 .header-info__bold {
   font-weight: bold;
 }
+.header-info__text {
+  display: block;
+  margin-left: 10px;
+}
 
 .header-intro {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width: 1000px) {
+  .header-intro {
+    margin: 0;
+  }
+}
 .header-intro__title {
   color: #fff;
   font-size: 76px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 1000px) {
+  .header-intro__title {
+    width: 276px;
+    font-size: 25px;
+    text-align: center;
+  }
 }
 .header-intro__title-color {
   color: #ff8949;
@@ -86,10 +162,19 @@
   width: 100%;
   background-color: #fff;
   height: 120px;
+  width: 1355px;
   display: flex;
   align-items: center;
   padding: 0 40px;
   margin-bottom: 41px;
+}
+@media screen and (max-width: 1000px) {
+  .header-search {
+    flex-direction: column;
+    height: 187px;
+    padding: 20px 40px;
+    width: 100%;
+  }
 }
 
 .date-block input select {
@@ -100,6 +185,12 @@
   color: #3e4042;
   font-size: 16px;
   margin-right: 30px;
+  font-weight: 500;
+}
+@media screen and (max-width: 1000px) {
+  .date-block {
+    margin: 0;
+  }
 }
 .date-block__inputs {
   margin-top: 10px;
@@ -107,18 +198,34 @@
 .date-block__btn {
   margin-top: 25px;
 }
+@media screen and (max-width: 1000px) {
+  .date-block__btn {
+    display: none;
+  }
+}
 
 .date-picker__header {
   width: 385px;
   margin-right: 15px;
 }
+@media screen and (max-width: 1000px) {
+  .date-picker__header {
+    width: 176px;
+    margin: 0;
+  }
+}
 
 .time-picker__header {
   width: 114px;
 }
+@media screen and (max-width: 1000px) {
+  .time-picker__header {
+    width: 105px;
+  }
+}
 
-input[type=date]::-webkit-calendar-picker-indicator {
-  background-image: url(./img/header/calendar.png);
+[type=date] {
+  background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
 }
 
 .parking {
@@ -131,6 +238,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin-right: 15px;
   flex-direction: column;
   position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .parking-logo {
+    display: none;
+  }
 }
 .parking-logo__img {
   align-self: start;
@@ -154,6 +266,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: flex;
   box-shadow: 6px 3px 10px -6px #5f6286;
 }
+@media screen and (max-width: 1000px) {
+  .parking-card {
+    flex-direction: column;
+    height: 720px;
+    width: 305px;
+  }
+}
 
 .parking-list__item {
   margin-bottom: 20px;
@@ -166,11 +285,28 @@ input[type=date]::-webkit-calendar-picker-indicator {
   flex-direction: column;
   position: relative;
 }
+@media screen and (max-width: 1000px) {
+  .parking-img {
+    width: 300px;
+    height: 220px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .parking-img__photo {
+    height: inherit;
+  }
+}
 
 .overlay-img {
   position: absolute;
   height: 351px;
   width: 395px;
+}
+@media screen and (max-width: 1000px) {
+  .overlay-img {
+    width: 300px;
+    height: 220px;
+  }
 }
 .overlay-img__header {
   font-size: 20px;
@@ -189,6 +325,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding-bottom: 20px;
   background: linear-gradient(0deg, #0000007a, #524f4f00);
 }
+@media screen and (max-width: 1000px) {
+  .overlay-img__footer {
+    margin-top: 65px;
+  }
+}
 
 .comment-text {
   font-weight: 500;
@@ -197,7 +338,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .parking-info {
   width: 685px;
-  padding: 19px 28px 0;
+  padding: 20px 28px 0;
+}
+@media screen and (max-width: 1000px) {
+  .parking-info {
+    width: inherit;
+    padding: 0 20px;
+  }
 }
 
 .parking-info__title {
@@ -209,9 +356,20 @@ input[type=date]::-webkit-calendar-picker-indicator {
   position: relative;
   padding-left: 13px;
 }
+@media screen and (max-width: 1000px) {
+  .parking-info__title {
+    width: 160px;
+    padding: 0;
+  }
+}
 
 .parking-name {
   margin: 13px 0;
+}
+@media screen and (max-width: 1000px) {
+  .parking-name {
+    font-size: 20px;
+  }
 }
 
 .parking-recommended {
@@ -225,9 +383,20 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 5px 0;
   right: -72px;
 }
+@media screen and (max-width: 1000px) {
+  .parking-recommended {
+    right: -119px;
+  }
+}
 
 .services-list {
   margin-bottom: 70px;
+}
+@media screen and (max-width: 1000px) {
+  .services-list {
+    border-bottom: 1px solid #F0F0F0;
+    margin-bottom: 10px;
+  }
 }
 .services-list__item {
   margin-bottom: 12px;
@@ -241,11 +410,24 @@ input[type=date]::-webkit-calendar-picker-indicator {
   justify-content: space-between;
   padding: 17px 0 0 13px;
 }
+@media screen and (max-width: 1000px) {
+  .parking-info__services {
+    flex-direction: column;
+  }
+}
 
 .price-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (max-width: 1000px) {
+  .price-info {
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    margin-bottom: 15px;
+  }
 }
 .price-info__old {
   font-size: 18px;
@@ -264,18 +446,40 @@ input[type=date]::-webkit-calendar-picker-indicator {
   text-decoration: underline;
   margin: 33px 0 18px;
 }
+@media screen and (max-width: 1000px) {
+  .price-info__more {
+    margin: 15px 0;
+  }
+}
 
 .parking-info__reservation {
   margin-top: 30px;
+}
+@media screen and (max-width: 1000px) {
+  .parking-info__reservation {
+    margin: 0;
+    text-align: center;
+  }
 }
 
 .transfer-block {
   display: flex;
 }
+@media screen and (max-width: 1000px) {
+  .transfer-block {
+    flex-direction: column;
+    border-bottom: 1px solid #F0F0F0;
+  }
+}
 
 .transfer-info {
   display: flex;
   margin-right: 36px;
+}
+@media screen and (max-width: 1000px) {
+  .transfer-info {
+    margin-bottom: 10px;
+  }
 }
 
 .transfer-info__wraper {
@@ -304,6 +508,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
   justify-content: space-between;
   margin-top: 15px;
 }
+@media screen and (max-width: 1000px) {
+  .add-info {
+    width: 160px;
+    margin: 10px auto;
+  }
+}
 .add-info__circle {
   color: #fff;
   background-color: #ff8949;
@@ -316,6 +526,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .parking-card__form {
   height: 581px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+@media screen and (max-width: 1000px) {
+  .parking-card__form {
+    flex-wrap: nowrap;
+    height: 1280px;
+  }
 }
 
 .parking-data label {
@@ -344,19 +562,60 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .user-data__email {
   width: 300px;
 }
+@media screen and (max-width: 1000px) {
+  .end-time-input,
+.start-time-input,
+.end-date-input,
+.start-date-input,
+.tel-input,
+.user-data__email {
+    width: 265px;
+  }
+}
 
 .reg-num-input,
 .person-num-input,
 .child-num-input {
   width: 190px;
 }
+@media screen and (max-width: 1000px) {
+  .reg-num-input,
+.person-num-input,
+.child-num-input {
+    width: 265px;
+  }
+}
 
 .name-input {
   width: 628px;
 }
+@media screen and (max-width: 1000px) {
+  .name-input {
+    width: 265px;
+  }
+}
+
+.end-time-input,
+.start-time-input {
+  width: 124px;
+}
+
+.parking-price {
+  order: 0;
+}
+@media screen and (max-width: 1000px) {
+  .parking-price {
+    order: 1;
+  }
+}
 
 .parking-price__days {
   margin: 15px;
+}
+@media screen and (max-width: 1000px) {
+  .parking-price__days {
+    width: 100%;
+  }
 }
 
 .price-list {
@@ -378,6 +637,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 1000px) {
+  .total {
+    width: 250px;
+  }
+}
 .total__price {
   font-size: 26px;
 }
@@ -385,10 +649,20 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: #9B9B9B;
   margin: 0 50px 0 25px;
 }
+@media screen and (max-width: 1000px) {
+  .total__days {
+    display: none;
+  }
+}
 
 .review {
   background-color: #F4F4F4;
   padding: 70px 0 50px;
+}
+@media screen and (max-width: 1000px) {
+  .review {
+    display: none;
+  }
 }
 
 .review-title {
@@ -473,6 +747,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-color: #3E4042;
   color: #fff;
   padding: 50px 0 0;
+}
+@media screen and (max-width: 1000px) {
+  .footer {
+    display: none;
+  }
 }
 
 .contacts {
@@ -582,19 +861,94 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 24px;
 }
 
+.popup-reservation, .popup-price {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #0b1724ab;
+}
+
+.popup__close {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 16px;
+  height: 16px;
+  font-size: 20px;
+  align-self: flex-end;
+}
+
+.reservation-block {
+  left: 38%;
+  top: 40%;
+  width: 416px;
+  height: 227px;
+  align-items: center;
+}
+.reservation-block__message {
+  font-size: 29px;
+  width: 314px;
+  height: 98px;
+  text-align: center;
+}
+.reservation-block__done {
+  height: 53px;
+  width: 53px;
+  border-radius: 50px;
+  border: 2px solid #18A75A;
+  text-align: center;
+  line-height: 55px;
+}
+
+.parking-price__popup {
+  width: 416px;
+  height: 341px;
+  left: 40%;
+  top: 35%;
+}
+
+.parking-price__title {
+  font-size: 29px;
+  width: 100%;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.popup {
+  background-color: #fff;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
 body {
   font-family: "Ubuntu";
   color: #3e4042;
   padding: 0;
   margin: 0;
   font-size: 16px;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 1000px) {
+  body {
+    font-size: 14px;
+  }
 }
 
-div, p, form, input, a, span, button {
+div,
+p,
+form,
+input,
+a,
+span,
+button {
   box-sizing: border-box;
 }
 
-ul, li {
+ul,
+li {
   display: block;
   padding: 0;
   margin: 0;
@@ -619,6 +973,11 @@ h4 {
 .container {
   width: 1350px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 300px;
+  }
 }
 
 .line {
@@ -659,6 +1018,10 @@ h4 {
 
 .d-flex {
   display: flex;
+}
+
+.hide {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

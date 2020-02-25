@@ -1,90 +1,104 @@
-@import './variables.scss';
-@import './header.scss';
-@import'./parking.scss';
-@import './review.scss';
-@import './footer.scss';
-
+@import "./variables.scss";
+@import "./breakpoints.scss";
+@import "./header.scss";
+@import "./parking.scss";
+@import "./review.scss";
+@import "./footer.scss";
+@import "./popup.scss";
 
 body {
-	font-family: 'Ubuntu', ;
-	color: $main-text-color;
-	padding: 0;
-	margin: 0;
-    font-size: 16px;
+  font-family: "Ubuntu";
+  color: $main-text-color;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  overflow-x: hidden;
+  @include for-mobile {
+    font-size: 14px;
+  }
 }
 
-div, p, form, input, a, span, button {
-	box-sizing: border-box;
+div,
+p,
+form,
+input,
+a,
+span,
+button {
+  box-sizing: border-box;
 }
 
-ul, li {
-	display: block;
-	padding: 0;
-	margin: 0;
+ul,
+li {
+  display: block;
+  padding: 0;
+  margin: 0;
 }
-a{
-    text-decoration: none;
-}
-
-h3{
-    font-weight: 700;
-    font-size: 26px;
-    margin: 0;
+a {
+  text-decoration: none;
 }
 
-h4{
-    font-size: 20px;
-    font-weight: 700;
-    margin: 0;
+h3 {
+  font-weight: 700;
+  font-size: 26px;
+  margin: 0;
 }
 
-
-
-.container{
-    width: 1350px;
-    margin: 0 auto;
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
 }
 
-.line{
-    color: $second-text-color;
-    font-weight: bold;
+.container {
+  width: 1350px;
+  margin: 0 auto;
+
+  @include for-mobile {
+    width: 300px;
+  }
 }
 
-.orange{
-    color: $second-text-color;
+.line {
+  color: $second-text-color;
+  font-weight: bold;
 }
 
-.bold{
-    font-weight: 700;
+.orange {
+  color: $second-text-color;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .btn {
-    background-color: $second-text-color;
-    height: 39px;
-    width: 172px;
-    border: none;
-    font-weight: bold;
-    color: #fff;
-    font-size: 16px;
-  }
+  background-color: $second-text-color;
+  height: 39px;
+  width: 172px;
+  border: none;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+}
 
- .non-active{
-      opacity: 30%;
-  }
+.non-active {
+  opacity: 30%;
+}
 
+.input {
+  height: 40px;
+}
 
- .input{
-    height: 40px;
-  }
+.input:focus {
+  border-color: $second-text-color;
+  outline: none;
+}
 
-  .input:focus{
-      border-color: $second-text-color;
-      outline: none;
-  }
+.d-flex {
+  display: flex;
+}
 
-  .d-flex{
-      display: flex;
-  }
-
-  
-
+.hide {
+  display: none;
+}

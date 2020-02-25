@@ -1,14 +1,19 @@
-.header{
-   
-}
 .header-menu {
-  display: flex;
   padding: 26px 0;
+  display: flex;
+  flex-direction: row;
+  @include for-mobile {
+  }
   &__logo-link {
     font-size: 22px;
     color: $main-text-color;
     text-transform: uppercase;
     font-weight: bold;
+    @include for-mobile {
+      font-size: 19px;
+      width: 111px;
+      display: block;
+    }
   }
 
   &__link_color {
@@ -22,22 +27,38 @@
   &__list {
     display: flex;
     align-items: center;
+    @include for-mobile {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
   }
-
   &__item {
     margin-left: 30px;
+  }
+
+  &__item:first-child {
+    @include for-mobile {
+      display: none;
+    }
   }
 
   &__link {
     color: $main-text-color;
     font-size: 16px;
     font-weight: 500;
+    @include for-mobile {
+      font-size: 12px;
+    }
   }
 
   &__link_phone {
     display: flex;
     font-size: 20px;
     font-weight: bold;
+    @include for-mobile {
+      font-size: 14px;
+      margin-top: 10px;
+    }
   }
   &__phone-img {
     margin-right: 15px;
@@ -45,9 +66,16 @@
 }
 
 .header-parking {
-  background: url(./img/header/header_cars.png)no-repeat top center/cover ;
+  background: url(./img/header/header_cars.png) no-repeat top center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
   height: 490px;
-
+  @include for-mobile {
+    flex-direction: column-reverse;
+    height: 460px;
+  }
 }
 
 .header-info {
@@ -57,36 +85,66 @@
   align-items: center;
   font-size: 20px;
   color: #fff;
+  @include for-mobile {
+    font-size: 12px;
+  }
+
   &__menu {
     display: flex;
     justify-content: space-between;
+    @include for-mobile {
+      height: 80px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: end;
+    }
+  }
+  &__item {
+    @include for-mobile {
+      width: 110px;
+    }
   }
 
   &__link {
     color: #fff;
+    display: flex;
+    margin-top: 9px;
   }
   &__line {
     color: $second-text-color;
   }
-  &__wraper{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  &__wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  &__bold{
+  &__bold {
     font-weight: bold;
-}
+  }
+
+  &__text{
+    display: block;
+    margin-left: 10px;
+  }
 }
 
 .header-intro {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  @include for-mobile {
+    margin: 0;
+  }
+
   &__title {
     color: #fff;
     font-size: 76px;
     text-transform: uppercase;
+    @include for-mobile {
+      width: 276px;
+      font-size: 25px;
+      text-align: center;
+    }
   }
   &__title-color {
     color: $second-text-color;
@@ -97,11 +155,17 @@
   width: 100%;
   background-color: #fff;
   height: 120px;
+  width: 1355px;
   display: flex;
   align-items: center;
   padding: 0 40px;
   margin-bottom: 41px;
-
+  @include for-mobile {
+    flex-direction: column;
+    height: 187px;
+    padding: 20px 40px;
+    width: 100%;
+  }
 }
 
 .date-block input select {
@@ -112,26 +176,39 @@
   color: $main-text-color;
   font-size: 16px;
   margin-right: 30px;
- &__inputs{
-     margin-top: 10px;
- }
- &__btn{
-     margin-top: 25px;
- }
+  font-weight: 500;
+  @include for-mobile {
+    margin: 0;
+  }
+  &__inputs {
+    margin-top: 10px;
+  }
+  &__btn {
+    margin-top: 25px;
+    @include for-mobile {
+      display: none;
+    }
+  }
 }
 
 .date-picker__header {
   width: 385px;
   margin-right: 15px;
+  @include for-mobile {
+    width: 176px;
+    margin: 0;
+  }
 }
 
 .time-picker__header {
   width: 114px;
-
+  @include for-mobile {
+    width: 105px;
+  }
 }
 
-input[type="date"] {
-  &::-webkit-calendar-picker-indicator {
-    background-image: url(./img/header/calendar.png);
-  }
+[type="date"] {
+  background: #fff
+    url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
+    97% 50% no-repeat;
 }

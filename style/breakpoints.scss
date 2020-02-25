@@ -1,0 +1,7 @@
+$lg:1000px;
+@mixin for-mobile {
+    @media screen and (max-width: $lg) {
+        @content
+    }
+}
+

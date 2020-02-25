@@ -1,6 +1,9 @@
 .review{
     background-color: #F4F4F4;
     padding: 70px 0 50px;
+    @include for-mobile {
+        display: none;
+        }
 }
 
 .review-title{

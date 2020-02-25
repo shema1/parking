@@ -2,6 +2,10 @@
   background-color: $main-footer-background-color;
   color: #fff;
   padding: 50px 0 0;
+
+  @include for-mobile {
+    display: none;
+    }
 }
 
 .contacts {

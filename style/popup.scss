@@ -1,0 +1,67 @@
+.popup-reservation, .popup-price{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: $popup-background;
+
+}
+
+.popup__close{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 16px;
+    height: 16px;
+    font-size: 20px;
+    align-self: flex-end;
+}
+
+.reservation-block{
+    left: 38%;
+    top: 40%;
+    width: 416px;
+    height: 227px;
+    align-items: center;
+   
+
+    &__message{
+        font-size: 29px;
+        width: 314px;
+        height: 98px;
+        text-align: center;
+    }
+
+    &__done{
+        height: 53px;
+        width: 53px;
+        border-radius: 50px;
+        border: 2px solid #18A75A;
+       text-align: center;
+       line-height: 55px;
+    }
+}
+
+.parking-price__popup{
+    width: 416px;
+    height: 341px;
+    left: 40%;
+    top: 35%;
+ 
+}
+
+.parking-price__title{
+    font-size: 29px;
+    width: 100%;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+
+.popup{
+    background-color: #fff;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}

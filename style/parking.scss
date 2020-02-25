@@ -7,6 +7,9 @@
   margin-right: 15px;
   flex-direction: column;
   position: relative;
+  @include for-mobile {
+   display: none;
+  }
 
 
   &__img{
@@ -32,6 +35,11 @@
   height: 351px;
   display: flex;
   box-shadow: 6px 3px 10px -6px rgba(95, 98, 134, 1);
+  @include for-mobile {
+    flex-direction: column;
+    height: 720px;
+    width: 305px;
+   }
 }
 
 .parking-list {
@@ -45,6 +53,17 @@
   display: flex;
   flex-direction: column;
   position: relative;
+
+  @include for-mobile {
+    width: 300px;
+    height: 220px;
+   }
+
+   &__photo{
+    @include for-mobile {
+      height: inherit
+     }
+  }
  
 }
 
@@ -52,6 +71,10 @@
   position: absolute;
   height: 351px;
   width: 395px;
+  @include for-mobile {
+    width: 300px;
+    height: 220px;
+   }
   &__header {
     font-size: 20px;
     color: #fff;
@@ -60,6 +83,7 @@
     text-align: center;
     padding-top: 15px;
   }
+  
   &__footer {
     height: 100px;
     display: flex;
@@ -68,6 +92,9 @@
     align-items: flex-end;
     padding-bottom: 20px;
     background: linear-gradient(0deg, #0000007a, #524f4f00);
+    @include for-mobile {
+      margin-top: 65px;
+     }
   }
 }
 .comment-text {
@@ -76,7 +103,11 @@
 }
 .parking-info {
   width: 685px;
-  padding: 19px 28px 0;
+  padding: 20px 28px 0;
+  @include for-mobile {
+    width: inherit;
+    padding: 0 20px;
+   }
 }
 
 .parking-info__title {
@@ -87,10 +118,17 @@
   width: 586px;
   position: relative;
   padding-left: 13px;
+  @include for-mobile {
+    width:  160px;
+    padding: 0;
+   }
 }
 
 .parking-name {
   margin: 13px 0;
+  @include for-mobile {
+    font-size: 20px;
+   }
 }
 
 .parking-recommended {
@@ -103,10 +141,18 @@
   clip-path: polygon(100% -600%, 0 100%, 100% 100%);
   padding: 5px 0;
   right: -72px;
+  @include for-mobile {
+    right: -119px;
+   }
 }
 
 .services-list {
+
   margin-bottom: 70px;
+  @include for-mobile {
+    border-bottom: 1px solid #F0F0F0;
+    margin-bottom: 10px;
+   }
   &__item {
     margin-bottom: 12px;
   }
@@ -119,13 +165,22 @@
   display: flex;
   justify-content: space-between;
   padding: 17px 0 0 13px;
+  @include for-mobile {
+    flex-direction: column;
+   }
 }
 
 .price-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  
+  @include for-mobile {
+    flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
+  margin-bottom: 15px;
+   }
   &__old {
     font-size: 18px;
     text-decoration: line-through;
@@ -144,20 +199,34 @@
     color: $second-text-color;
     text-decoration: underline;
     margin: 33px 0 18px;
+    @include for-mobile {
+      margin: 15px 0;
+     }
   }
 }
 
 .parking-info__reservation {
   margin-top: 30px;
+  @include for-mobile {
+    margin: 0;
+    text-align: center;
+   }
 }
 
 .transfer-block {
   display: flex;
+  @include for-mobile {
+    flex-direction: column;
+    border-bottom: 1px solid #F0F0F0;
+   }
 }
 
 .transfer-info {
   display: flex;
   margin-right: 36px;
+  @include for-mobile {
+   margin-bottom: 10px;
+   }
 }
 .transfer-info__wraper {
   display: flex;
@@ -184,6 +253,10 @@
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
+  @include for-mobile {
+    width: 160px;
+    margin: 10px auto;
+   }
   &__circle {
     color: #fff;
     background-color: $second-text-color;
@@ -197,6 +270,12 @@
 
 .parking-card__form {
   height: 581px;
+  flex-wrap: wrap;
+    flex-direction: column;
+    @include for-mobile {
+     flex-wrap: nowrap;
+     height: 1280px;
+     }
 }
 
 .parking-data label {
@@ -224,19 +303,41 @@
 .tel-input,
 .user-data__email {
   width: 300px;
+  @include for-mobile {
+   width: 265px;
+   }
 }
 .reg-num-input,
 .person-num-input,
 .child-num-input {
   width: 190px;
+  @include for-mobile {
+    width: 265px;
+    }
 }
 
 .name-input {
   width: 628px;
+  @include for-mobile {
+    width: 265px;
+    }
 }
 
+.end-time-input,
+.start-time-input{
+  width: 124px;
+}
+.parking-price{
+  order: 0;
+  @include for-mobile {
+    order: 1;
+    }
+}
 .parking-price__days {
   margin: 15px;
+  @include for-mobile {
+    width: 100%;
+    }
 }
 
 .price-list {
@@ -258,6 +359,9 @@
     margin-left: auto;
     display: flex;
     align-items: center;
+    @include for-mobile {
+      width: 250px;
+      }
     &__price  {
         font-size: 26px;
     }
@@ -265,5 +369,8 @@
     &__days{
         color: #9B9B9B;
         margin: 0 50px 0 25px;
+        @include for-mobile {
+          display: none;
+          }
     }
 }
