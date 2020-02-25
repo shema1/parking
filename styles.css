@@ -661,13 +661,19 @@
 }
 @media screen and (max-width: 1000px) {
   .review {
-    display: none;
+    padding: 20px 0;
   }
 }
 
 .review-title {
   font-size: 50px;
   margin-right: 690px;
+}
+@media screen and (max-width: 1000px) {
+  .review-title {
+    font-size: 30px;
+    margin: 20px auto;
+  }
 }
 
 .comments {
@@ -678,11 +684,24 @@
   padding: 23px 50px;
   box-shadow: 6px 3px 10px -6px #5f6286;
 }
+@media screen and (max-width: 1000px) {
+  .comments {
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+  }
+}
 .comments__header {
   display: flex;
-  border-bottom: 1px solid #707070;
+  border-bottom: 1px solid #F0F0F0;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (max-width: 1000px) {
+  .comments__header {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .comments__user-info {
   display: flex;
@@ -691,12 +710,29 @@
 .comments__username {
   font-size: 26px;
 }
+@media screen and (max-width: 1000px) {
+  .comments__username {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+}
 .comments__text {
   margin-top: 15px;
 }
 .comments__data {
   display: block;
   text-align: right;
+  color: #9B9B9B;
+}
+@media screen and (max-width: 1000px) {
+  .comments__parking-name {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .comments__rating {
+    margin-bottom: 20px;
+  }
 }
 
 .review-control {
@@ -713,6 +749,11 @@
 
 .slider-arrow {
   margin-right: 45px;
+}
+@media screen and (max-width: 1000px) {
+  .slider-arrow {
+    display: none;
+  }
 }
 
 .arrow-size {
@@ -738,6 +779,11 @@
   margin-left: 780px;
   margin-top: 25px;
 }
+@media screen and (max-width: 1000px) {
+  .slider-point {
+    margin: 20px auto;
+  }
+}
 
 .active-point {
   background-color: #ff8949;
@@ -748,9 +794,13 @@
   color: #fff;
   padding: 50px 0 0;
 }
+
+.footer-wraper {
+  display: flex;
+}
 @media screen and (max-width: 1000px) {
-  .footer {
-    display: none;
+  .footer-wraper {
+    flex-direction: column;
   }
 }
 
@@ -781,6 +831,11 @@
 .navigation {
   margin: 0 230px 0 150px;
 }
+@media screen and (max-width: 1000px) {
+  .navigation {
+    margin: 40px 0;
+  }
+}
 
 .navigation-list__item {
   margin-bottom: 5px;
@@ -795,6 +850,11 @@
 }
 .info__text {
   margin: 0;
+}
+@media screen and (max-width: 1000px) {
+  .info__text {
+    width: 300px;
+  }
 }
 
 .footer-links {
@@ -817,8 +877,13 @@
 .social-links {
   display: flex;
 }
+@media screen and (max-width: 1000px) {
+  .social-links {
+    margin-bottom: 30px;
+  }
+}
 
-.social-links__title {
+.social-links__title, .payment-title {
   text-transform: uppercase;
   margin-right: 20px;
 }
@@ -834,6 +899,11 @@
 .payment {
   display: flex;
   margin-left: 550px;
+}
+@media screen and (max-width: 1000px) {
+  .payment {
+    margin: 0;
+  }
 }
 
 .payment-title {

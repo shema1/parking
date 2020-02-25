@@ -3,8 +3,12 @@
   color: #fff;
   padding: 50px 0 0;
 
+}
+
+.footer-wraper{
+  display: flex;
   @include for-mobile {
-    display: none;
+    flex-direction: column;
     }
 }
 
@@ -33,6 +37,9 @@
 
 .navigation {
   margin: 0 230px 0 150px;
+  @include for-mobile {
+    margin: 40px 0
+    }
 }
 
 .navigation-list {
@@ -49,6 +56,9 @@
   width: 347px;
   &__text {
     margin: 0;
+    @include for-mobile {
+      width: 300px
+      }
   }
 }
 
@@ -57,6 +67,7 @@
   padding: 12px 0;
   margin-top: 20px;
   display: flex;
+ 
 }
 
 .networks {
@@ -71,9 +82,12 @@
 
 .social-links {
   display: flex;
+  @include for-mobile {
+    margin-bottom: 30px;
+    }
 }
 
-.social-links__title {
+.social-links__title,.payment-title {
   text-transform: uppercase;
   margin-right: 20px;
 }
@@ -88,6 +102,9 @@
 .payment{
     display: flex;
     margin-left:550px ;
+    @include for-mobile {
+      margin: 0;
+      }
 }
 .payment-title {
   text-transform: uppercase;

@@ -2,13 +2,17 @@
     background-color: #F4F4F4;
     padding: 70px 0 50px;
     @include for-mobile {
-        display: none;
+        padding: 20px 0;
         }
 }
 
 .review-title{
     font-size: 50px; 
     margin-right: 690px;
+    @include for-mobile {
+       font-size: 30px;
+       margin: 20px auto;
+        }
 }
 
 .comments{
@@ -18,11 +22,20 @@
    background-color: #fff;
    padding: 23px 50px ;
    box-shadow: 6px 3px 10px -6px rgba(95, 98, 134, 1);
+   @include for-mobile {
+    width: 300px;
+    height: 400px;
+    padding: 20px ;
+    }
    &__header{
     display: flex;
-       border-bottom: 1px solid #707070 ;
+       border-bottom: 1px solid #F0F0F0 ;
        align-items: center;;
        justify-content: space-between;
+       @include for-mobile {
+       flex-direction: column;
+       text-align: center;
+        }
    }
    &__user-info{
        display: flex;
@@ -31,15 +44,32 @@
 
    &__username{
        font-size: 26px;
+       @include for-mobile {
+       font-size: 20px;
+       margin: 15px 0;
+        }
    }
 
    &__text{
        margin-top: 15px;
+      
    }
 
    &__data{
        display: block;
       text-align: right;
+      color: #9B9B9B;
+   }
+
+   &__parking-name{
+    @include for-mobile {
+       font-size: 12px;
+        } 
+   }
+   &__rating{
+    @include for-mobile {
+        margin-bottom: 20px;
+         } 
    }
 }
 
@@ -59,7 +89,9 @@
 
 .slider-arrow{
     margin-right: 45px;
-   
+    @include for-mobile {
+        display: none;
+        }
 }
 
 .arrow-size{
@@ -83,7 +115,9 @@
     width: 82px;
     margin-left: 780px;
     margin-top: 25px;
-
+    @include for-mobile {
+        margin: 20px auto;
+        }
 }
 .active-point{
     background-color:$second-text-color
