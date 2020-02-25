@@ -54,9 +54,6 @@ h4 {
   width: 1350px;
   margin: 0 auto;
 
-  @include for-tablet {
-    width: 800px;
-  }
   @include for-mobile {
     width: 300px;
   }
