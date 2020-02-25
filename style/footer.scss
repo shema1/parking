@@ -25,6 +25,9 @@
   display: flex;
   color: #fff;
   text-decoration: none;
+  @include for-mobile {
+    margin: 20px 0;
+    }
 }
 
 .contacts__phone {

@@ -210,7 +210,7 @@
 }
 @media screen and (max-width: 1000px) {
   .date-picker__header {
-    width: 176px;
+    width: 170px;
     margin: 0;
   }
 }
@@ -818,6 +818,11 @@
   display: flex;
   color: #fff;
   text-decoration: none;
+}
+@media screen and (max-width: 1000px) {
+  .contacts__link {
+    margin: 20px 0;
+  }
 }
 
 .contacts__phone {
