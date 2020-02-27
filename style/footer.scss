@@ -3,12 +3,21 @@
   background-color: $main-footer-background-color;
   color: #fff;
   padding: 50px 0 0;
-
+  @include for-mobile {
+    flex-direction: column;
+    }
 }
 
 .footer-wraper{
   display: flex;
+  width: 1350px;
+  margin: 0 auto;
+  @include for-tablet {
+    padding: 0 20px;
+    width: 100%;
+    }
   @include for-mobile {
+    width: 300px;
     flex-direction: column;
     }
 }
@@ -71,6 +80,12 @@
   padding: 12px 0;
   margin-top: 20px;
   display: flex;
+  @include for-tablet {
+    padding: 12px 20px;
+    }
+  @include for-mobile {
+    flex-direction: column;
+    }
  
 }
 
@@ -106,6 +121,9 @@
 .payment{
     display: flex;
     margin-left:550px ;
+    @include for-tablet {
+      margin-left: auto;
+      }
     @include for-mobile {
       margin: 0;
       }

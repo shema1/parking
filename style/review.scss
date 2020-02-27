@@ -1,125 +1,167 @@
-.review{
-    background-color: #F4F4F4;
-    padding: 70px 0 50px;
-    @include for-mobile {
-        padding: 20px 0;
-        }
+.review {
+  background-color: #f4f4f4;
+  padding-bottom: 70px;
+  @include for-mobile {
+    padding: 20px 0;
+  }
 }
 
-.review-title{
-    font-size: 50px; 
-    margin-right: 690px;
-    @include for-mobile {
-       font-size: 30px;
-       margin: 20px auto;
-        }
+.review-title {
+  font-size: 50px;
+  margin-right: 690px;
+  @include for-mobile {
+    font-size: 30px;
+    margin: 20px auto;
+  }
 }
 
-.comments{
-   width: 1075px;
-   height: 270px; 
-   margin-left: auto;
-   background-color: #fff;
-   padding: 23px 50px ;
-   box-shadow: 6px 3px 10px -6px rgba(95, 98, 134, 1);
-   @include for-mobile {
+.comments {
+  width: 1075px;
+  height: 270px;
+  margin-left: auto;
+  background-color: #fff;
+  padding: 23px 50px;
+  box-shadow: 6px 3px 10px -6px rgba(95, 98, 134, 1);
+  @include for-mobile {
     width: 300px;
     height: 400px;
-    padding: 20px ;
-    }
-   &__header{
+    padding: 20px;
+  }
+  &__header {
     display: flex;
-       border-bottom: 1px solid #F0F0F0 ;
-       align-items: center;;
-       justify-content: space-between;
-       @include for-mobile {
-       flex-direction: column;
-       text-align: center;
-        }
-   }
-   &__user-info{
-       display: flex;
-       flex-direction: column;
-   }
-
-   &__username{
-       font-size: 26px;
-       @include for-mobile {
-       font-size: 20px;
-       margin: 15px 0;
-        }
-   }
-
-   &__text{
-       margin-top: 15px;
-      
-   }
-
-   &__data{
-       display: block;
-      text-align: right;
-      color: #9B9B9B;
-   }
-
-   &__parking-name{
-    @include for-mobile {
-       font-size: 12px;
-        } 
-   }
-   &__rating{
-    @include for-mobile {
-        margin-bottom: 20px;
-         } 
-   }
-}
-
-.review-control{
-    display: flex;
-    justify-content: flex-end;
+    border-bottom: 1px solid #f0f0f0;
     align-items: center;
-
-}
-
-
-.arrow{
-    border: none;
-    outline: none; 
-    background-color: transparent;
-}
-
-.slider-arrow{
-    margin-right: 45px;
+    justify-content: space-between;
     @include for-mobile {
-        display: none;
-        }
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  &__user-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__username {
+    font-size: 26px;
+    @include for-mobile {
+      font-size: 20px;
+      margin: 15px 0;
+    }
+  }
+
+  &__text {
+    margin-top: 15px;
+  }
+
+  &__data {
+    display: block;
+    text-align: right;
+    color: #9b9b9b;
+  }
+
+  &__parking-name {
+    @include for-mobile {
+      font-size: 12px;
+    }
+  }
+  &__rating {
+    @include for-mobile {
+      margin-bottom: 20px;
+    }
+  }
 }
 
-.arrow-size{
-    font-size: 25px;
-}
-.arrow:active{
-     color: $second-text-color;
+.review-control {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.point{
-    width: 10px;
+.slider {
+  width: 1077px;
+  margin-left: auto;
+  position: relative;
+  z-index: 10;
+  @include for-tablet {
+      width: 900px;
+    margin: 0 auto;
+  }
+  @include for-mobile {
+    width: 85%;
+  }
+}
+
+.arrow-size {
+  font-size: 25px;
+}
+
+.arrow-right {
+  position: absolute;
+  right: 50px;
+  top: -85px;
+}
+.arrow-left {
+  position: absolute;
+  right: 90px;
+  top: -85px;
+}
+
+.arrow:active {
+  color: $second-text-color;
+}
+
+.point {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #b4b4b4;
+  border-radius: 50px;
+  background-color: transparent;
+}
+
+.slider-point {
+  display: flex;
+  justify-content: space-between;
+  width: 82px;
+  margin-left: 780px;
+  margin-top: 25px;
+  @include for-mobile {
+    margin: 20px auto;
+  }
+}
+.active-point {
+  background-color: $second-text-color;
+}
+
+.slick-dots {
+  right: 0;
+  height: 0;
+  width: 70%;
+}
+
+.slick-dots li {
+  margin: 0;
+  @include for-mobile {
+    display: none;
+   }
+}
+.slick-active li button {
+  background-color: $second-text-color;
+}
+
+.slick-dots {
+  li button {
     height: 10px;
-    border: 1px solid #B4B4B4;
+    width: 10px;
+    border: 1px solid #b4b4b4;
     border-radius: 50px;
     background-color: transparent;
-}
+  }
+  li button::before {
+    content: " ";
+  }
 
-.slider-point{
-    display: flex;
-    justify-content: space-between;
-    width: 82px;
-    margin-left: 780px;
-    margin-top: 25px;
-    @include for-mobile {
-        margin: 20px auto;
-        }
+  li.slick-active button {
+    background-color: $second-text-color;
+  }
 }
-.active-point{
-    background-color:$second-text-color
-}
-

@@ -2,17 +2,28 @@
   padding: 26px 0;
   display: flex;
   flex-direction: row;
-  @include for-mobile {
-  }
+  align-items: center;
+  width: 1350px;
+  margin: 0 auto;
+  @include for-tablet {
+    padding: 20px 30px;
+    }
+    @include for-mobile {
+     padding: 10px 30px;
+    }
   &__logo-link {
     font-size: 22px;
     color: $main-text-color;
     text-transform: uppercase;
     font-weight: bold;
-    @include for-mobile {
-      font-size: 19px;
-      width: 111px;
+
+    @include for-tablet {
+      width: 280px;
       display: block;
+    }
+    @include for-mobile {
+      width: 180px;
+      font-size: 19px;
     }
   }
 
@@ -23,10 +34,13 @@
 
 .header-nav {
   margin-left: auto;
-
   &__list {
     display: flex;
     align-items: center;
+    @include for-tablet {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
     @include for-mobile {
       flex-direction: column-reverse;
       text-align: center;
@@ -34,6 +48,10 @@
   }
   &__item {
     margin-left: 30px;
+    margin-top: 10px;
+    @include for-mobile {
+     margin: 0;
+    }
   }
 
   &__item:first-child {
@@ -62,11 +80,16 @@
   }
   &__phone-img {
     margin-right: 15px;
+    align-self: center;
+    @include for-mobile {
+     font-weight: 500;
+     margin: 0;
+    }
   }
 }
 
 .header-parking {
-  background: url(./img/header/header_cars.png) no-repeat top center/cover;
+  background: url(./img/header/header_cars.png) center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -74,7 +97,6 @@
   height: 490px;
   @include for-mobile {
     flex-direction: column-reverse;
-    height: 460px;
   }
 }
 
@@ -85,6 +107,7 @@
   align-items: center;
   font-size: 20px;
   color: #fff;
+ 
   @include for-mobile {
     font-size: 12px;
   }
@@ -92,12 +115,19 @@
   &__menu {
     display: flex;
     justify-content: space-between;
-    @include for-mobile {
+    @include for-tablet{
       height: 80px;
       flex-wrap: wrap;
       flex-direction: column;
       justify-content: end;
+      align-items: center;
     }
+    // @include for-mobile {
+    //   height: 80px;
+    //   flex-wrap: wrap;
+    //   flex-direction: column;
+    //   justify-content: end;
+    // }
   }
   &__item {
     @include for-mobile {
@@ -126,11 +156,7 @@
     display: block;
     margin-left: 10px;
   }
-  &__mobile{
-    @include for-mobile {
-      margin-bottom: 25px;
-    }
-  }
+
 }
 .header-overlay{
   position: absolute;
@@ -140,13 +166,14 @@
   height: 100%;
   background-color: #221711;
   opacity: 0.28;
-  z-index: 1;
+  z-index: 0;
 }
 .header-intro {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
   @include for-mobile {
     margin: 0;
   }
@@ -156,6 +183,9 @@
     font-size: 76px;
     text-transform: uppercase;
     z-index: 5;
+    @include for-tablet{
+      font-size: 62px;
+    }
     @include for-mobile {
       width: 276px;
       font-size: 25px;
@@ -176,7 +206,10 @@
   align-items: center;
   padding: 0 40px;
   margin-bottom: 41px;
-  z-index: 5;
+  z-index: 1;
+  @include for-tablet{
+    width: 990px;
+  }
   @include for-mobile {
     flex-direction: column;
     height: 187px;
@@ -212,8 +245,14 @@
 .date-picker__header {
   width: 385px;
   margin-right: 15px;
+  padding: 0 10px;
+  width: 380px;
+
+  @include for-tablet {
+    width: 200px;
+  }
   @include for-mobile {
-    width: 160px;
+    width: 140px;
     margin: 0;
   }
 }

@@ -1,9 +1,16 @@
 $lg:1400px;
-$tb:800px;
+$tb:991px;
 @mixin for-mobile {
+    @media screen and (max-width: $tb) {
+        @content
+    }
+}
+
+@mixin for-tablet {
     @media screen and (max-width: $lg) {
         @content
     }
 }
+
 
 

@@ -1,12 +1,20 @@
 .parking {
   display: flex;
-  padding: 40px 0;
+  padding:  20px 10px;
+  @include for-tablet{
+    display: flex;
+    justify-content: center;
+  }
 }
+
 .parking-logo {
   display: flex;
   margin-right: 15px;
   flex-direction: column;
   position: relative;
+  @include for-tablet{
+    display: none;
+  }
   @include for-mobile {
    display: none;
   }
@@ -35,6 +43,10 @@
   height: 351px;
   display: flex;
   box-shadow: 6px 3px 10px -6px rgba(95, 98, 134, 1);
+  position: relative;
+  @include for-tablet{
+    width: 975px;
+  }
   @include for-mobile {
     flex-direction: column;
     height: 720px;
@@ -47,19 +59,31 @@
     margin-bottom: 20px;
   }
 }
+
+
+
 .parking-img {
   width: 395px;
   height: 351px;
   display: flex;
   flex-direction: column;
   position: relative;
-
+  z-index: -1;
+  @include for-tablet{
+    align-self: center;
+    width: 350px;
+    height: 300px;
+  }
   @include for-mobile {
     width: 300px;
     height: 220px;
    }
 
    &__photo{
+    @include for-tablet{
+      width: inherit;
+      height: inherit
+    }
     @include for-mobile {
       height: inherit
      }
@@ -71,6 +95,10 @@
   position: absolute;
   height: 351px;
   width: 395px;
+  @include for-tablet{
+    width: 350px;
+    height: 300px;
+  }
   @include for-mobile {
     width: 300px;
     height: 220px;
@@ -92,6 +120,9 @@
     align-items: flex-end;
     padding-bottom: 20px;
     background: linear-gradient(0deg, #0000007a, #524f4f00);
+    @include for-tablet{
+     margin-top: 144px;
+    }
     @include for-mobile {
       margin-top: 65px;
      }
@@ -141,14 +172,19 @@
   clip-path: polygon(100% -600%, 0 100%, 100% 100%);
   padding: 5px 0;
   right: -72px;
+  @include for-tablet{
+    right: -11px;
+  }
   @include for-mobile {
     right: -119px;
    }
 }
 
 .services-list {
-
   margin-bottom: 70px;
+  @include for-tablet{
+    margin-bottom: 40px;
+  }
   @include for-mobile {
     border-bottom: 1px solid #F0F0F0;
     margin-bottom: 10px;
@@ -215,8 +251,11 @@
 
 .transfer-block {
   display: flex;
-  @include for-mobile {
+  @include for-tablet{
     flex-direction: column;
+  }
+  @include for-mobile {
+  
     border-bottom: 1px solid #F0F0F0;
    }
 }
@@ -224,6 +263,9 @@
 .transfer-info {
   display: flex;
   margin-right: 36px;
+  @include for-tablet{
+    margin-top: 10px;
+  }
   @include for-mobile {
    margin-bottom: 10px;
    }
@@ -278,22 +320,49 @@
      }
 }
 
+.parking-data{
+  @include for-tablet {
+    width:580px;
+     }
+
+     @include for-mobile {
+      width:274px;
+       }
+}
+
 .parking-data label {
   color: #777777;
   margin-bottom: 8px;
   margin-left: 13px;
 }
 
+.date-picker__form{
+  width: 300px;
+  @include for-tablet {
+   width: 280px ;
+    }
+  @include for-mobile {
+   width: 265px;
+    }
+}
+
 .userData {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+   @include for-mobile {
+    width: 265px;
+     }
 }
 
 .user-data {
   display: flex;
   flex-direction: column;
   margin-bottom: 17px;
+}
+
+.time-picker__form{
+  width:300px ;
 }
 
 .end-time-input,
@@ -310,7 +379,9 @@
 .reg-num-input,
 .person-num-input,
 .child-num-input {
-  width: 190px;
+  @include for-tablet {
+    width: 160px;
+    }
   @include for-mobile {
     width: 265px;
     }
@@ -318,9 +389,18 @@
 
 .name-input {
   width: 628px;
+  @include for-tablet {
+    width:580px;
+     }
   @include for-mobile {
     width: 265px;
     }
+}
+
+.tel-input,.email-input {
+  @include for-tablet {
+    width:250px;
+     }
 }
 
 .end-time-input,
@@ -354,13 +434,20 @@
   }
 }
 
-
+.send-btn{
+  @include for-mobile {
+   margin: 0 auto;
+    }
+}
 .total{
     margin-left: auto;
     display: flex;
     align-items: center;
+    
     @include for-mobile {
       width: 250px;
+      justify-content: center;
+      margin-bottom: 10px;
       }
     &__price  {
         font-size: 26px;

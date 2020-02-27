@@ -12,8 +12,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./style/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
     <header class="header">
@@ -99,11 +99,14 @@
               >
               <div class="date-block__inputs">
                 <input
-                  type="date"
-                  name="arrival-date"
-                  class="input date-picker__header"
+                  type="text"
+                  class="calendar input date-picker__header"
+                  onclick="correctWidth(event)"
                 />
-                <select name="start-time" class="input time-picker__header">
+                <select
+                  name="start-time"
+                  class="input select  time-picker__header"
+                >
                   <option value="1">01:00</option>
                   <option value="2">02:00</option>
                   <option value="3">03:00</option>
@@ -136,11 +139,14 @@
               >
               <div class="date-block__inputs">
                 <input
-                  type="date"
-                  name="departure-date"
-                  class="input date-picker__header"
+                  type="text"
+                  class="calendar input date-picker__header"
+                  onclick="correctWidth(event)"
                 />
-                <select name="end-time" class="input time-picker__header">
+                <select
+                  name="end-time"
+                  class="input select time-picker__header"
+                >
                   <option value="1">01:00</option>
                   <option value="2">02:00</option>
                   <option value="3">03:00</option>
@@ -181,7 +187,7 @@
         </div>
       </div>
     </header>
-    <section class="parking container">
+    <main class="parking container">
       <div class="parking-logo">
         <img
           class="parking-logo__img"
@@ -195,7 +201,7 @@
           <div class="parking-card">
             <div class="parking-img">
               <img
-                src="./img/parking/parking_card_2.png"
+                src="./img/parking/parking_card_1.png"
                 alt="img"
                 class="parking-img__photo"
               />
@@ -212,6 +218,53 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="parking-price parking-price__mobile hide">
+              <h3 class="parking-price__days">
+                Сeny za dni:
+              </h3>
+              <ul class="price-list">
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">50zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">55zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">60zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">65zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">70zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">75zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">80zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">85zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">90zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">95zł</span>
+                </li>
+              </ul>
             </div>
             <div class="parking-info">
               <div class="parking-info__title">
@@ -268,143 +321,68 @@
                     <span class="price-info__days">Za 7 dni</span>
                     <a href="#" class="price-info__more">zobacz ceny za dni </a>
                   </div>
-                  <button class="btn">
+                  <button class="btn " onclick="openForm(event)">
                     Zarezerwować
                   </button>
                   <div class="add-info">
                     <span class="line">-</span> Darmowa anulacja
-                    <span class="add-info__circle">i</span>
+                    <span class="add-info__circle" onclick="openPricePopup(event)">i</span>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </li>
-        <li class="parking-list__item">
-          <div class="parking-card parking-card__form">
-            <div class="parking-rating">
-              <div class="parking-img">
-                <img
-                  src="./img/parking/parking_card_2.png"
-                  alt="img"
-                  class="parking-img__photo"
-                />
-                <div class="overlay-img">
-                  <div class="overlay-img__header">
-                    Zniżka - <span class="orange"> 50%</span>
-                  </div>
-                  <div class="overlay-img__footer">
-                    <div class="rating">
-                      <img src="./img/parking/stars.png" alt="star" />
-                    </div>
-                    <div class="overlay-img__comments">
-                      <span class="comment-text"> 4.7 (1986 opinii)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="parking-price parking-price__mobile ">
-              <h3 class="parking-price__days">
-                Сeny za dni:
-              </h3>
-              <ul class="price-list">
-                <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
-                </li>
-                <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
-                </li>
-                <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
-                </li>
-                <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
-                </li>
-                <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
-                </li>
-                <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
-                </li>
-                <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
-                </li>
-                <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
-                </li>
-                <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
-                </li>
-                <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
-                </li>
-              </ul>
-            </div>
-            <div class="parking-info">
-              <div class="parking-info__title">
-                <h3 class="parking-name">Parking Samolot</h3>
-                <span class="parking-recommended">Polecany</span>
-              </div>
-              <form class="parking-data">
+              <form class="parking-data hide">
                 <div class="userData">
                   <div class="user-data user-data__start-date">
                     <label for="start-date" class="l">Data przyjazdu:</label>
                     <input
-                      type="date"
-                      name="start-date"
-                      class="start-date-input input"
+                      type="text"
+                      class="calendar input date-picker__form"
                     />
                   </div>
                   <div class="user-data user-data__end-date">
                     <label for="end-date" class="l">Data przyjazdu:</label>
                     <input
-                      type="date"
-                      name="end-date"
-                      class="end-date-input input"
+                      type="text"
+                      class="calendar input date-picker__form"
                     />
                   </div>
                   <div class="user-data user-data__start-time">
                     <label for="start-time" class="">Godziny od :</label>
-                    <select name="start-time" class=" start-time-input input">
+                    <select
+                      name="start-time"
+                      class="input select  time-picker__form"
+                    >
                       <option value="1">01:00</option>
-                  <option value="2">02:00</option>
-                  <option value="3">03:00</option>
-                  <option value="4">04:00</option>
-                  <option value="5">05:00</option>
-                  <option value="6">06:00</option>
-                  <option value="7">07:00</option>
-                  <option value="8">08:00</option>
-                  <option value="9">09:00</option>
-                  <option value="10">10:00</option>
-                  <option value="11">11:00</option>
-                  <option value="12">12:00</option>
-                  <option value="13">13:00</option>
-                  <option value="14">14:00</option>
-                  <option value="15">15:00</option>
-                  <option value="16">16:00</option>
-                  <option value="17">17:00</option>
-                  <option value="18">18:00</option>
-                  <option value="19">19:00</option>
-                  <option value="20">20:00</option>
-                  <option value="21">21:00</option>
-                  <option value="22">22:00</option>
-                  <option value="23">23:00</option>
+                      <option value="2">02:00</option>
+                      <option value="3">03:00</option>
+                      <option value="4">04:00</option>
+                      <option value="5">05:00</option>
+                      <option value="6">06:00</option>
+                      <option value="7">07:00</option>
+                      <option value="8">08:00</option>
+                      <option value="9">09:00</option>
+                      <option value="10">10:00</option>
+                      <option value="11">11:00</option>
+                      <option value="12">12:00</option>
+                      <option value="13">13:00</option>
+                      <option value="14">14:00</option>
+                      <option value="15">15:00</option>
+                      <option value="16">16:00</option>
+                      <option value="17">17:00</option>
+                      <option value="18">18:00</option>
+                      <option value="19">19:00</option>
+                      <option value="20">20:00</option>
+                      <option value="21">21:00</option>
+                      <option value="22">22:00</option>
+                      <option value="23">23:00</option>
                     </select>
                   </div>
-                  <div class="user-data user-data__3nd-time">
+                  <div class="user-data user-data__end-time">
                     <label for="start-time" class="">do:</label>
-                    <select name="start-time" class=" end-time-input input">
+                    <select
+                      name="start-time"
+                      class="input select  time-picker__form"
+                    >
                       <option value="1">01:00</option>
                       <option value="2">02:00</option>
                       <option value="3">03:00</option>
@@ -474,17 +452,36 @@
                     <span class="total__price orange bold">60zł</span>
                     <span class="total__days">Za 3 dni</span>
                   </div>
-                  <button class="btn" type="submit">Zarezerwować</button>
+                  <button
+                    class="btn send-btn"
+                    type="submit"
+                    onclick="successfulReservationPopup(event)"
+                  >
+                    Zarezerwować
+                  </button>
                 </div>
               </form>
             </div>
           </div>
+          <div class="popup-reservation hide">
+            <div class="reservation-block popup">
+              <button class="popup__close" onclick="closeReservationPopup()">
+                x
+              </button>
+              <span class="reservation-block__message">
+                Rezerwacja zakończona powodzeniem</span
+              >
+              <span class="reservation-block__done"
+                ><img src="./img/popup/done.png" alt="img"
+              /></span>
+            </div>
+          </div>
         </li>
         <li class="parking-list__item">
           <div class="parking-card">
             <div class="parking-img">
               <img
-                src="./img/parking/parking_card_4.png"
+                src="./img/parking/parking_card_2.png"
                 alt="img"
                 class="parking-img__photo"
               />
@@ -502,12 +499,59 @@
                 </div>
               </div>
             </div>
+            <div class="parking-price parking-price__mobile hide">
+              <h3 class="parking-price__days">
+                Сeny za dni:
+              </h3>
+              <ul class="price-list">
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">50zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">55zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">60zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">65zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">70zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">75zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">80zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">85zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">90zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">95zł</span>
+                </li>
+              </ul>
+            </div>
             <div class="parking-info">
               <div class="parking-info__title">
                 <h3 class="parking-name">Parking Samolot</h3>
                 <span class="parking-recommended">Polecany</span>
               </div>
-              <div class="parking-info__services">
+              <div class="parking-info__services ">
                 <div class="parking-info__services-wraper">
                   <ul class="services-list">
                     <li class="services-list__item">
@@ -557,7 +601,7 @@
                     <span class="price-info__days">Za 7 dni</span>
                     <a href="#" class="price-info__more">zobacz ceny za dni </a>
                   </div>
-                  <button class="btn">
+                  <button class="btn" onclick="openForm(event)">
                     Zarezerwować
                   </button>
                   <div class="add-info">
@@ -566,185 +610,155 @@
                   </div>
                 </div>
               </div>
+              <form class="parking-data hide">
+                <div class="userData">
+                  <div class="user-data user-data__start-date">
+                    <label for="start-date" class="l">Data przyjazdu:</label>
+                    <input
+                      type="text"
+                      class="calendar input date-picker__form"
+                    />
+                  </div>
+                  <div class="user-data user-data__end-date">
+                    <label for="end-date" class="l">Data przyjazdu:</label>
+                    <input
+                      type="text"
+                      class="calendar input date-picker__form"
+                    />
+                  </div>
+                  <div class="user-data user-data__start-time">
+                    <label for="start-time" class="">Godziny od :</label>
+                    <select
+                      name="start-time"
+                      class="input select  time-picker__form"
+                    >
+                      <option value="1">01:00</option>
+                      <option value="2">02:00</option>
+                      <option value="3">03:00</option>
+                      <option value="4">04:00</option>
+                      <option value="5">05:00</option>
+                      <option value="6">06:00</option>
+                      <option value="7">07:00</option>
+                      <option value="8">08:00</option>
+                      <option value="9">09:00</option>
+                      <option value="10">10:00</option>
+                      <option value="11">11:00</option>
+                      <option value="12">12:00</option>
+                      <option value="13">13:00</option>
+                      <option value="14">14:00</option>
+                      <option value="15">15:00</option>
+                      <option value="16">16:00</option>
+                      <option value="17">17:00</option>
+                      <option value="18">18:00</option>
+                      <option value="19">19:00</option>
+                      <option value="20">20:00</option>
+                      <option value="21">21:00</option>
+                      <option value="22">22:00</option>
+                      <option value="23">23:00</option>
+                    </select>
+                  </div>
+                  <div class="user-data user-data__end-time">
+                    <label for="start-time" class="">do:</label>
+                    <select
+                      name="start-time"
+                      class="input select  time-picker__form"
+                    >
+                      <option value="1">01:00</option>
+                      <option value="2">02:00</option>
+                      <option value="3">03:00</option>
+                      <option value="4">04:00</option>
+                      <option value="5">05:00</option>
+                      <option value="6">06:00</option>
+                      <option value="7">07:00</option>
+                      <option value="8">08:00</option>
+                      <option value="9">09:00</option>
+                      <option value="10">10:00</option>
+                      <option value="11">11:00</option>
+                      <option value="12">12:00</option>
+                      <option value="13">13:00</option>
+                      <option value="14">14:00</option>
+                      <option value="15">15:00</option>
+                      <option value="16">16:00</option>
+                      <option value="17">17:00</option>
+                      <option value="18">18:00</option>
+                      <option value="19">19:00</option>
+                      <option value="20">20:00</option>
+                      <option value="21">21:00</option>
+                      <option value="22">22:00</option>
+                      <option value="23">23:00</option>
+                    </select>
+                  </div>
+                  <div class="user-data user-data__name">
+                    <label for="name" class="">Imię i nazwisko:</label>
+                    <input type="text" name="name" class="name-input input" />
+                  </div>
+                  <div class="user-data user-data__reg-num">
+                    <label for="reg-num" class="">Numer rejestracyjny:</label>
+                    <input
+                      type="text"
+                      name="reg-num"
+                      class="reg-num-input input"
+                    />
+                  </div>
+                  <div class="user-data user-data__person-num">
+                    <label for="person-num" class="">Liczba osób:</label>
+                    <input
+                      type="number"
+                      name="person-num"
+                      class="person-num-input input"
+                    />
+                  </div>
+                  <div class="user-data user-data__child-num ">
+                    <label for="child-num" class="">Liczba dzieci:</label>
+                    <input
+                      type="number"
+                      name="child-num"
+                      class="child-num-input input"
+                    />
+                  </div>
+                  <div class="user-data user-data__tel ">
+                    <label for="tel" class="">Numer telefonu:</label>
+                    <input type="tel" name="tel" class="tel-input input" />
+                  </div>
+                  <div class="user-data user-data__email">
+                    <label for="email" class="">E-mail:</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="email-input input"
+                    />
+                  </div>
+                  <div class="total">
+                    <span class="total__price orange bold">60zł</span>
+                    <span class="total__days">Za 3 dni</span>
+                  </div>
+                  <button
+                    class="btn send-btn"
+                    type="submit"
+                    onclick="successfulReservationPopup(event)"
+                  >
+                    Zarezerwować
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="popup-reservation hide">
+            <div class="reservation-block popup">
+              <button class="popup__close" onclick="closeReservationPopup()">
+                x
+              </button>
+              <span class="reservation-block__message">
+                Rezerwacja zakończona powodzeniem</span
+              >
+              <span class="reservation-block__done"
+                ><img src="./img/popup/done.png" alt="img"
+              /></span>
             </div>
           </div>
         </li>
         <li class="parking-list__item">
           <div class="parking-card">
-            <div class="parking-img">
-              <img
-                src="./img/parking/parking_card_5.png"
-                alt="img"
-                class="parking-img__photo"
-              />
-              <div class="overlay-img">
-                <div class="overlay-img__header">
-                  Zniżka - <span class="orange"> 50%</span>
-                </div>
-                <div class="overlay-img__footer">
-                  <div class="rating">
-                    <img src="./img/parking/stars.png" alt="star" />
-                  </div>
-                  <div class="overlay-img__comments">
-                    <span class="comment-text"> 4.7 (1986 opinii)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="parking-info">
-              <div class="parking-info__title">
-                <h3 class="parking-name">Parking Samolot</h3>
-                <span class="parking-recommended">Polecany</span>
-              </div>
-              <div class="parking-info__services">
-                <div class="parking-info__services-wraper">
-                  <ul class="services-list">
-                    <li class="services-list__item">
-                      <span class="services-list__line line">-</span>Ogrodzony
-                    </li>
-                    <li class="services-list__item">
-                      <span class="services-list__line line">-</span>Faktura VAT
-                    </li>
-                    <li class="services-list__item">
-                      <span class="services-list__line line">-</span>Monitoring
-                      24/7
-                    </li>
-                    <li class="services-list__item">
-                      <span class="services-list__line line">-</span>Darmowe
-                      Wi-Fi
-                    </li>
-                  </ul>
-                  <div class="transfer-block">
-                    <div class="transfer-info">
-                      <img
-                        class="transfer-info__img"
-                        src="./img/parking/path.png"
-                        alt="img"
-                      />
-                      <div class="transfer-info__wraper">
-                        <span class="info-title">6 km</span>
-                        <span class="info-text">Оdległość do lotniska</span>
-                      </div>
-                    </div>
-                    <div class="transfer-info">
-                      <img
-                        class="transfer-info__img"
-                        src="./img/parking/bus.png"
-                        alt="img"
-                      />
-                      <div class="transfer-info__wraper">
-                        <span class="info-title">9 min</span>
-                        <span class="info-text">Transfer na lotnisko</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="parking-info__reservation">
-                  <div class="price-info">
-                    <span class="price-info__old">210zł</span>
-                    <span class="price-info__new">109zł</span>
-                    <span class="price-info__days">Za 7 dni</span>
-                    <a href="#" class="price-info__more">zobacz ceny za dni </a>
-                  </div>
-                  <button class="btn">
-                    Zarezerwować
-                  </button>
-                  <div class="add-info">
-                    <span class="line">-</span> Darmowa anulacja
-                    <span class="add-info__circle">i</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="parking-list__item">
-          <div class="parking-card non-active">
-            <div class="parking-img">
-              <img src="./img/parking/parking_card_3.png" alt="img" />
-              <div class="overlay-img">
-                <div class="overlay-img__header">
-                  Zniżka - <span class="orange"> 50%</span>
-                </div>
-                <div class="overlay-img__footer">
-                  <div class="rating">
-                    <img src="./img/parking/stars.png" alt="star" />
-                  </div>
-                  <div class="overlay-img__comments">
-                    <span class="comment-text"> 4.7 (1986 opinii)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="parking-info">
-              <div class="parking-info__title">
-                <h3 class="parking-name">Parking Samolot</h3>
-                <span class="parking-recommended">Polecany</span>
-              </div>
-              <div class="parking-info__services">
-                <div class="parking-info__services-wraper">
-                  <ul class="services-list">
-                    <li class="services-list__item">
-                      <span class="services-list__line line">-</span>Ogrodzony
-                    </li>
-                    <li class="services-list__item">
-                      <span class="services-list__line line">-</span>Faktura VAT
-                    </li>
-                    <li class="services-list__item">
-                      <span class="services-list__line line">-</span>Monitoring
-                      24/7
-                    </li>
-                    <li class="services-list__item">
-                      <span class="services-list__line line">-</span>Darmowe
-                      Wi-Fi
-                    </li>
-                  </ul>
-                  <div class="transfer-block">
-                    <div class="transfer-info">
-                      <img
-                        class="transfer-info__img"
-                        src="./img/parking/path.png"
-                        alt="img"
-                      />
-                      <div class="transfer-info__wraper">
-                        <span class="info-title">6 km</span>
-                        <span class="info-text">Оdległość do lotniska</span>
-                      </div>
-                    </div>
-                    <div class="transfer-info">
-                      <img
-                        class="transfer-info__img"
-                        src="./img/parking/bus.png"
-                        alt="img"
-                      />
-                      <div class="transfer-info__wraper">
-                        <span class="info-title">9 min</span>
-                        <span class="info-text">Transfer na lotnisko</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="parking-info__reservation">
-                  <div class="price-info">
-                    <span class="price-info__old">210zł</span>
-                    <span class="price-info__new">109zł</span>
-                    <span class="price-info__days">Za 7 dni</span>
-                    <a href="#" class="price-info__more">zobacz ceny za dni </a>
-                  </div>
-                  <button class="btn">
-                    Zarezerwować
-                  </button>
-                  <div class="add-info">
-                    <span class="line">-</span> Darmowa anulacja
-                    <span class="add-info__circle">i</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="parking-list__item">
-          <div class="parking-card non-active">
             <div class="parking-img">
               <img
                 src="./img/parking/parking_card_3.png"
@@ -765,12 +779,59 @@
                 </div>
               </div>
             </div>
+            <div class="parking-price parking-price__mobile hide">
+              <h3 class="parking-price__days">
+                Сeny za dni:
+              </h3>
+              <ul class="price-list">
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">50zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">55zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">60zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">65zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">70zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">75zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">80zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">85zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">90zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">95zł</span>
+                </li>
+              </ul>
+            </div>
             <div class="parking-info">
               <div class="parking-info__title">
                 <h3 class="parking-name">Parking Samolot</h3>
                 <span class="parking-recommended">Polecany</span>
               </div>
-              <div class="parking-info__services">
+              <div class="parking-info__services ">
                 <div class="parking-info__services-wraper">
                   <ul class="services-list">
                     <li class="services-list__item">
@@ -820,7 +881,7 @@
                     <span class="price-info__days">Za 7 dni</span>
                     <a href="#" class="price-info__more">zobacz ceny za dni </a>
                   </div>
-                  <button class="btn">
+                  <button class="btn" onclick="openForm(event)">
                     Zarezerwować
                   </button>
                   <div class="add-info">
@@ -829,56 +890,1148 @@
                   </div>
                 </div>
               </div>
+              <form class="parking-data hide">
+                <div class="userData">
+                  <div class="user-data user-data__start-date">
+                    <label for="start-date" class="l">Data przyjazdu:</label>
+                    <input
+                      type="text"
+                      class="calendar input date-picker__form"
+                    />
+                  </div>
+                  <div class="user-data user-data__end-date">
+                    <label for="end-date" class="l">Data przyjazdu:</label>
+                    <input
+                      type="text"
+                      class="calendar input date-picker__form"
+                    />
+                  </div>
+                  <div class="user-data user-data__start-time">
+                    <label for="start-time" class="">Godziny od :</label>
+                    <select
+                      name="start-time"
+                      class="input select  time-picker__form"
+                    >
+                      <option value="1">01:00</option>
+                      <option value="2">02:00</option>
+                      <option value="3">03:00</option>
+                      <option value="4">04:00</option>
+                      <option value="5">05:00</option>
+                      <option value="6">06:00</option>
+                      <option value="7">07:00</option>
+                      <option value="8">08:00</option>
+                      <option value="9">09:00</option>
+                      <option value="10">10:00</option>
+                      <option value="11">11:00</option>
+                      <option value="12">12:00</option>
+                      <option value="13">13:00</option>
+                      <option value="14">14:00</option>
+                      <option value="15">15:00</option>
+                      <option value="16">16:00</option>
+                      <option value="17">17:00</option>
+                      <option value="18">18:00</option>
+                      <option value="19">19:00</option>
+                      <option value="20">20:00</option>
+                      <option value="21">21:00</option>
+                      <option value="22">22:00</option>
+                      <option value="23">23:00</option>
+                    </select>
+                  </div>
+                  <div class="user-data user-data__end-time">
+                    <label for="start-time" class="">do:</label>
+                    <select
+                      name="start-time"
+                      class="input select  time-picker__form"
+                    >
+                      <option value="1">01:00</option>
+                      <option value="2">02:00</option>
+                      <option value="3">03:00</option>
+                      <option value="4">04:00</option>
+                      <option value="5">05:00</option>
+                      <option value="6">06:00</option>
+                      <option value="7">07:00</option>
+                      <option value="8">08:00</option>
+                      <option value="9">09:00</option>
+                      <option value="10">10:00</option>
+                      <option value="11">11:00</option>
+                      <option value="12">12:00</option>
+                      <option value="13">13:00</option>
+                      <option value="14">14:00</option>
+                      <option value="15">15:00</option>
+                      <option value="16">16:00</option>
+                      <option value="17">17:00</option>
+                      <option value="18">18:00</option>
+                      <option value="19">19:00</option>
+                      <option value="20">20:00</option>
+                      <option value="21">21:00</option>
+                      <option value="22">22:00</option>
+                      <option value="23">23:00</option>
+                    </select>
+                  </div>
+                  <div class="user-data user-data__name">
+                    <label for="name" class="">Imię i nazwisko:</label>
+                    <input type="text" name="name" class="name-input input" />
+                  </div>
+                  <div class="user-data user-data__reg-num">
+                    <label for="reg-num" class="">Numer rejestracyjny:</label>
+                    <input
+                      type="text"
+                      name="reg-num"
+                      class="reg-num-input input"
+                    />
+                  </div>
+                  <div class="user-data user-data__person-num">
+                    <label for="person-num" class="">Liczba osób:</label>
+                    <input
+                      type="number"
+                      name="person-num"
+                      class="person-num-input input"
+                    />
+                  </div>
+                  <div class="user-data user-data__child-num ">
+                    <label for="child-num" class="">Liczba dzieci:</label>
+                    <input
+                      type="number"
+                      name="child-num"
+                      class="child-num-input input"
+                    />
+                  </div>
+                  <div class="user-data user-data__tel ">
+                    <label for="tel" class="">Numer telefonu:</label>
+                    <input type="tel" name="tel" class="tel-input input" />
+                  </div>
+                  <div class="user-data user-data__email">
+                    <label for="email" class="">E-mail:</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="email-input input"
+                    />
+                  </div>
+                  <div class="total">
+                    <span class="total__price orange bold">60zł</span>
+                    <span class="total__days">Za 3 dni</span>
+                  </div>
+                  <button
+                    class="btn send-btn"
+                    type="submit"
+                    onclick="successfulReservationPopup(event)"
+                  >
+                    Zarezerwować
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="popup-reservation hide">
+            <div class="reservation-block popup">
+              <button class="popup__close" onclick="closeReservationPopup()">
+                x
+              </button>
+              <span class="reservation-block__message">
+                Rezerwacja zakończona powodzeniem</span
+              >
+              <span class="reservation-block__done"
+                ><img src="./img/popup/done.png" alt="img"
+              /></span>
+            </div>
+          </div>
+        </li>
+        <li class="parking-list__item ">
+          <div class="parking-card non-active">
+            <div class="parking-img">
+              <img
+                src="./img/parking/parking_card_4.png"
+                alt="img"
+                class="parking-img__photo"
+              />
+              <div class="overlay-img">
+                <div class="overlay-img__header">
+                  Zniżka - <span class="orange"> 50%</span>
+                </div>
+                <div class="overlay-img__footer">
+                  <div class="rating">
+                    <img src="./img/parking/stars.png" alt="star" />
+                  </div>
+                  <div class="overlay-img__comments">
+                    <span class="comment-text"> 4.7 (1986 opinii)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="parking-price parking-price__mobile hide">
+              <h3 class="parking-price__days">
+                Сeny za dni:
+              </h3>
+              <ul class="price-list">
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">50zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">55zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">60zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">65zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">70zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">75zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">80zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">85zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">90zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">95zł</span>
+                </li>
+              </ul>
+            </div>
+            <div class="parking-info">
+              <div class="parking-info__title">
+                <h3 class="parking-name">Parking Samolot</h3>
+                <span class="parking-recommended">Polecany</span>
+              </div>
+              <div class="parking-info__services ">
+                <div class="parking-info__services-wraper">
+                  <ul class="services-list">
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Ogrodzony
+                    </li>
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Faktura VAT
+                    </li>
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Monitoring
+                      24/7
+                    </li>
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Darmowe
+                      Wi-Fi
+                    </li>
+                  </ul>
+                  <div class="transfer-block">
+                    <div class="transfer-info">
+                      <img
+                        class="transfer-info__img"
+                        src="./img/parking/path.png"
+                        alt="img"
+                      />
+                      <div class="transfer-info__wraper">
+                        <span class="info-title">6 km</span>
+                        <span class="info-text">Оdległość do lotniska</span>
+                      </div>
+                    </div>
+                    <div class="transfer-info">
+                      <img
+                        class="transfer-info__img"
+                        src="./img/parking/bus.png"
+                        alt="img"
+                      />
+                      <div class="transfer-info__wraper">
+                        <span class="info-title">9 min</span>
+                        <span class="info-text">Transfer na lotnisko</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="parking-info__reservation">
+                  <div class="price-info">
+                    <span class="price-info__old">210zł</span>
+                    <span class="price-info__new">109zł</span>
+                    <span class="price-info__days">Za 7 dni</span>
+                    <a href="#" class="price-info__more">zobacz ceny za dni </a>
+                  </div>
+                  <button class="btn" onclick="openForm(event)">
+                    Zarezerwować
+                  </button>
+                  <div class="add-info">
+                    <span class="line">-</span> Darmowa anulacja
+                    <span class="add-info__circle">i</span>
+                  </div>
+                </div>
+              </div>
+              <form class="parking-data hide">
+                <div class="userData">
+                  <div class="user-data user-data__start-date">
+                    <label for="start-date" class="l">Data przyjazdu:</label>
+                    <input
+                      type="text"
+                      class="calendar input date-picker__form"
+                    />
+                  </div>
+                  <div class="user-data user-data__end-date">
+                    <label for="end-date" class="l">Data przyjazdu:</label>
+                    <input
+                      type="text"
+                      class="calendar input date-picker__form"
+                    />
+                  </div>
+                  <div class="user-data user-data__start-time">
+                    <label for="start-time" class="">Godziny od :</label>
+                    <select
+                      name="start-time"
+                      class="input select  time-picker__form"
+                    >
+                      <option value="1">01:00</option>
+                      <option value="2">02:00</option>
+                      <option value="3">03:00</option>
+                      <option value="4">04:00</option>
+                      <option value="5">05:00</option>
+                      <option value="6">06:00</option>
+                      <option value="7">07:00</option>
+                      <option value="8">08:00</option>
+                      <option value="9">09:00</option>
+                      <option value="10">10:00</option>
+                      <option value="11">11:00</option>
+                      <option value="12">12:00</option>
+                      <option value="13">13:00</option>
+                      <option value="14">14:00</option>
+                      <option value="15">15:00</option>
+                      <option value="16">16:00</option>
+                      <option value="17">17:00</option>
+                      <option value="18">18:00</option>
+                      <option value="19">19:00</option>
+                      <option value="20">20:00</option>
+                      <option value="21">21:00</option>
+                      <option value="22">22:00</option>
+                      <option value="23">23:00</option>
+                    </select>
+                  </div>
+                  <div class="user-data user-data__end-time">
+                    <label for="start-time" class="">do:</label>
+                    <select
+                      name="start-time"
+                      class="input select  time-picker__form"
+                    >
+                      <option value="1">01:00</option>
+                      <option value="2">02:00</option>
+                      <option value="3">03:00</option>
+                      <option value="4">04:00</option>
+                      <option value="5">05:00</option>
+                      <option value="6">06:00</option>
+                      <option value="7">07:00</option>
+                      <option value="8">08:00</option>
+                      <option value="9">09:00</option>
+                      <option value="10">10:00</option>
+                      <option value="11">11:00</option>
+                      <option value="12">12:00</option>
+                      <option value="13">13:00</option>
+                      <option value="14">14:00</option>
+                      <option value="15">15:00</option>
+                      <option value="16">16:00</option>
+                      <option value="17">17:00</option>
+                      <option value="18">18:00</option>
+                      <option value="19">19:00</option>
+                      <option value="20">20:00</option>
+                      <option value="21">21:00</option>
+                      <option value="22">22:00</option>
+                      <option value="23">23:00</option>
+                    </select>
+                  </div>
+                  <div class="user-data user-data__name">
+                    <label for="name" class="">Imię i nazwisko:</label>
+                    <input type="text" name="name" class="name-input input" />
+                  </div>
+                  <div class="user-data user-data__reg-num">
+                    <label for="reg-num" class="">Numer rejestracyjny:</label>
+                    <input
+                      type="text"
+                      name="reg-num"
+                      class="reg-num-input input"
+                    />
+                  </div>
+                  <div class="user-data user-data__person-num">
+                    <label for="person-num" class="">Liczba osób:</label>
+                    <input
+                      type="number"
+                      name="person-num"
+                      class="person-num-input input"
+                    />
+                  </div>
+                  <div class="user-data user-data__child-num ">
+                    <label for="child-num" class="">Liczba dzieci:</label>
+                    <input
+                      type="number"
+                      name="child-num"
+                      class="child-num-input input"
+                    />
+                  </div>
+                  <div class="user-data user-data__tel ">
+                    <label for="tel" class="">Numer telefonu:</label>
+                    <input type="tel" name="tel" class="tel-input input" />
+                  </div>
+                  <div class="user-data user-data__email">
+                    <label for="email" class="">E-mail:</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="email-input input"
+                    />
+                  </div>
+                  <div class="total">
+                    <span class="total__price orange bold">60zł</span>
+                    <span class="total__days">Za 3 dni</span>
+                  </div>
+                  <button
+                    class="btn send-btn"
+                    type="submit"
+                    onclick="successfulReservationPopup(event)"
+                  >
+                    Zarezerwować
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="popup-reservation hide">
+            <div class="reservation-block popup">
+              <button class="popup__close" onclick="closeReservationPopup()">
+                x
+              </button>
+              <span class="reservation-block__message">
+                Rezerwacja zakończona powodzeniem</span
+              >
+              <span class="reservation-block__done"
+                ><img src="./img/popup/done.png" alt="img"
+              /></span>
+            </div>
+          </div>
+        </li>
+        <li class="parking-list__item ">
+          <div class="parking-card ">
+            <div class="parking-img">
+              <img
+                src="./img/parking/parking_card_5.png"
+                alt="img"
+                class="parking-img__photo"
+              />
+              <div class="overlay-img">
+                <div class="overlay-img__header">
+                  Zniżka - <span class="orange"> 50%</span>
+                </div>
+                <div class="overlay-img__footer">
+                  <div class="rating">
+                    <img src="./img/parking/stars.png" alt="star" />
+                  </div>
+                  <div class="overlay-img__comments">
+                    <span class="comment-text"> 4.7 (1986 opinii)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="parking-price parking-price__mobile hide">
+              <h3 class="parking-price__days">
+                Сeny za dni:
+              </h3>
+              <ul class="price-list">
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">50zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">55zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">60zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">65zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">70zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">75zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">80zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">85zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">90zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">95zł</span>
+                </li>
+              </ul>
+            </div>
+            <div class="parking-info">
+              <div class="parking-info__title">
+                <h3 class="parking-name">Parking Samolot</h3>
+                <span class="parking-recommended hide">Polecany</span>
+              </div>
+              <div class="parking-info__services ">
+                <div class="parking-info__services-wraper">
+                  <ul class="services-list">
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Ogrodzony
+                    </li>
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Faktura VAT
+                    </li>
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Monitoring
+                      24/7
+                    </li>
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Darmowe
+                      Wi-Fi
+                    </li>
+                  </ul>
+                  <div class="transfer-block">
+                    <div class="transfer-info">
+                      <img
+                        class="transfer-info__img"
+                        src="./img/parking/path.png"
+                        alt="img"
+                      />
+                      <div class="transfer-info__wraper">
+                        <span class="info-title">6 km</span>
+                        <span class="info-text">Оdległość do lotniska</span>
+                      </div>
+                    </div>
+                    <div class="transfer-info">
+                      <img
+                        class="transfer-info__img"
+                        src="./img/parking/bus.png"
+                        alt="img"
+                      />
+                      <div class="transfer-info__wraper">
+                        <span class="info-title">9 min</span>
+                        <span class="info-text">Transfer na lotnisko</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="parking-info__reservation">
+                  <div class="price-info">
+                    <span class="price-info__old">210zł</span>
+                    <span class="price-info__new">109zł</span>
+                    <span class="price-info__days">Za 7 dni</span>
+                    <a href="#" class="price-info__more">zobacz ceny za dni </a>
+                  </div>
+                  <button class="btn" onclick="openForm(event)">
+                    Zarezerwować
+                  </button>
+                  <div class="add-info">
+                    <span class="line">-</span> Darmowa anulacja
+                    <span class="add-info__circle">i</span>
+                  </div>
+                </div>
+              </div>
+              <form class="parking-data hide">
+                <div class="userData">
+                  <div class="user-data user-data__start-date">
+                    <label for="start-date" class="l">Data przyjazdu:</label>
+                    <input
+                      type="text"
+                      class="calendar input date-picker__form"
+                    />
+                  </div>
+                  <div class="user-data user-data__end-date">
+                    <label for="end-date" class="l">Data przyjazdu:</label>
+                    <input
+                      type="text"
+                      class="calendar input date-picker__form"
+                    />
+                  </div>
+                  <div class="user-data user-data__start-time">
+                    <label for="start-time" class="">Godziny od :</label>
+                    <select
+                      name="start-time"
+                      class="input select  time-picker__form"
+                    >
+                      <option value="1">01:00</option>
+                      <option value="2">02:00</option>
+                      <option value="3">03:00</option>
+                      <option value="4">04:00</option>
+                      <option value="5">05:00</option>
+                      <option value="6">06:00</option>
+                      <option value="7">07:00</option>
+                      <option value="8">08:00</option>
+                      <option value="9">09:00</option>
+                      <option value="10">10:00</option>
+                      <option value="11">11:00</option>
+                      <option value="12">12:00</option>
+                      <option value="13">13:00</option>
+                      <option value="14">14:00</option>
+                      <option value="15">15:00</option>
+                      <option value="16">16:00</option>
+                      <option value="17">17:00</option>
+                      <option value="18">18:00</option>
+                      <option value="19">19:00</option>
+                      <option value="20">20:00</option>
+                      <option value="21">21:00</option>
+                      <option value="22">22:00</option>
+                      <option value="23">23:00</option>
+                    </select>
+                  </div>
+                  <div class="user-data user-data__end-time">
+                    <label for="start-time" class="">do:</label>
+                    <select
+                      name="start-time"
+                      class="input select  time-picker__form"
+                    >
+                      <option value="1">01:00</option>
+                      <option value="2">02:00</option>
+                      <option value="3">03:00</option>
+                      <option value="4">04:00</option>
+                      <option value="5">05:00</option>
+                      <option value="6">06:00</option>
+                      <option value="7">07:00</option>
+                      <option value="8">08:00</option>
+                      <option value="9">09:00</option>
+                      <option value="10">10:00</option>
+                      <option value="11">11:00</option>
+                      <option value="12">12:00</option>
+                      <option value="13">13:00</option>
+                      <option value="14">14:00</option>
+                      <option value="15">15:00</option>
+                      <option value="16">16:00</option>
+                      <option value="17">17:00</option>
+                      <option value="18">18:00</option>
+                      <option value="19">19:00</option>
+                      <option value="20">20:00</option>
+                      <option value="21">21:00</option>
+                      <option value="22">22:00</option>
+                      <option value="23">23:00</option>
+                    </select>
+                  </div>
+                  <div class="user-data user-data__name">
+                    <label for="name" class="">Imię i nazwisko:</label>
+                    <input type="text" name="name" class="name-input input" />
+                  </div>
+                  <div class="user-data user-data__reg-num">
+                    <label for="reg-num" class="">Numer rejestracyjny:</label>
+                    <input
+                      type="text"
+                      name="reg-num"
+                      class="reg-num-input input"
+                    />
+                  </div>
+                  <div class="user-data user-data__person-num">
+                    <label for="person-num" class="">Liczba osób:</label>
+                    <input
+                      type="number"
+                      name="person-num"
+                      class="person-num-input input"
+                    />
+                  </div>
+                  <div class="user-data user-data__child-num ">
+                    <label for="child-num" class="">Liczba dzieci:</label>
+                    <input
+                      type="number"
+                      name="child-num"
+                      class="child-num-input input"
+                    />
+                  </div>
+                  <div class="user-data user-data__tel ">
+                    <label for="tel" class="">Numer telefonu:</label>
+                    <input type="tel" name="tel" class="tel-input input" />
+                  </div>
+                  <div class="user-data user-data__email">
+                    <label for="email" class="">E-mail:</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="email-input input"
+                    />
+                  </div>
+                  <div class="total">
+                    <span class="total__price orange bold">60zł</span>
+                    <span class="total__days">Za 3 dni</span>
+                  </div>
+                  <button
+                    class="btn send-btn"
+                    type="submit"
+                    onclick="successfulReservationPopup(event)"
+                  >
+                    Zarezerwować
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="popup-reservation hide">
+            <div class="reservation-block popup">
+              <button class="popup__close" onclick="closeReservationPopup()">
+                x
+              </button>
+              <span class="reservation-block__message">
+                Rezerwacja zakończona powodzeniem</span
+              >
+              <span class="reservation-block__done"
+                ><img src="./img/popup/done.png" alt="img"
+              /></span>
+            </div>
+          </div>
+        </li>
+        <li class="parking-list__item ">
+          <div class="parking-card ">
+            <div class="parking-img">
+              <img
+                src="./img/parking/parking_card_6.png"
+                alt="img"
+                class="parking-img__photo"
+              />
+              <div class="overlay-img">
+                <div class="overlay-img__header">
+                  Zniżka - <span class="orange"> 50%</span>
+                </div>
+                <div class="overlay-img__footer">
+                  <div class="rating">
+                    <img src="./img/parking/stars.png" alt="star" />
+                  </div>
+                  <div class="overlay-img__comments">
+                    <span class="comment-text"> 4.7 (1986 opinii)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="parking-price parking-price__mobile hide">
+              <h3 class="parking-price__days">
+                Сeny za dni:
+              </h3>
+              <ul class="price-list">
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">50zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">55zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">60zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">65zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">70zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">75zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">80zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">85zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">90zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">95zł</span>
+                </li>
+              </ul>
+            </div>
+            <div class="parking-info">
+              <div class="parking-info__title">
+                <h3 class="parking-name">Parking Samolot</h3>
+                <span class="parking-recommended hide">Polecany</span>
+              </div>
+              <div class="parking-info__services ">
+                <div class="parking-info__services-wraper">
+                  <ul class="services-list">
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Ogrodzony
+                    </li>
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Faktura VAT
+                    </li>
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Monitoring
+                      24/7
+                    </li>
+                    <li class="services-list__item">
+                      <span class="services-list__line line">-</span>Darmowe
+                      Wi-Fi
+                    </li>
+                  </ul>
+                  <div class="transfer-block">
+                    <div class="transfer-info">
+                      <img
+                        class="transfer-info__img"
+                        src="./img/parking/path.png"
+                        alt="img"
+                      />
+                      <div class="transfer-info__wraper">
+                        <span class="info-title">6 km</span>
+                        <span class="info-text">Оdległość do lotniska</span>
+                      </div>
+                    </div>
+                    <div class="transfer-info">
+                      <img
+                        class="transfer-info__img"
+                        src="./img/parking/bus.png"
+                        alt="img"
+                      />
+                      <div class="transfer-info__wraper">
+                        <span class="info-title">9 min</span>
+                        <span class="info-text">Transfer na lotnisko</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="parking-info__reservation">
+                  <div class="price-info">
+                    <span class="price-info__old">210zł</span>
+                    <span class="price-info__new">109zł</span>
+                    <span class="price-info__days">Za 7 dni</span>
+                    <a href="#" class="price-info__more">zobacz ceny za dni </a>
+                  </div>
+                  <button class="btn" onclick="openForm(event)">
+                    Zarezerwować
+                  </button>
+                  <div class="add-info">
+                    <span class="line">-</span> Darmowa anulacja
+                    <span class="add-info__circle">i</span>
+                  </div>
+                </div>
+              </div>
+              <form class="parking-data hide">
+                <div class="userData">
+                  <div class="user-data user-data__start-date">
+                    <label for="start-date" class="l">Data przyjazdu:</label>
+                    <input
+                      type="text"
+                      class="calendar input date-picker__form"
+                    />
+                  </div>
+                  <div class="user-data user-data__end-date">
+                    <label for="end-date" class="l">Data przyjazdu:</label>
+                    <input
+                      type="text"
+                      class="calendar input date-picker__form"
+                    />
+                  </div>
+                  <div class="user-data user-data__start-time">
+                    <label for="start-time" class="">Godziny od :</label>
+                    <select
+                      name="start-time"
+                      class="input select  time-picker__form"
+                    >
+                      <option value="1">01:00</option>
+                      <option value="2">02:00</option>
+                      <option value="3">03:00</option>
+                      <option value="4">04:00</option>
+                      <option value="5">05:00</option>
+                      <option value="6">06:00</option>
+                      <option value="7">07:00</option>
+                      <option value="8">08:00</option>
+                      <option value="9">09:00</option>
+                      <option value="10">10:00</option>
+                      <option value="11">11:00</option>
+                      <option value="12">12:00</option>
+                      <option value="13">13:00</option>
+                      <option value="14">14:00</option>
+                      <option value="15">15:00</option>
+                      <option value="16">16:00</option>
+                      <option value="17">17:00</option>
+                      <option value="18">18:00</option>
+                      <option value="19">19:00</option>
+                      <option value="20">20:00</option>
+                      <option value="21">21:00</option>
+                      <option value="22">22:00</option>
+                      <option value="23">23:00</option>
+                    </select>
+                  </div>
+                  <div class="user-data user-data__end-time">
+                    <label for="start-time" class="">do:</label>
+                    <select
+                      name="start-time"
+                      class="input select  time-picker__form"
+                    >
+                      <option value="1">01:00</option>
+                      <option value="2">02:00</option>
+                      <option value="3">03:00</option>
+                      <option value="4">04:00</option>
+                      <option value="5">05:00</option>
+                      <option value="6">06:00</option>
+                      <option value="7">07:00</option>
+                      <option value="8">08:00</option>
+                      <option value="9">09:00</option>
+                      <option value="10">10:00</option>
+                      <option value="11">11:00</option>
+                      <option value="12">12:00</option>
+                      <option value="13">13:00</option>
+                      <option value="14">14:00</option>
+                      <option value="15">15:00</option>
+                      <option value="16">16:00</option>
+                      <option value="17">17:00</option>
+                      <option value="18">18:00</option>
+                      <option value="19">19:00</option>
+                      <option value="20">20:00</option>
+                      <option value="21">21:00</option>
+                      <option value="22">22:00</option>
+                      <option value="23">23:00</option>
+                    </select>
+                  </div>
+                  <div class="user-data user-data__name">
+                    <label for="name" class="">Imię i nazwisko:</label>
+                    <input type="text" name="name" class="name-input input" />
+                  </div>
+                  <div class="user-data user-data__reg-num">
+                    <label for="reg-num" class="">Numer rejestracyjny:</label>
+                    <input
+                      type="text"
+                      name="reg-num"
+                      class="reg-num-input input"
+                    />
+                  </div>
+                  <div class="user-data user-data__person-num">
+                    <label for="person-num" class="">Liczba osób:</label>
+                    <input
+                      type="number"
+                      name="person-num"
+                      class="person-num-input input"
+                    />
+                  </div>
+                  <div class="user-data user-data__child-num ">
+                    <label for="child-num" class="">Liczba dzieci:</label>
+                    <input
+                      type="number"
+                      name="child-num"
+                      class="child-num-input input"
+                    />
+                  </div>
+                  <div class="user-data user-data__tel ">
+                    <label for="tel" class="">Numer telefonu:</label>
+                    <input type="tel" name="tel" class="tel-input input" />
+                  </div>
+                  <div class="user-data user-data__email">
+                    <label for="email" class="">E-mail:</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="email-input input"
+                    />
+                  </div>
+                  <div class="total">
+                    <span class="total__price orange bold">60zł</span>
+                    <span class="total__days">Za 3 dni</span>
+                  </div>
+                  <button
+                    class="btn send-btn"
+                    type="submit"
+                    onclick="successfulReservationPopup(event)"
+                  >
+                    Zarezerwować
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="popup-reservation hide">
+            <div class="reservation-block popup">
+              <button class="popup__close" onclick="closeReservationPopup()">
+                x
+              </button>
+              <span class="reservation-block__message">
+                Rezerwacja zakończona powodzeniem</span
+              >
+              <span class="reservation-block__done"
+                ><img src="./img/popup/done.png" alt="img"
+              /></span>
             </div>
           </div>
         </li>
       </ul>
-    </section>
-    <section class="review">
+    </main>
+    <main class="review">
       <div class="container">
         <div class="review-control">
           <h2 class="review-title bold">Recenzje</h2>
-          <div class="slider-arrow">
-            <button class="left-arrow arrow">
-              <i class="material-icons arrow-size">
-                keyboard_arrow_left
-              </i>
-            </button>
-            <button class="right-arrow arrow">
-              <i class="material-icons arrow-size">
-                keyboard_arrow_right
-              </i>
-            </button>
+        </div>
+        <div class="slider">
+          <div class="comments">
+            <div class="comments__header">
+              <div class="comments__user-info">
+                <span class="comments__parking-name"
+                  >Parking Okęcie (parkKING)</span
+                >
+                <span class="comments__username bold"
+                  >Aleksandra Krasowska</span
+                >
+              </div>
+              <div class="comments__rating">
+                <img src="./img/review/stars.png" alt="img" />
+              </div>
+            </div>
+            <div class="comments__body">
+              <p class="comments__text">
+                Idealna opcja - szybki kontakt, błyskawiczny transfer na i z
+                lotniska, łatwy dojazd. Gdybym miał się czegoś czepiać, to na
+                parkingu dość tłoczno, miejsca nie są wyznaczone, z początku
+                można czuć się przytłoczonym.
+              </p>
+              <p class="comments__text">
+                Nie było to jednak problemem, spokojnie stanąłem, wszystko
+                grało. W drodze powrotnej kierowca dojechał tak szybko, że nie
+                zdążyłem dojść do wyjścia, czekał na mnie.
+              </p>
+              <span class="comments__data">29.01.2020 12:14</span>
+            </div>
+          </div>
+          <div class="comments">
+            <div class="comments__header">
+              <div class="comments__user-info">
+                <span class="comments__parking-name"
+                  >Parking Okęcie (parkKING)</span
+                >
+                <span class="comments__username bold"
+                  >Aleksandra Krasowska</span
+                >
+              </div>
+              <div class="comments__rating">
+                <img src="./img/review/stars.png" alt="img" />
+              </div>
+            </div>
+            <div class="comments__body">
+              <p class="comments__text">
+                Idealna opcja - szybki kontakt, błyskawiczny transfer na i z
+                lotniska, łatwy dojazd. Gdybym miał się czegoś czepiać, to na
+                parkingu dość tłoczno, miejsca nie są wyznaczone, z początku
+                można czuć się przytłoczonym.
+              </p>
+              <p class="comments__text">
+                Nie było to jednak problemem, spokojnie stanąłem, wszystko
+                grało. W drodze powrotnej kierowca dojechał tak szybko, że nie
+                zdążyłem dojść do wyjścia, czekał na mnie.
+              </p>
+              <span class="comments__data">29.01.2020 12:14</span>
+            </div>
+          </div>
+          <div class="comments">
+            <div class="comments__header">
+              <div class="comments__user-info">
+                <span class="comments__parking-name"
+                  >Parking Okęcie (parkKING)</span
+                >
+                <span class="comments__username bold"
+                  >Aleksandra Krasowska</span
+                >
+              </div>
+              <div class="comments__rating">
+                <img src="./img/review/stars.png" alt="img" />
+              </div>
+            </div>
+            <div class="comments__body">
+              <p class="comments__text">
+                Idealna opcja - szybki kontakt, błyskawiczny transfer na i z
+                lotniska, łatwy dojazd. Gdybym miał się czegoś czepiać, to na
+                parkingu dość tłoczno, miejsca nie są wyznaczone, z początku
+                można czuć się przytłoczonym.
+              </p>
+              <p class="comments__text">
+                Nie było to jednak problemem, spokojnie stanąłem, wszystko
+                grało. W drodze powrotnej kierowca dojechał tak szybko, że nie
+                zdążyłem dojść do wyjścia, czekał na mnie.
+              </p>
+              <span class="comments__data">29.01.2020 12:14</span>
+            </div>
+          </div>
+          <div class="comments">
+            <div class="comments__header">
+              <div class="comments__user-info">
+                <span class="comments__parking-name"
+                  >Parking Okęcie (parkKING)</span
+                >
+                <span class="comments__username bold"
+                  >Aleksandra Krasowska</span
+                >
+              </div>
+              <div class="comments__rating">
+                <img src="./img/review/stars.png" alt="img" />
+              </div>
+            </div>
+            <div class="comments__body">
+              <p class="comments__text">
+                Idealna opcja - szybki kontakt, błyskawiczny transfer na i z
+                lotniska, łatwy dojazd. Gdybym miał się czegoś czepiać, to na
+                parkingu dość tłoczno, miejsca nie są wyznaczone, z początku
+                można czuć się przytłoczonym.
+              </p>
+              <p class="comments__text">
+                Nie było to jednak problemem, spokojnie stanąłem, wszystko
+                grało. W drodze powrotnej kierowca dojechał tak szybko, że nie
+                zdążyłem dojść do wyjścia, czekał na mnie.
+              </p>
+              <span class="comments__data">29.01.2020 12:14</span>
+            </div>
+          </div>
+          <div class="comments">
+            <div class="comments__header">
+              <div class="comments__user-info">
+                <span class="comments__parking-name"
+                  >Parking Okęcie (parkKING)</span
+                >
+                <span class="comments__username bold"
+                  >Aleksandra Krasowska</span
+                >
+              </div>
+              <div class="comments__rating">
+                <img src="./img/review/stars.png" alt="img" />
+              </div>
+            </div>
+            <div class="comments__body">
+              <p class="comments__text">
+                Idealna opcja - szybki kontakt, błyskawiczny transfer na i z
+                lotniska, łatwy dojazd. Gdybym miał się czegoś czepiać, to na
+                parkingu dość tłoczno, miejsca nie są wyznaczone, z początku
+                można czuć się przytłoczonym.
+              </p>
+              <p class="comments__text">
+                Nie było to jednak problemem, spokojnie stanąłem, wszystko
+                grało. W drodze powrotnej kierowca dojechał tak szybko, że nie
+                zdążyłem dojść do wyjścia, czekał na mnie.
+              </p>
+              <span class="comments__data">29.01.2020 12:14</span>
+            </div>
           </div>
         </div>
-        <div class="comments">
-          <div class="comments__header">
-            <div class="comments__user-info">
-              <span class="comments__parking-name"
-                >Parking Okęcie (parkKING)</span
-              >
-              <span class="comments__username bold">Aleksandra Krasowska</span>
-            </div>
-            <div class="comments__rating">
-              <img src="./img/review/stars.png" alt="img" />
-            </div>
-          </div>
-          <div class="comments__body">
-            <p class="comments__text">
-              Idealna opcja - szybki kontakt, błyskawiczny transfer na i z
-              lotniska, łatwy dojazd. Gdybym miał się czegoś czepiać, to na
-              parkingu dość tłoczno, miejsca nie są wyznaczone, z początku można
-              czuć się przytłoczonym.
-            </p>
-            <p class="comments__text">
-              Nie było to jednak problemem, spokojnie stanąłem, wszystko grało.
-              W drodze powrotnej kierowca dojechał tak szybko, że nie zdążyłem
-              dojść do wyjścia, czekał na mnie.
-            </p>
-            <span class="comments__data">29.01.2020 12:14</span>
-          </div>
-        </div>
-        <div class="slider-point">
+        <div class="slider-point hide">
           <span class="point"></span>
           <span class="point"></span>
           <span class="point active-point"></span>
@@ -886,9 +2039,9 @@
           <span class="point"></span>
         </div>
       </div>
-    </section>
+    </main>
     <footer class="footer">
-      <div class="footer-wraper container">
+      <div class="footer-wraper">
         <div class="contacts">
           <h4 class="contacts__title">Skontaktuj się z nami</h4>
           <a href="tel:+48579996550" class="contacts__link">
@@ -927,7 +2080,7 @@
           </ul>
         </div>
         <div class="info">
-          <h4 class="info__title">Nawigacja</h4>
+          <h4 class="info__title">PARKING lotnisko Warzsawa</h4>
           <p class="info__text">
             Parklot to firma będąca liderem na rynku okołolotniskowych usług
             parkingowych. W swojej ofercie Parklot posiada miejsca parkingowe na
@@ -937,7 +2090,7 @@
         </div>
       </div>
       <div class="footer-links">
-        <div class="footer-wraper container">
+        <div class="footer-wraper ">
           <div class="social-links">
             <span class="social-links__title">obserwuj nas:</span>
             <ul class="social-links__list">
@@ -1066,5 +2219,13 @@
         </ul>
       </div>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
