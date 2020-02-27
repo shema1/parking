@@ -1524,9 +1524,23 @@
 
 @font-face {
   font-family: "Ubuntu";
-  src: url("../fonts/WebFont-Italic.eot");
-  font-weight: normal;
-  font-style: italic;
+  src: url("./fonts/Ubuntu-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./fonts/Ubuntu-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./fonts/Ubuntu-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./fonts/Ubuntu-Bold.ttf");
+  font-weight: 700;
 }
 body {
   font-family: "Ubuntu";
@@ -1673,7 +1687,7 @@ h4 {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #E6E6E6;
+  background: #e6e6e6;
   border-radius: 4px;
   height: 10px;
 }
@@ -1812,7 +1826,8 @@ li.ui-menu-item:hover {
   font-size: 14px;
 }
 
-.ui-state-default, .ui-widget-content .ui-state-default {
+.ui-state-default,
+.ui-widget-content .ui-state-default {
   background: transparent;
   border: none;
   width: 25px;
@@ -1820,7 +1835,8 @@ li.ui-menu-item:hover {
   text-align: center;
   line-height: 19px;
 }
-.ui-state-default:hover, .ui-widget-content .ui-state-default:hover {
+.ui-state-default:hover,
+.ui-widget-content .ui-state-default:hover {
   background: #ff8949;
 }
 
