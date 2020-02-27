@@ -1,15 +1,5 @@
 
-$('.calendar').datepicker({
-    inline: true,
-    firstDay: 0,
-    showOtherMonths: true,
-    selectOtherMonths: true,
-    dayNamesMin: ['Pn.', 'Wt.', 'Sr.', 'Czw.', 'Pt.', 'Sob.', 'Ndz.'],
-    monthNames: ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec ", "Lipiec ", "Sierpień ", "Wrzesień ", "Październik", "Listopad", "Grudzień"],
-    altFormat: "dd.mm.yy"
-
-});
-
+$('.datepicker').datepicker()
 
 $('.slider').slick({
     dots: true,
@@ -19,12 +9,11 @@ $('.slider').slick({
     slidesToScroll: 1,
 });
 
-
 $('.select').selectmenu().selectmenu("menuWidget")
     .addClass("overflow");
 
 const cardItem = document.querySelector(".parking-list")
-
+let selectedCard = 0;
 
 // open card form
 const openForm = (event) => {
@@ -62,10 +51,9 @@ cardItem.addEventListener("click", successfulReservationPopup)
 
 // open price popup
 
-const openPricePopup = (event)=>{
-    console.log("woek")
-    if(event.target.classList.value.includes("price-info__more")){
-        console.log("asdsdf")
+const openPricePopup = (event) => {
+    // console.log("woek")
+    if (event.target.classList.value.includes("price-info__more")) {
         const currentCard = event.target.closest(".parking-list__item")
         currentCard.querySelector(".popup-price").classList.remove("hide")
     }
@@ -79,12 +67,36 @@ cardItem.addEventListener("click", openPricePopup)
 // close popup window
 
 const closeBtn = document.querySelector("body")
+
 const closeReservationPopup = (event) => {
-    if(event.target.classList.value.includes("close")){
+    if (event.target.classList.value.includes("close")) {
         const currentPopup = event.target.closest(".popup-mark");
         currentPopup.classList.add("hide");
     }
 }
 
-closeBtn.addEventListener("click",closeReservationPopup)
+closeBtn.addEventListener("click", closeReservationPopup)
 
+
+
+
+
+const calculate = (event) => {
+    if (event.target.classList.value.includes("userData")) {
+        // console.log(moment().format())
+        const currentCard = event.target.closest(".parking-card")
+        let startDate = moment(currentCard.querySelector(".start-date").value)
+        let endDate = moment(currentCard.querySelector(".end-date").value)
+        // let diference = startDate.from(endDate,"d")
+        let diference = endDate.diff(startDate, 'days')
+        let result = 5 * diference
+        let price = currentCard.querySelector(".total__price")
+        if (result < 0) {
+            price.innerHTML = 0 + "zł"
+        } else if (result > 0) {
+            price.innerHTML = result + "zł"
+        }
+    }
+}
+
+cardItem.addEventListener("mouseover", calculate)

@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <link rel="stylesheet" href="./style/jquery-ui.min.css" />
+    <link href="./style/datepicker.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
@@ -97,7 +98,7 @@
               <div class="date-block__inputs">
                 <input
                   type="text"
-                  class="calendar input date-picker__header"
+                  class="input date-picker__header"
                   value=""
                 />
                 <select
@@ -135,7 +136,7 @@
                 >Departure Date</label
               >
               <div class="date-block__inputs">
-                <input type="text" class="calendar input date-picker__header" />
+                <input type="text" class="input date-picker__header" />
                 <select
                   name="end-time"
                   class="input select time-picker__header"
@@ -329,14 +330,16 @@
                     <label for="start-date" class="l">Data przyjazdu:</label>
                     <input
                       type="text"
-                      class="calendar input date-picker__form"
+                      class=" input date-picker__form start-date datepicker-here "
+                      data-date-format="mm-dd-yyyy" 
                     />
                   </div>
                   <div class="user-data user-data__end-date">
-                    <label for="end-date" class="l">Data przyjazdu:</label>
+                    <label for="end-date" class="l">Data wyjazdu:</label>
                     <input
                       type="text"
-                      class="calendar input date-picker__form"
+                      class=" input date-picker__form end-date datepicker-here"
+                      data-date-format="mm-dd-yyyy" 
                     />
                   </div>
                   <div class="user-data user-data__start-time">
@@ -647,14 +650,17 @@
                     <label for="start-date" class="l">Data przyjazdu:</label>
                     <input
                       type="text"
-                      class="calendar input date-picker__form"
+                      class=" input date-picker__form start-date datepicker-here "
+                      data-date-format="mm-dd-yyyy" 
                     />
                   </div>
                   <div class="user-data user-data__end-date">
-                    <label for="end-date" class="l">Data przyjazdu:</label>
+                    <label for="end-date" class="l">Data wyjazdu:</label>
                     <input
+                 
                       type="text"
-                      class="calendar input date-picker__form"
+                      class=" input date-picker__form end-date datepicker-here "
+                      data-date-format="mm-dd-yyyy" 
                     />
                   </div>
                   <div class="user-data user-data__start-time">
@@ -965,21 +971,23 @@
                     <label for="start-date" class="l">Data przyjazdu:</label>
                     <input
                       type="text"
-                      class="calendar input date-picker__form"
+                      class="input date-picker__form"
                     />
                   </div>
                   <div class="user-data user-data__end-date">
-                    <label for="end-date" class="l">Data przyjazdu:</label>
+                    <label for="end-date" class="l">Data wyjazdu:</label>
                     <input
                       type="text"
-                      class="calendar input date-picker__form"
+                      class=" input date-picker__form end-date datepicker-here "
+                      data-date-format="mm-dd-yyyy" 
                     />
                   </div>
                   <div class="user-data user-data__start-time">
                     <label for="start-time" class="">Godziny od :</label>
                     <select
                       name="start-time"
-                      class="input select  time-picker__form"
+                      class=" input date-picker__form start-date datepicker-here "
+                      data-date-format="mm-dd-yyyy" 
                     >
                       <option value="1">01:00</option>
                       <option value="2">02:00</option>
@@ -1283,14 +1291,16 @@
                     <label for="start-date" class="l">Data przyjazdu:</label>
                     <input
                       type="text"
-                      class="calendar input date-picker__form"
+                      class=" input date-picker__form start-date datepicker-here "
+                      data-date-format="mm-dd-yyyy" 
                     />
                   </div>
                   <div class="user-data user-data__end-date">
-                    <label for="end-date" class="l">Data przyjazdu:</label>
+                    <label for="end-date" class="l">Data wyjazdu:</label>
                     <input
                       type="text"
-                      class="calendar input date-picker__form"
+                      class=" input date-picker__form end-date datepicker-here "
+                      data-date-format="mm-dd-yyyy" 
                     />
                   </div>
                   <div class="user-data user-data__start-time">
@@ -1600,15 +1610,15 @@
                   <div class="user-data user-data__start-date">
                     <label for="start-date" class="l">Data przyjazdu:</label>
                     <input
-                      type="text"
-                      class="calendar input date-picker__form"
+                    class=" input date-picker__form start-date datepicker-here "
+                    data-date-format="mm-dd-yyyy" 
                     />
                   </div>
                   <div class="user-data user-data__end-date">
-                    <label for="end-date" class="l">Data przyjazdu:</label>
+                    <label for="end-date" class="l">Data wyjazdu:</label>
                     <input
-                      type="text"
-                      class="calendar input date-picker__form"
+                    class=" input date-picker__form end-date datepicker-here "
+                    data-date-format="mm-dd-yyyy" 
                     />
                   </div>
                   <div class="user-data user-data__start-time">
@@ -1919,15 +1929,15 @@
                   <div class="user-data user-data__start-date">
                     <label for="start-date" class="l">Data przyjazdu:</label>
                     <input
-                      type="text"
-                      class="calendar input date-picker__form"
+                    class=" input date-picker__form start-date datepicker-here "
+                    data-date-format="mm-dd-yyyy" 
                     />
                   </div>
                   <div class="user-data user-data__end-date">
-                    <label for="end-date" class="l">Data przyjazdu:</label>
+                    <label for="end-date" class="l">Data wyjazdu:</label>
                     <input
-                      type="text"
-                      class="calendar input date-picker__form"
+                    class=" input date-picker__form end-date datepicker-here "
+                    data-date-format="mm-dd-yyyy" 
                     />
                   </div>
                   <div class="user-data user-data__start-time">
@@ -2455,8 +2465,9 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
-    <script src="js/"></script>
     <script src="./js/jquery-ui.min.js"></script>
+    <script src="js/datepicker.min.js"></script> 
+    <script src="js/moment.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
