@@ -1,7 +1,7 @@
 .parking {
   display: flex;
-  padding:  20px 10px;
-  @include for-tablet{
+  padding: 20px 10px;
+  @include for-tablet {
     display: flex;
     justify-content: center;
   }
@@ -12,17 +12,15 @@
   margin-right: 15px;
   flex-direction: column;
   position: relative;
-  @include for-tablet{
+  @include for-tablet {
     display: none;
   }
   @include for-mobile {
-   display: none;
+    display: none;
   }
 
-
-  &__img{
+  &__img {
     align-self: start;
-
   }
   &__text {
     position: absolute;
@@ -44,14 +42,14 @@
   display: flex;
   box-shadow: 6px 3px 10px -6px rgba(95, 98, 134, 1);
   position: relative;
-  @include for-tablet{
+  @include for-tablet {
     width: 975px;
   }
   @include for-mobile {
     flex-direction: column;
     height: 720px;
     width: 300px;
-   }
+  }
 }
 
 .parking-list {
@@ -60,8 +58,6 @@
   }
 }
 
-
-
 .parking-img {
   width: 395px;
   height: 351px;
@@ -69,7 +65,7 @@
   flex-direction: column;
   position: relative;
   z-index: -1;
-  @include for-tablet{
+  @include for-tablet {
     align-self: center;
     width: 350px;
     height: 300px;
@@ -77,32 +73,31 @@
   @include for-mobile {
     width: 300px;
     height: 220px;
-   }
+  }
 
-   &__photo{
-    @include for-tablet{
+  &__photo {
+    @include for-tablet {
       width: inherit;
-      height: inherit
+      height: inherit;
     }
     @include for-mobile {
-      height: inherit
-     }
+      height: inherit;
+    }
   }
- 
 }
 
-.overlay-img{
+.overlay-img {
   position: absolute;
   height: 351px;
   width: 395px;
-  @include for-tablet{
+  @include for-tablet {
     width: 350px;
     height: 300px;
   }
   @include for-mobile {
     width: 300px;
     height: 220px;
-   }
+  }
   &__header {
     font-size: 20px;
     color: #fff;
@@ -111,7 +106,7 @@
     text-align: center;
     padding-top: 15px;
   }
-  
+
   &__footer {
     height: 100px;
     display: flex;
@@ -120,12 +115,12 @@
     align-items: flex-end;
     padding-bottom: 20px;
     background: linear-gradient(0deg, #0000007a, #524f4f00);
-    @include for-tablet{
-     margin-top: 144px;
+    @include for-tablet {
+      margin-top: 144px;
     }
     @include for-mobile {
       margin-top: 65px;
-     }
+    }
   }
 }
 .comment-text {
@@ -138,7 +133,7 @@
   @include for-mobile {
     width: inherit;
     padding: 0 20px;
-   }
+  }
 }
 
 .parking-info__title {
@@ -150,16 +145,16 @@
   position: relative;
   padding-left: 13px;
   @include for-mobile {
-    width:  160px;
+    width: 160px;
     padding: 0;
-   }
+  }
 }
 
 .parking-name {
   margin: 13px 0;
   @include for-mobile {
     font-size: 20px;
-   }
+  }
 }
 
 .parking-recommended {
@@ -172,23 +167,23 @@
   clip-path: polygon(100% -600%, 0 100%, 100% 100%);
   padding: 5px 0;
   right: -72px;
-  @include for-tablet{
+  @include for-tablet {
     right: -11px;
   }
   @include for-mobile {
     right: -119px;
-   }
+  }
 }
 
 .services-list {
   margin-bottom: 70px;
-  @include for-tablet{
+  @include for-tablet {
     margin-bottom: 40px;
   }
   @include for-mobile {
-    border-bottom: 1px solid #F0F0F0;
+    border-bottom: 1px solid #f0f0f0;
     margin-bottom: 10px;
-   }
+  }
   &__item {
     margin-bottom: 12px;
   }
@@ -203,20 +198,20 @@
   padding: 17px 0 0 13px;
   @include for-mobile {
     flex-direction: column;
-   }
+  }
 }
 
 .price-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   @include for-mobile {
     flex-direction: row;
-  flex-wrap: wrap-reverse;
-  justify-content: space-around;
-  margin-bottom: 15px;
-   }
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    margin-bottom: 15px;
+  }
   &__old {
     font-size: 18px;
     text-decoration: line-through;
@@ -237,7 +232,7 @@
     margin: 33px 0 18px;
     @include for-mobile {
       margin: 15px 0;
-     }
+    }
   }
 }
 
@@ -246,29 +241,28 @@
   @include for-mobile {
     margin: 0;
     text-align: center;
-   }
+  }
 }
 
 .transfer-block {
   display: flex;
-  @include for-tablet{
+  @include for-tablet {
     flex-direction: column;
   }
   @include for-mobile {
-  
-    border-bottom: 1px solid #F0F0F0;
-   }
+    border-bottom: 1px solid #f0f0f0;
+  }
 }
 
 .transfer-info {
   display: flex;
   margin-right: 36px;
-  @include for-tablet{
+  @include for-tablet {
     margin-top: 10px;
   }
   @include for-mobile {
-   margin-bottom: 10px;
-   }
+    margin-bottom: 10px;
+  }
 }
 .transfer-info__wraper {
   display: flex;
@@ -298,7 +292,7 @@
   @include for-mobile {
     width: 160px;
     margin: 10px auto;
-   }
+  }
   &__circle {
     color: #fff;
     background-color: $second-text-color;
@@ -313,21 +307,21 @@
 .parking-card__form {
   height: 581px;
   flex-wrap: wrap;
-    flex-direction: column;
-    @include for-mobile {
-     flex-wrap: nowrap;
-     height: 1280px;
-     }
+  flex-direction: column;
+  @include for-mobile {
+    flex-wrap: nowrap;
+    height: 1280px;
+  }
 }
 
-.parking-data{
+.parking-data {
   @include for-tablet {
-    width:580px;
-     }
+    width: 580px;
+  }
 
-     @include for-mobile {
-      width:274px;
-       }
+  @include for-mobile {
+    width: 274px;
+  }
 }
 
 .parking-data label {
@@ -336,23 +330,23 @@
   margin-left: 13px;
 }
 
-.date-picker__form{
+.date-picker__form {
   width: 300px;
   @include for-tablet {
-   width: 280px ;
-    }
+    width: 280px;
+  }
   @include for-mobile {
-   width: 265px;
-    }
+    width: 265px;
+  }
 }
 
 .userData {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-   @include for-mobile {
+  @include for-mobile {
     width: 265px;
-     }
+  }
 }
 
 .user-data {
@@ -361,8 +355,8 @@
   margin-bottom: 17px;
 }
 
-.time-picker__form{
-  width:300px ;
+.time-picker__form {
+  width: 300px;
 }
 
 .end-time-input,
@@ -373,51 +367,52 @@
 .user-data__email {
   width: 300px;
   @include for-mobile {
-   width: 265px;
-   }
+    width: 265px;
+  }
 }
 .reg-num-input,
 .person-num-input,
 .child-num-input {
   @include for-tablet {
     width: 160px;
-    }
+  }
   @include for-mobile {
     width: 265px;
-    }
+  }
 }
 
 .name-input {
   width: 628px;
   @include for-tablet {
-    width:580px;
-     }
+    width: 580px;
+  }
   @include for-mobile {
     width: 265px;
-    }
+  }
 }
 
-.tel-input,.email-input {
+.tel-input,
+.email-input {
   @include for-tablet {
-    width:250px;
-     }
+    width: 250px;
+  }
 }
 
 .end-time-input,
-.start-time-input{
+.start-time-input {
   width: 124px;
 }
-.parking-price{
+.parking-price {
   order: 0;
   @include for-mobile {
     order: 1;
-    }
+  }
 }
 .parking-price__days {
   margin: 15px;
   @include for-mobile {
     width: 100%;
-    }
+  }
 }
 
 .price-list {
@@ -435,33 +430,33 @@
   }
 }
 
-.price{
+.price {
   margin-left: 10px;
 }
-.send-btn{
+.send-btn {
   @include for-mobile {
-   margin: 0 auto;
-    }
+    margin: 0 auto;
+  }
 }
-.total{
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    
-    @include for-mobile {
-      width: 250px;
-      justify-content: center;
-      margin-bottom: 10px;
-      }
-    &__price  {
-        font-size: 26px;
-    }
+.total {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
 
-    &__days{
-        color: #9B9B9B;
-        margin: 0 50px 0 25px;
-        @include for-mobile {
-          display: none;
-          }
+  @include for-mobile {
+    width: 250px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  &__price {
+    font-size: 26px;
+  }
+
+  &__days {
+    color: #9b9b9b;
+    margin: 0 50px 0 25px;
+    @include for-mobile {
+      display: none;
     }
+  }
 }

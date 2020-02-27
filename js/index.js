@@ -1,4 +1,15 @@
 
+$('.calendar').datepicker({
+    inline: true,
+    firstDay: 0,
+    showOtherMonths: true,
+    selectOtherMonths: true,
+    dayNamesMin: ['Pn.', 'Wt.', 'Sr.', 'Czw.', 'Pt.', 'Sob.', 'Ndz.'],
+    monthNames: ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec ", "Lipiec ", "Sierpień ", "Wrzesień ", "Październik", "Listopad", "Grudzień"],
+    altFormat: "dd.mm.yy"
+
+});
+
 
 $('.slider').slick({
     dots: true,
@@ -15,7 +26,7 @@ $('.select').selectmenu().selectmenu("menuWidget")
 
 
 const openForm = (event) => {
-    // document.querySelector(".btn").setAttribute("style", "background-color: red")
+
     const currentCard = event.target.closest(".parking-card")
 
     currentCard.querySelector(".parking-info__services").classList.add("hide")
@@ -52,29 +63,10 @@ const closeReservationPopup = () => {
 }
 
 const openPricePopup = (event)=>{
-    // const currentCard = event.target.closest(".add-info__circle")
+
     document.querySelector(".popup-price").classList.remove("hide")
 }
 const closePricePopup = (event)=>{
-    // const currentCard = event.target.closest(".add-info__circle")
+
     document.querySelector(".popup-price").classList.add("hide")
 }
-
-const correctWidth = (event) => {
-    const newWidth = document.createElement("style")
-    // newWidth.innerText = `.test{width: ${event.target.offsetWidth}px;}`
-    newWidth.innerText = `.test{width: 400px;}`
-    const calendar =document.querySelector("#ui-datepicker-div")
-    console.log(calendar)
-    calendar.appendChild(newWidth)
-}
-$('.calendar').datepicker({
-    inline: true,
-    firstDay: 0,
-    showOtherMonths: true,
-    selectOtherMonths: true,
-    dayNamesMin: ['Pn.', 'Wt.', 'Sr.', 'Czw.', 'Pt.', 'Sob.', 'Ndz.'],
-    monthNames: ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec ", "Lipiec ", "Sierpień ", "Wrzesień ", "Październik", "Listopad", "Grudzień"],
-    altFormat: "dd.mm.yy"
-
-});

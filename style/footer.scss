@@ -1,25 +1,24 @@
 .footer {
-  // display: none;
   background-color: $main-footer-background-color;
   color: #fff;
   padding: 50px 0 0;
   @include for-mobile {
     flex-direction: column;
-    }
+  }
 }
 
-.footer-wraper{
+.footer-wraper {
   display: flex;
   width: 1350px;
   margin: 0 auto;
   @include for-tablet {
     padding: 0 20px;
     width: 100%;
-    }
+  }
   @include for-mobile {
     width: 300px;
     flex-direction: column;
-    }
+  }
 }
 
 .contacts {
@@ -37,7 +36,7 @@
   text-decoration: none;
   @include for-mobile {
     margin: 20px 0;
-    }
+  }
 }
 
 .contacts__phone {
@@ -51,8 +50,8 @@
 .navigation {
   margin: 0 230px 0 150px;
   @include for-mobile {
-    margin: 40px 0
-    }
+    margin: 40px 0;
+  }
 }
 
 .navigation-list {
@@ -70,8 +69,8 @@
   &__text {
     margin: 0;
     @include for-mobile {
-      width: 300px
-      }
+      width: 300px;
+    }
   }
 }
 
@@ -82,11 +81,10 @@
   display: flex;
   @include for-tablet {
     padding: 12px 20px;
-    }
+  }
   @include for-mobile {
     flex-direction: column;
-    }
- 
+  }
 }
 
 .networks {
@@ -103,10 +101,11 @@
   display: flex;
   @include for-mobile {
     margin-bottom: 30px;
-    }
+  }
 }
 
-.social-links__title,.payment-title {
+.social-links__title,
+.payment-title {
   text-transform: uppercase;
   margin-right: 20px;
 }
@@ -118,15 +117,15 @@
   margin-right: 10px;
 }
 
-.payment{
-    display: flex;
-    margin-left:550px ;
-    @include for-tablet {
-      margin-left: auto;
-      }
-    @include for-mobile {
-      margin: 0;
-      }
+.payment {
+  display: flex;
+  margin-left: 550px;
+  @include for-tablet {
+    margin-left: auto;
+  }
+  @include for-mobile {
+    margin: 0;
+  }
 }
 .payment-title {
   text-transform: uppercase;
@@ -146,9 +145,9 @@
   }
 
   &__img {
-   padding-top: 2px;
+    padding-top: 2px;
   }
 }
-.payment-list__img{
-    line-height:24px ;
+.payment-list__img {
+  line-height: 24px;
 }

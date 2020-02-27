@@ -7,10 +7,10 @@
   margin: 0 auto;
   @include for-tablet {
     padding: 20px 30px;
-    }
-    @include for-mobile {
-     padding: 10px 30px;
-    }
+  }
+  @include for-mobile {
+    padding: 10px 30px;
+  }
   &__logo-link {
     font-size: 22px;
     color: $main-text-color;
@@ -50,7 +50,7 @@
     margin-left: 30px;
     margin-top: 10px;
     @include for-mobile {
-     margin: 0;
+      margin: 0;
     }
   }
 
@@ -82,8 +82,8 @@
     margin-right: 15px;
     align-self: center;
     @include for-mobile {
-     font-weight: 500;
-     margin: 0;
+      font-weight: 500;
+      margin: 0;
     }
   }
 }
@@ -107,7 +107,7 @@
   align-items: center;
   font-size: 20px;
   color: #fff;
- 
+
   @include for-mobile {
     font-size: 12px;
   }
@@ -115,19 +115,14 @@
   &__menu {
     display: flex;
     justify-content: space-between;
-    @include for-tablet{
+    @include for-tablet {
       height: 80px;
       flex-wrap: wrap;
       flex-direction: column;
       justify-content: end;
       align-items: center;
     }
-    // @include for-mobile {
-    //   height: 80px;
-    //   flex-wrap: wrap;
-    //   flex-direction: column;
-    //   justify-content: end;
-    // }
+
   }
   &__item {
     @include for-mobile {
@@ -152,13 +147,12 @@
     font-weight: bold;
   }
 
-  &__text{
+  &__text {
     display: block;
     margin-left: 10px;
   }
-
 }
-.header-overlay{
+.header-overlay {
   position: absolute;
   left: 0;
   top: 0;
@@ -183,7 +177,7 @@
     font-size: 76px;
     text-transform: uppercase;
     z-index: 5;
-    @include for-tablet{
+    @include for-tablet {
       font-size: 62px;
     }
     @include for-mobile {
@@ -207,7 +201,7 @@
   padding: 0 40px;
   margin-bottom: 41px;
   z-index: 1;
-  @include for-tablet{
+  @include for-tablet {
     width: 990px;
   }
   @include for-mobile {
@@ -268,5 +262,5 @@
   background: #fff
     url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
     97% 50% no-repeat;
-    border: none;
+  border: none;
 }

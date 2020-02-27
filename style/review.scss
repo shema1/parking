@@ -84,7 +84,7 @@
   position: relative;
   z-index: 10;
   @include for-tablet {
-      width: 900px;
+    width: 900px;
     margin: 0 auto;
   }
   @include for-mobile {
@@ -143,7 +143,7 @@
   margin: 0;
   @include for-mobile {
     display: none;
-   }
+  }
 }
 .slick-active li button {
   background-color: $second-text-color;
