@@ -426,14 +426,18 @@
   flex-wrap: wrap;
   height: 150px;
   align-items: center;
+  padding: 0 10px;
   &__item {
     margin-bottom: 12px;
   }
   &__line {
-    margin-left: 10px;
+    margin: 0 10px;
   }
 }
 
+.price{
+  margin-left: 10px;
+}
 .send-btn{
   @include for-mobile {
    margin: 0 auto;

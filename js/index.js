@@ -61,13 +61,6 @@ const closePricePopup = (event)=>{
 }
 
 const correctWidth = (event) => {
-    // console.log(event.target.offsetWidth)
-    // document.querySelector(".test").style.width =`${event.target.offsetWidth}`
-    //  document.querySelector(".ui-datepicker").classList.add("test")
-    // document.querySelector(".ui-datepicker").setAttribute("style", "color:red")
-    // console.log(`"width: ${event.target.offsetWidth}px"`)
-    // .setAttribute("style","background-color: red")
-
     const newWidth = document.createElement("style")
     // newWidth.innerText = `.test{width: ${event.target.offsetWidth}px;}`
     newWidth.innerText = `.test{width: 400px;}`

@@ -98,6 +98,7 @@
                 <input
                   type="text"
                   class="calendar input date-picker__header"
+                  value=""
                   onclick="correctWidth(event)"
                 />
                 <select
@@ -223,43 +224,43 @@
               <ul class="price-list">
                 <li class="price-list__item">
                   <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
+                  <span class="orange bold price">50zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">55zł</span>
+                  <span class="price-list__line line">-</span>2 dzień
+                  <span class="orange bold price">55zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">60zł</span>
+                  <span class="price-list__line line">-</span>3 dzień
+                  <span class="orange bold price">60zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">65zł</span>
+                  <span class="price-list__line line">-</span>4 dzień
+                  <span class="orange bold price">65zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">70zł</span>
+                  <span class="price-list__line line">-</span>5 dzień
+                  <span class="orange bold price">70zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">75zł</span>
+                  <span class="price-list__line line">-</span>6 dzień
+                  <span class="orange bold price">75zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">80zł</span>
+                  <span class="price-list__line line">-</span>7 dzień
+                  <span class="orange bold price">80zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">85zł</span>
+                  <span class="price-list__line line">-</span>8 dzień
+                  <span class="orange bold price">85zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">90zł</span>
+                  <span class="price-list__line line">-</span>9 dzień
+                  <span class="orange bold price">90zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">95zł</span>
+                  <span class="price-list__line line">-</span>10 dzień
+                  <span class="orange bold price">95zł</span>
                 </li>
               </ul>
             </div>
@@ -460,8 +461,59 @@
               </form>
             </div>
           </div>
-
-
+          <div class="popup-price hide">
+            <div class="parking-price parking-price__popup popup ">
+              <button class="popup__close popup__close_price" onclick="closePricePopup()"><i class="material-icons">
+                close
+                </i></button>
+              <span class="parking-price__title">Parking Samolot</span>
+              <h3 class="parking-price__days">
+                cena za dzień:
+              </h3>
+              <ul class="price-list">
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">50zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>2 dzień
+                  <span class="orange bold">55zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>3 dzień
+                  <span class="orange bold">60zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>4 dzień
+                  <span class="orange bold">65zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>5 dzień
+                  <span class="orange bold">70zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>6 dzień
+                  <span class="orange bold">75zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>7 dzień
+                  <span class="orange bold">80zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>8 dzień
+                  <span class="orange bold">85zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>9 dzień
+                  <span class="orange bold">90zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>10 dzień
+                  <span class="orange bold">95zł</span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
 
         </li>
@@ -494,49 +546,49 @@
               <ul class="price-list">
                 <li class="price-list__item">
                   <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
+                  <span class="orange bold price">50zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">55zł</span>
+                  <span class="price-list__line line">-</span>2 dzień
+                  <span class="orange bold price">55zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">60zł</span>
+                  <span class="price-list__line line">-</span>3 dzień
+                  <span class="orange bold price">60zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">65zł</span>
+                  <span class="price-list__line line">-</span>4 dzień
+                  <span class="orange bold price">65zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">70zł</span>
+                  <span class="price-list__line line">-</span>5 dzień
+                  <span class="orange bold price">70zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">75zł</span>
+                  <span class="price-list__line line">-</span>6 dzień
+                  <span class="orange bold price">75zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">80zł</span>
+                  <span class="price-list__line line">-</span>7 dzień
+                  <span class="orange bold price">80zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">85zł</span>
+                  <span class="price-list__line line">-</span>8 dzień
+                  <span class="orange bold price">85zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">90zł</span>
+                  <span class="price-list__line line">-</span>9 dzień
+                  <span class="orange bold price">90zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">95zł</span>
+                  <span class="price-list__line line">-</span>10 dzień
+                  <span class="orange bold price">95zł</span>
                 </li>
               </ul>
             </div>
             <div class="parking-info">
               <div class="parking-info__title">
-                <h3 class="parking-name">Parking Samolot</h3>
+                <h3 class="parking-name">Р51 24/7</h3>
                 <span class="parking-recommended">Polecany</span>
               </div>
               <div class="parking-info__services ">
@@ -594,7 +646,7 @@
                   </button>
                   <div class="add-info">
                     <span class="line">-</span> Darmowa anulacja
-                    <span class="add-info__circle">i</span>
+                    <span class="add-info__circle" onclick="openPricePopup(event)">i</span>
                   </div>
                 </div>
               </div>
@@ -731,7 +783,59 @@
               </form>
             </div>
           </div>
-
+          <div class="popup-price hide">
+            <div class="parking-price parking-price__popup popup ">
+              <button class="popup__close popup__close_price" onclick="closePricePopup()"><i class="material-icons">
+                close
+                </i></button>
+              <span class="parking-price__title">Parking Złotówka</span>
+              <h3 class="parking-price__days">
+                cena za dzień:
+              </h3>
+              <ul class="price-list">
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">50zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>2 dzień
+                  <span class="orange bold">55zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>3 dzień
+                  <span class="orange bold">60zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>4 dzień
+                  <span class="orange bold">65zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>5 dzień
+                  <span class="orange bold">70zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>6 dzień
+                  <span class="orange bold">75zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>7 dzień
+                  <span class="orange bold">80zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>8 dzień
+                  <span class="orange bold">85zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>9 dzień
+                  <span class="orange bold">90zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>10 dzień
+                  <span class="orange bold">95zł</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </li>
         <li class="parking-list__item">
           <div class="parking-card">
@@ -762,49 +866,49 @@
               <ul class="price-list">
                 <li class="price-list__item">
                   <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
+                  <span class="orange bold price">50zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">55zł</span>
+                  <span class="price-list__line line">-</span>2 dzień
+                  <span class="orange bold price">55zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">60zł</span>
+                  <span class="price-list__line line">-</span>3 dzień
+                  <span class="orange bold price">60zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">65zł</span>
+                  <span class="price-list__line line">-</span>4 dzień
+                  <span class="orange bold price">65zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">70zł</span>
+                  <span class="price-list__line line">-</span>5 dzień
+                  <span class="orange bold price">70zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">75zł</span>
+                  <span class="price-list__line line">-</span>6 dzień
+                  <span class="orange bold price">75zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">80zł</span>
+                  <span class="price-list__line line">-</span>7 dzień
+                  <span class="orange bold price">80zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">85zł</span>
+                  <span class="price-list__line line">-</span>8 dzień
+                  <span class="orange bold price">85zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">90zł</span>
+                  <span class="price-list__line line">-</span>9 dzień
+                  <span class="orange bold price">90zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">95zł</span>
+                  <span class="price-list__line line">-</span>10 dzień
+                  <span class="orange bold price">95zł</span>
                 </li>
               </ul>
             </div>
             <div class="parking-info">
               <div class="parking-info__title">
-                <h3 class="parking-name">Parking Samolot</h3>
+                <h3 class="parking-name">Parking Złotówka</h3>
                 <span class="parking-recommended">Polecany</span>
               </div>
               <div class="parking-info__services ">
@@ -862,7 +966,7 @@
                   </button>
                   <div class="add-info">
                     <span class="line">-</span> Darmowa anulacja
-                    <span class="add-info__circle">i</span>
+                    <span class="add-info__circle" onclick="openPricePopup(event)">i</span>
                   </div>
                 </div>
               </div>
@@ -997,6 +1101,59 @@
                   </button>
                 </div>
               </form>
+            </div>
+          </div>
+          <div class="popup-price hide">
+            <div class="parking-price parking-price__popup popup ">
+              <button class="popup__close popup__close_price" onclick="closePricePopup()"><i class="material-icons">
+                close
+                </i></button>
+              <span class="parking-price__title">Szybki Parking P117</span>
+              <h3 class="parking-price__days">
+                cena za dzień:
+              </h3>
+              <ul class="price-list">
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">50zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>2 dzień
+                  <span class="orange bold">55zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>3 dzień
+                  <span class="orange bold">60zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>4 dzień
+                  <span class="orange bold">65zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>5 dzień
+                  <span class="orange bold">70zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>6 dzień
+                  <span class="orange bold">75zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>7 dzień
+                  <span class="orange bold">80zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>8 dzień
+                  <span class="orange bold">85zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>9 dzień
+                  <span class="orange bold">90zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>10 dzień
+                  <span class="orange bold">95zł</span>
+                </li>
+              </ul>
             </div>
           </div>
         </li>
@@ -1029,49 +1186,49 @@
               <ul class="price-list">
                 <li class="price-list__item">
                   <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
+                  <span class="orange bold price">50zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">55zł</span>
+                  <span class="price-list__line line">-</span>2 dzień
+                  <span class="orange bold price">55zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">60zł</span>
+                  <span class="price-list__line line">-</span>3 dzień
+                  <span class="orange bold price">60zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">65zł</span>
+                  <span class="price-list__line line">-</span>4 dzień
+                  <span class="orange bold price">65zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">70zł</span>
+                  <span class="price-list__line line">-</span>5 dzień
+                  <span class="orange bold price">70zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">75zł</span>
+                  <span class="price-list__line line">-</span>6 dzień
+                  <span class="orange bold price">75zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">80zł</span>
+                  <span class="price-list__line line">-</span>7 dzień
+                  <span class="orange bold price">80zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">85zł</span>
+                  <span class="price-list__line line">-</span>8 dzień
+                  <span class="orange bold price">85zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">90zł</span>
+                  <span class="price-list__line line">-</span>9 dzień
+                  <span class="orange bold price">90zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">95zł</span>
+                  <span class="price-list__line line">-</span>10 dzień
+                  <span class="orange bold price">95zł</span>
                 </li>
               </ul>
             </div>
             <div class="parking-info">
               <div class="parking-info__title">
-                <h3 class="parking-name">Parking Samolot</h3>
+                <h3 class="parking-name">Szybki Parking P117</h3>
                 <span class="parking-recommended">Polecany</span>
               </div>
               <div class="parking-info__services ">
@@ -1129,7 +1286,7 @@
                   </button>
                   <div class="add-info">
                     <span class="line">-</span> Darmowa anulacja
-                    <span class="add-info__circle">i</span>
+                    <span class="add-info__circle" onclick="openPricePopup(event)">i</span>
                   </div>
                 </div>
               </div>
@@ -1266,7 +1423,59 @@
               </form>
             </div>
           </div>
-
+          <div class="popup-price hide">
+            <div class="parking-price parking-price__popup popup ">
+              <button class="popup__close popup__close_price" onclick="closePricePopup()"><i class="material-icons">
+                close
+                </i></button>
+              <span class="parking-price__title">Parking Samolot</span>
+              <h3 class="parking-price__days">
+                cena za dzień:
+              </h3>
+              <ul class="price-list">
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">50zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>2 dzień
+                  <span class="orange bold">55zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>3 dzień
+                  <span class="orange bold">60zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>4 dzień
+                  <span class="orange bold">65zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>5 dzień
+                  <span class="orange bold">70zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>6 dzień
+                  <span class="orange bold">75zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>7 dzień
+                  <span class="orange bold">80zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>8 dzień
+                  <span class="orange bold">85zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>9 dzień
+                  <span class="orange bold">90zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>10 dzień
+                  <span class="orange bold">95zł</span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
 
 
@@ -1303,49 +1512,49 @@
               <ul class="price-list">
                 <li class="price-list__item">
                   <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
+                  <span class="orange bold price">50zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">55zł</span>
+                  <span class="price-list__line line">-</span>2 dzień
+                  <span class="orange bold price">55zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">60zł</span>
+                  <span class="price-list__line line">-</span>3 dzień
+                  <span class="orange bold price">60zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">65zł</span>
+                  <span class="price-list__line line">-</span>4 dzień
+                  <span class="orange bold price">65zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">70zł</span>
+                  <span class="price-list__line line">-</span>5 dzień
+                  <span class="orange bold price">70zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">75zł</span>
+                  <span class="price-list__line line">-</span>6 dzień
+                  <span class="orange bold price">75zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">80zł</span>
+                  <span class="price-list__line line">-</span>7 dzień
+                  <span class="orange bold price">80zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">85zł</span>
+                  <span class="price-list__line line">-</span>8 dzień
+                  <span class="orange bold price">85zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">90zł</span>
+                  <span class="price-list__line line">-</span>9 dzień
+                  <span class="orange bold price">90zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">95zł</span>
+                  <span class="price-list__line line">-</span>10 dzień
+                  <span class="orange bold price">95zł</span>
                 </li>
               </ul>
             </div>
             <div class="parking-info">
               <div class="parking-info__title">
-                <h3 class="parking-name">Parking Samolot</h3>
+                <h3 class="parking-name">Parking EXPRESS</h3>
                 <span class="parking-recommended hide">Polecany</span>
               </div>
               <div class="parking-info__services ">
@@ -1403,7 +1612,7 @@
                   </button>
                   <div class="add-info">
                     <span class="line">-</span> Darmowa anulacja
-                    <span class="add-info__circle">i</span>
+                    <span class="add-info__circle" onclick="openPricePopup(event)">i</span>
                   </div>
                 </div>
               </div>
@@ -1541,7 +1750,59 @@
             </div>
           </div>
           
-
+          <div class="popup-price hide">
+            <div class="parking-price parking-price__popup popup ">
+              <button class="popup__close popup__close_price" onclick="closePricePopup()"><i class="material-icons">
+                close
+                </i></button>
+              <span class="parking-price__title">Parking EXPRESS</span>
+              <h3 class="parking-price__days">
+                cena za dzień:
+              </h3>
+              <ul class="price-list">
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">50zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>2 dzień
+                  <span class="orange bold">55zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>3 dzień
+                  <span class="orange bold">60zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>4 dzień
+                  <span class="orange bold">65zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>5 dzień
+                  <span class="orange bold">70zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>6 dzień
+                  <span class="orange bold">75zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>7 dzień
+                  <span class="orange bold">80zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>8 dzień
+                  <span class="orange bold">85zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>9 dzień
+                  <span class="orange bold">90zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>10 dzień
+                  <span class="orange bold">95zł</span>
+                </li>
+              </ul>
+            </div>
+          </div>
           
         </li>
         <li class="parking-list__item ">
@@ -1573,49 +1834,49 @@
               <ul class="price-list">
                 <li class="price-list__item">
                   <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">50zł</span>
+                  <span class="orange bold price">50zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">55zł</span>
+                  <span class="price-list__line line">-</span>2 dzień
+                  <span class="orange bold price">55zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">60zł</span>
+                  <span class="price-list__line line">-</span>3 dzień
+                  <span class="orange bold price">60zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">65zł</span>
+                  <span class="price-list__line line">-</span>4 dzień
+                  <span class="orange bold price">65zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">70zł</span>
+                  <span class="price-list__line line">-</span>5 dzień
+                  <span class="orange bold price">70zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">75zł</span>
+                  <span class="price-list__line line">-</span>6 dzień
+                  <span class="orange bold price">75zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">80zł</span>
+                  <span class="price-list__line line">-</span>7 dzień
+                  <span class="orange bold price">80zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">85zł</span>
+                  <span class="price-list__line line">-</span>8 dzień
+                  <span class="orange bold price">85zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">90zł</span>
+                  <span class="price-list__line line">-</span>9 dzień
+                  <span class="orange bold price">90zł</span>
                 </li>
                 <li class="price-list__item">
-                  <span class="price-list__line line">-</span>1 dzień
-                  <span class="orange bold">95zł</span>
+                  <span class="price-list__line line">-</span>10 dzień
+                  <span class="orange bold price">95zł</span>
                 </li>
               </ul>
             </div>
             <div class="parking-info">
               <div class="parking-info__title">
-                <h3 class="parking-name">Parking Samolot</h3>
+                <h3 class="parking-name">Parking Sky</h3>
                 <span class="parking-recommended hide">Polecany</span>
               </div>
               <div class="parking-info__services ">
@@ -1673,7 +1934,7 @@
                   </button>
                   <div class="add-info">
                     <span class="line">-</span> Darmowa anulacja
-                    <span class="add-info__circle">i</span>
+                    <span class="add-info__circle" onclick="openPricePopup(event)">i</span>
                   </div>
                 </div>
               </div>
@@ -1810,7 +2071,59 @@
               </form>
             </div>
           </div>
-        
+          <div class="popup-price hide">
+            <div class="parking-price parking-price__popup popup ">
+              <button class="popup__close popup__close_price" onclick="closePricePopup()"><i class="material-icons">
+                close
+                </i></button>
+              <span class="parking-price__title">Parking Sky</span>
+              <h3 class="parking-price__days">
+                cena za dzień:
+              </h3>
+              <ul class="price-list">
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>1 dzień
+                  <span class="orange bold">50zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>2 dzień
+                  <span class="orange bold">55zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>3 dzień
+                  <span class="orange bold">60zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>4 dzień
+                  <span class="orange bold">65zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>5 dzień
+                  <span class="orange bold">70zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>6 dzień
+                  <span class="orange bold">75zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>7 dzień
+                  <span class="orange bold">80zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>8 dzień
+                  <span class="orange bold">85zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>9 dzień
+                  <span class="orange bold">90zł</span>
+                </li>
+                <li class="price-list__item">
+                  <span class="price-list__line line">-</span>10 dzień
+                  <span class="orange bold">95zł</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </li>
       </ul>
     </main>
@@ -2107,7 +2420,9 @@
     </div>
     <div class="popup-price hide">
       <div class="parking-price parking-price__popup popup ">
-        <button class="popup__close popup__close_price" onclick="closePricePopup()">x</button>
+        <button class="popup__close popup__close_price" onclick="closePricePopup()"><i class="material-icons">
+          close
+          </i></button>
         <span class="parking-price__title">Parking Samolot</span>
         <h3 class="parking-price__days">
           cena za dzień:
