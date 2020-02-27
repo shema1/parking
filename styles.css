@@ -1532,26 +1532,6 @@
   z-index: 200;
 }
 
-@font-face {
-  font-family: "Ubuntu";
-  src: url("./fonts/Ubuntu-Light.ttf");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Ubuntu";
-  src: url("./fonts/Ubuntu-Regular.ttf");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Ubuntu";
-  src: url("./fonts/Ubuntu-Medium.ttf");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Ubuntu";
-  src: url("./fonts/Ubuntu-Bold.ttf");
-  font-weight: 700;
-}
 body {
   font-family: "Ubuntu";
   color: #3e4042;
@@ -1860,6 +1840,10 @@ li.ui-menu-item:hover {
   opacity: 1;
   background: url(//www.gravatar.com/avatar/cbfaff96665b7567defe1b34a883db8b?s=16&d=identicon&r=PG) no-repeat center;
   background-size: contain;
+}
+
+.test {
+  width: 500px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -23,50 +23,68 @@ $('.slider').slick({
 $('.select').selectmenu().selectmenu("menuWidget")
     .addClass("overflow");
 
+const cardItem = document.querySelector(".parking-list")
 
 
+// open card form
 const openForm = (event) => {
-
-    const currentCard = event.target.closest(".parking-card")
-
-    currentCard.querySelector(".parking-info__services").classList.add("hide")
-    currentCard.querySelector(".parking-data").classList.remove("hide")
-    currentCard.querySelector(".parking-price").classList.remove("hide")
-    currentCard.classList.add("parking-card__form")
+    event.preventDefault()
+    if (event.target.classList.value === "btn") {
+        const currentCard = event.target.closest(".parking-card")
+        currentCard.querySelector(".parking-info__services").classList.add("hide")
+        currentCard.querySelector(".parking-data").classList.remove("hide")
+        currentCard.querySelector(".parking-price").classList.remove("hide")
+        currentCard.classList.add("parking-card__form")
+    }
 }
+cardItem.addEventListener("click", openForm)
+
+
+// open successful Reservation Popup
 
 const successfulReservationPopup = (event) => {
     event.preventDefault()
-    
-    const currentCard = event.target.closest(".parking-card")
-    currentCard.querySelector(".parking-info__services").classList.remove("hide")
-    currentCard.querySelector(".parking-data").classList.add("hide")
-    currentCard.querySelector(".parking-price").classList.add("hide")
-    currentCard.classList.remove("parking-card__form")
+    if (event.target.classList.value.includes("send-btn")) {
+        const currentCard = event.target.closest(".parking-card")
+        currentCard.querySelector(".parking-info__services").classList.remove("hide")
+        currentCard.querySelector(".parking-data").classList.add("hide")
+        currentCard.querySelector(".parking-price").classList.add("hide")
+        currentCard.classList.remove("parking-card__form")
 
-    const popupReservation = document.querySelector(".popup-reservation")
-    popupReservation.classList.remove("hide")
+        const popupReservation = document.querySelector(".popup-reservation")
+        popupReservation.classList.remove("hide")
+    }
 }
+cardItem.addEventListener("click", successfulReservationPopup)
 
-const closeReservationPopup = () => {
-    const popupReservation = document.querySelector(".popup-reservation")
-    popupReservation.classList.add("hide")
 
-    const info = document.querySelector(".parking-info__services")
-    info.classList.remove("hide")
-    const form = document.querySelector(".parking-data")
-    form.classList.add("hide")
-    const price = document.querySelector(".parking-price")
-    price.classList.add("hide")
-    const parcingCard = document.querySelector(".parking-card")
-    parcingCard.classList.remove("parking-card__form")
-}
+
+
+// open price popup
 
 const openPricePopup = (event)=>{
-
-    document.querySelector(".popup-price").classList.remove("hide")
+    console.log("woek")
+    if(event.target.classList.value.includes("price-info__more")){
+        console.log("asdsdf")
+        const currentCard = event.target.closest(".parking-list__item")
+        currentCard.querySelector(".popup-price").classList.remove("hide")
+    }
 }
-const closePricePopup = (event)=>{
 
-    document.querySelector(".popup-price").classList.add("hide")
+cardItem.addEventListener("click", openPricePopup)
+
+
+
+
+// close popup window
+
+const closeBtn = document.querySelector("body")
+const closeReservationPopup = (event) => {
+    if(event.target.classList.value.includes("close")){
+        const currentPopup = event.target.closest(".popup-mark");
+        currentPopup.classList.add("hide");
+    }
 }
+
+closeBtn.addEventListener("click",closeReservationPopup)
+
