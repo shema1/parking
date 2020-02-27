@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <link rel="stylesheet" href="./style/jquery-ui.min.css" />
-    <link href="./style/datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="./style/datepicker.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
@@ -98,12 +98,12 @@
               <div class="date-block__inputs">
                 <input
                   type="text"
-                  class="input date-picker__header"
-                  value=""
+                  class="input date-picker__header datepicker-here"
+                  data-date-format="mm-dd-yyyy"
                 />
                 <select
                   name="start-time"
-                  class="input select  time-picker__header"
+                  class="input select  time-picker__header "
                 >
                   <option value="1">01:00</option>
                   <option value="2">02:00</option>
@@ -136,7 +136,11 @@
                 >Departure Date</label
               >
               <div class="date-block__inputs">
-                <input type="text" class="input date-picker__header" />
+                <input
+                  type="text"
+                  class="input date-picker__header  datepicker-here"
+                  data-date-format="mm-dd-yyyy"
+                />
                 <select
                   name="end-time"
                   class="input select time-picker__header"
@@ -331,7 +335,7 @@
                     <input
                       type="text"
                       class=" input date-picker__form start-date datepicker-here "
-                      data-date-format="mm-dd-yyyy" 
+                      data-date-format="mm-dd-yyyy"
                     />
                   </div>
                   <div class="user-data user-data__end-date">
@@ -339,7 +343,7 @@
                     <input
                       type="text"
                       class=" input date-picker__form end-date datepicker-here"
-                      data-date-format="mm-dd-yyyy" 
+                      data-date-format="mm-dd-yyyy"
                     />
                   </div>
                   <div class="user-data user-data__start-time">
@@ -445,7 +449,7 @@
                     />
                   </div>
                   <div class="total">
-                    <span class="total__price orange bold">60zł</span>
+                    <span class="total__price orange bold">0zł</span>
                     <span class="total__days">Za 3 dni</span>
                   </div>
                   <button class="btn send-btn" type="submit">
@@ -651,16 +655,15 @@
                     <input
                       type="text"
                       class=" input date-picker__form start-date datepicker-here "
-                      data-date-format="mm-dd-yyyy" 
+                      data-date-format="mm-dd-yyyy"
                     />
                   </div>
                   <div class="user-data user-data__end-date">
                     <label for="end-date" class="l">Data wyjazdu:</label>
                     <input
-                 
                       type="text"
                       class=" input date-picker__form end-date datepicker-here "
-                      data-date-format="mm-dd-yyyy" 
+                      data-date-format="mm-dd-yyyy"
                     />
                   </div>
                   <div class="user-data user-data__start-time">
@@ -766,7 +769,7 @@
                     />
                   </div>
                   <div class="total">
-                    <span class="total__price orange bold">60zł</span>
+                    <span class="total__price orange bold">0zł</span>
                     <span class="total__days">Za 3 dni</span>
                   </div>
                   <button class="btn send-btn" type="submit">
@@ -969,17 +972,14 @@
                 <div class="userData">
                   <div class="user-data user-data__start-date">
                     <label for="start-date" class="l">Data przyjazdu:</label>
-                    <input
-                      type="text"
-                      class="input date-picker__form"
-                    />
+                    <input type="text" class="input date-picker__form" />
                   </div>
                   <div class="user-data user-data__end-date">
                     <label for="end-date" class="l">Data wyjazdu:</label>
                     <input
                       type="text"
                       class=" input date-picker__form end-date datepicker-here "
-                      data-date-format="mm-dd-yyyy" 
+                      data-date-format="mm-dd-yyyy"
                     />
                   </div>
                   <div class="user-data user-data__start-time">
@@ -987,7 +987,7 @@
                     <select
                       name="start-time"
                       class=" input date-picker__form start-date datepicker-here "
-                      data-date-format="mm-dd-yyyy" 
+                      data-date-format="mm-dd-yyyy"
                     >
                       <option value="1">01:00</option>
                       <option value="2">02:00</option>
@@ -1086,7 +1086,7 @@
                     />
                   </div>
                   <div class="total">
-                    <span class="total__price orange bold">60zł</span>
+                    <span class="total__price orange bold">0zł</span>
                     <span class="total__days">Za 3 dni</span>
                   </div>
                   <button class="btn send-btn" type="submit">
@@ -1292,7 +1292,7 @@
                     <input
                       type="text"
                       class=" input date-picker__form start-date datepicker-here "
-                      data-date-format="mm-dd-yyyy" 
+                      data-date-format="mm-dd-yyyy"
                     />
                   </div>
                   <div class="user-data user-data__end-date">
@@ -1300,7 +1300,7 @@
                     <input
                       type="text"
                       class=" input date-picker__form end-date datepicker-here "
-                      data-date-format="mm-dd-yyyy" 
+                      data-date-format="mm-dd-yyyy"
                     />
                   </div>
                   <div class="user-data user-data__start-time">
@@ -1406,7 +1406,7 @@
                     />
                   </div>
                   <div class="total">
-                    <span class="total__price orange bold">60zł</span>
+                    <span class="total__price orange bold">0zł</span>
                     <span class="total__days">Za 3 dni</span>
                   </div>
                   <button class="btn send-btn" type="submit">
@@ -1610,15 +1610,15 @@
                   <div class="user-data user-data__start-date">
                     <label for="start-date" class="l">Data przyjazdu:</label>
                     <input
-                    class=" input date-picker__form start-date datepicker-here "
-                    data-date-format="mm-dd-yyyy" 
+                      class=" input date-picker__form start-date datepicker-here "
+                      data-date-format="mm-dd-yyyy"
                     />
                   </div>
                   <div class="user-data user-data__end-date">
                     <label for="end-date" class="l">Data wyjazdu:</label>
                     <input
-                    class=" input date-picker__form end-date datepicker-here "
-                    data-date-format="mm-dd-yyyy" 
+                      class=" input date-picker__form end-date datepicker-here "
+                      data-date-format="mm-dd-yyyy"
                     />
                   </div>
                   <div class="user-data user-data__start-time">
@@ -1724,7 +1724,7 @@
                     />
                   </div>
                   <div class="total">
-                    <span class="total__price orange bold">60zł</span>
+                    <span class="total__price orange bold">0zł</span>
                     <span class="total__days">Za 3 dni</span>
                   </div>
                   <button class="btn send-btn" type="submit">
@@ -1929,15 +1929,15 @@
                   <div class="user-data user-data__start-date">
                     <label for="start-date" class="l">Data przyjazdu:</label>
                     <input
-                    class=" input date-picker__form start-date datepicker-here "
-                    data-date-format="mm-dd-yyyy" 
+                      class=" input date-picker__form start-date datepicker-here "
+                      data-date-format="mm-dd-yyyy"
                     />
                   </div>
                   <div class="user-data user-data__end-date">
                     <label for="end-date" class="l">Data wyjazdu:</label>
                     <input
-                    class=" input date-picker__form end-date datepicker-here "
-                    data-date-format="mm-dd-yyyy" 
+                      class=" input date-picker__form end-date datepicker-here "
+                      data-date-format="mm-dd-yyyy"
                     />
                   </div>
                   <div class="user-data user-data__start-time">
@@ -2043,7 +2043,7 @@
                     />
                   </div>
                   <div class="total">
-                    <span class="total__price orange bold">60zł</span>
+                    <span class="total__price orange bold">0zł</span>
                     <span class="total__days">Za 3 dni</span>
                   </div>
                   <button class="btn send-btn" type="submit">
@@ -2466,7 +2466,7 @@
     ></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
-    <script src="js/datepicker.min.js"></script> 
+    <script src="js/datepicker.min.js"></script>
     <script src="js/moment.js"></script>
     <script src="./js/index.js"></script>
   </body>

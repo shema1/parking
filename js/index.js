@@ -1,5 +1,13 @@
 
-$('.datepicker').datepicker()
+
+$('.datepicker').datepicker({
+
+})
+
+
+
+// dayNamesMin: ['Pn.', 'Wt.', 'Sr.', 'Czw.', 'Pt.', 'Sob.', 'Ndz.'],
+//     monthNames: ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec ", "Lipiec ", "Sierpień ", "Wrzesień ", "Październik", "Listopad", "Grudzień"],
 
 $('.slider').slick({
     dots: true,
@@ -83,11 +91,9 @@ closeBtn.addEventListener("click", closeReservationPopup)
 
 const calculate = (event) => {
     if (event.target.classList.value.includes("userData")) {
-        // console.log(moment().format())
         const currentCard = event.target.closest(".parking-card")
         let startDate = moment(currentCard.querySelector(".start-date").value)
         let endDate = moment(currentCard.querySelector(".end-date").value)
-        // let diference = startDate.from(endDate,"d")
         let diference = endDate.diff(startDate, 'days')
         let result = 5 * diference
         let price = currentCard.querySelector(".total__price")
