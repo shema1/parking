@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parking</title>
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap"
       rel="stylesheet"
-    />
-    <link
+    /> -->
+    <!-- <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
+    /> -->
     <link rel="stylesheet" href="./style/jquery-ui.min.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
@@ -463,19 +463,10 @@
               </form>
             </div>
           </div>
-          <div class="popup-reservation hide">
-            <div class="reservation-block popup">
-              <button class="popup__close" onclick="closeReservationPopup()">
-                x
-              </button>
-              <span class="reservation-block__message">
-                Rezerwacja zakończona powodzeniem</span
-              >
-              <span class="reservation-block__done"
-                ><img src="./img/popup/done.png" alt="img"
-              /></span>
-            </div>
-          </div>
+
+
+
+
         </li>
         <li class="parking-list__item">
           <div class="parking-card">
@@ -743,19 +734,7 @@
               </form>
             </div>
           </div>
-          <div class="popup-reservation hide">
-            <div class="reservation-block popup">
-              <button class="popup__close" onclick="closeReservationPopup()">
-                x
-              </button>
-              <span class="reservation-block__message">
-                Rezerwacja zakończona powodzeniem</span
-              >
-              <span class="reservation-block__done"
-                ><img src="./img/popup/done.png" alt="img"
-              /></span>
-            </div>
-          </div>
+
         </li>
         <li class="parking-list__item">
           <div class="parking-card">
@@ -1021,19 +1000,6 @@
                   </button>
                 </div>
               </form>
-            </div>
-          </div>
-          <div class="popup-reservation hide">
-            <div class="reservation-block popup">
-              <button class="popup__close" onclick="closeReservationPopup()">
-                x
-              </button>
-              <span class="reservation-block__message">
-                Rezerwacja zakończona powodzeniem</span
-              >
-              <span class="reservation-block__done"
-                ><img src="./img/popup/done.png" alt="img"
-              /></span>
             </div>
           </div>
         </li>
@@ -1303,19 +1269,13 @@
               </form>
             </div>
           </div>
-          <div class="popup-reservation hide">
-            <div class="reservation-block popup">
-              <button class="popup__close" onclick="closeReservationPopup()">
-                x
-              </button>
-              <span class="reservation-block__message">
-                Rezerwacja zakończona powodzeniem</span
-              >
-              <span class="reservation-block__done"
-                ><img src="./img/popup/done.png" alt="img"
-              /></span>
-            </div>
-          </div>
+
+
+
+
+
+
+
         </li>
         <li class="parking-list__item ">
           <div class="parking-card ">
@@ -1583,19 +1543,9 @@
               </form>
             </div>
           </div>
-          <div class="popup-reservation hide">
-            <div class="reservation-block popup">
-              <button class="popup__close" onclick="closeReservationPopup()">
-                x
-              </button>
-              <span class="reservation-block__message">
-                Rezerwacja zakończona powodzeniem</span
-              >
-              <span class="reservation-block__done"
-                ><img src="./img/popup/done.png" alt="img"
-              /></span>
-            </div>
-          </div>
+          
+
+          
         </li>
         <li class="parking-list__item ">
           <div class="parking-card ">
@@ -1863,19 +1813,7 @@
               </form>
             </div>
           </div>
-          <div class="popup-reservation hide">
-            <div class="reservation-block popup">
-              <button class="popup__close" onclick="closeReservationPopup()">
-                x
-              </button>
-              <span class="reservation-block__message">
-                Rezerwacja zakończona powodzeniem</span
-              >
-              <span class="reservation-block__done"
-                ><img src="./img/popup/done.png" alt="img"
-              /></span>
-            </div>
-          </div>
+        
         </li>
       </ul>
     </main>
@@ -2159,7 +2097,9 @@
     </footer>
     <div class="popup-reservation hide">
       <div class="reservation-block popup">
-        <button class="popup__close">x</button>
+        <button class="popup__close" onclick="closeReservationPopup()">
+          x
+        </button>
         <span class="reservation-block__message">
           Rezerwacja zakończona powodzeniem</span
         >
@@ -2170,7 +2110,7 @@
     </div>
     <div class="popup-price hide">
       <div class="parking-price parking-price__popup popup ">
-        <button class="popup__close">x</button>
+        <button class="popup__close popup__close_price" onclick="closePricePopup()">x</button>
         <span class="parking-price__title">Parking Samolot</span>
         <h3 class="parking-price__days">
           cena za dzień:

@@ -25,8 +25,14 @@ const openForm = (event) => {
 }
 
 const successfulReservationPopup = (event) => {
-    console.log(event)
     event.preventDefault()
+    
+    const currentCard = event.target.closest(".parking-card")
+    currentCard.querySelector(".parking-info__services").classList.remove("hide")
+    currentCard.querySelector(".parking-data").classList.add("hide")
+    currentCard.querySelector(".parking-price").classList.add("hide")
+    currentCard.classList.remove("parking-card__form")
+
     const popupReservation = document.querySelector(".popup-reservation")
     popupReservation.classList.remove("hide")
 }
@@ -51,23 +57,23 @@ const openPricePopup = (event)=>{
 }
 const closePricePopup = (event)=>{
     // const currentCard = event.target.closest(".add-info__circle")
-    document.querySelector(".popup__close_price").classList.add("hide")
+    document.querySelector(".popup-price").classList.add("hide")
 }
-// const aaa = ( )=>{
-//     // document.querySelectorAll(".parking-list__item").classList.add("hide")
-//  const test= document.querySelectorAll(".parking-card")
-//     console.log(test)
-
-//     test.forEach(elem =>elem.classList.add("hide"))
-// }
 
 const correctWidth = (event) => {
     // console.log(event.target.offsetWidth)
-    document.querySelector(".test").style.width =`${event.target.offsetWidth}`
-     document.querySelector(".ui-datepicker").classList.add("test")
+    // document.querySelector(".test").style.width =`${event.target.offsetWidth}`
+    //  document.querySelector(".ui-datepicker").classList.add("test")
     // document.querySelector(".ui-datepicker").setAttribute("style", "color:red")
     // console.log(`"width: ${event.target.offsetWidth}px"`)
     // .setAttribute("style","background-color: red")
+
+    const newWidth = document.createElement("style")
+    // newWidth.innerText = `.test{width: ${event.target.offsetWidth}px;}`
+    newWidth.innerText = `.test{width: 400px;}`
+    const calendar =document.querySelector("#ui-datepicker-div")
+    console.log(calendar)
+    calendar.appendChild(newWidth)
 }
 $('.calendar').datepicker({
     inline: true,

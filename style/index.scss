@@ -8,6 +8,22 @@
 @import "./footer.scss";
 @import "./popup.scss";
 
+
+
+
+@font-face{
+
+  font-family: 'Ubuntu';
+  
+  src: url('../fonts/WebFont-Italic.eot');
+  
+  font-weight: normal;
+  
+  font-style: italic;
+  
+  }
+
+
 body {
   font-family: "Ubuntu";
   color: $main-text-color;

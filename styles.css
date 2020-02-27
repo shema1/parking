@@ -1448,12 +1448,12 @@
 
 .popup-reservation, .popup-price {
   position: fixed;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   top: 0;
   left: 0;
   background-color: #0b1724ab;
-  z-index: 10;
+  z-index: 20;
 }
 
 .popup__close {
@@ -1464,6 +1464,7 @@
   height: 16px;
   font-size: 20px;
   align-self: flex-end;
+  color: #3e4042;
 }
 
 .reservation-block {
@@ -1473,11 +1474,22 @@
   height: 227px;
   align-items: center;
 }
+@media screen and (max-width: 991px) {
+  .reservation-block {
+    width: 300px;
+    left: 24%;
+  }
+}
 .reservation-block__message {
   font-size: 29px;
   width: 314px;
   height: 98px;
   text-align: center;
+}
+@media screen and (max-width: 991px) {
+  .reservation-block__message {
+    font-size: 20px;
+  }
 }
 .reservation-block__done {
   height: 53px;
@@ -1510,6 +1522,12 @@
   z-index: 200;
 }
 
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/WebFont-Italic.eot");
+  font-weight: normal;
+  font-style: italic;
+}
 body {
   font-family: "Ubuntu";
   color: #3e4042;
